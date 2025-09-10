@@ -14,14 +14,14 @@ PR = "r0"
 
 DEPENDS = " \
     freerdp3 \
-    qtbase \
-    qtwayland \
-    qtwayland-native \
-    qtkeychain \
-    kpipewire \
-    kstatusnotifieritem \
+    qtbase6 \
+    qtwayland6 \
+    qtwayland6-native \
+    qtkeychain6 \
+    kpipewire6 \
+    kstatusnotifieritem6 \
     libxkbcommon \
-    plasma-wayland-protocols \
+    plasma-wayland6-protocols6 \
 "
 
 inherit cmake_kdeapp kf6-kconfig kf6-kcmutils systemd

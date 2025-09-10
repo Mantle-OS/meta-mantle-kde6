@@ -19,13 +19,13 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    qtdeclarative \
-    kcoreaddons \
-    kitemmodels \
-    kdeclarative \
-    kservice \
-    libplasma \
-    krunner \
+    qtdeclarative6 \
+    kcoreaddons6 \
+    kitemmodels6 \
+    kdeclarative6 \
+    kservice6 \
+    libplasma6 \
+    krunner6 \
 "
 
 inherit cmake_plasma

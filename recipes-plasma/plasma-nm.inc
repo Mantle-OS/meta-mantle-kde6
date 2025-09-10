@@ -9,30 +9,30 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=9e2385fe012386d34dcc5c9
 PR = "r0"
 
 DEPENDS = " \
-    qtdeclarative \
-    qttools \
+    qtdeclarative6 \
+    qttools6 \
     \
     kcompletion \
-    kconfigwidgets \
-    kcoreaddons \
-    kdbusaddons \
-    kiconthemes \
-    kio \
+    kconfigwidgets6 \
+    kcoreaddons6 \
+    kdbusaddons6 \
+    kiconthemes6 \
+    kio6 \
     knotifications \
-    kservice \
-    ksvg \
-    kwallet \
-    kwidgetsaddons \
-    kwindowsystem \
-    modemmanager-qt \
-    networkmanager-qt \
+    kservice6 \
+    ksvg6 \
+    kwallet6 \
+    kwidgetsaddons6 \
+    kwindowsystem6 \
+    modemmanager-qt6 \
+    networkmanager-qt6 \
     prison \
-    solid \
+    solid6 \
     \
-    libplasma \
+    libplasma6 \
     \
     qca \
-    qcoro \
+    qcoro6 \
 "
 
 inherit cmake_plasma

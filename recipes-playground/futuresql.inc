@@ -13,7 +13,7 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    qcoro \
+    qcoro6 \
 "
 
 SRC_URI = "git://invent.kde.org/libraries/${BPN};nobranch=1;protocol=https"

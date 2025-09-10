@@ -9,9 +9,9 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=ebece3896618ecf0b60c4fade17f026f"
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    qttools \
-    qttools-native \
+    qtbase6 \
+    qttools6 \
+    qttools6-native \
     libsecret \
 "
 

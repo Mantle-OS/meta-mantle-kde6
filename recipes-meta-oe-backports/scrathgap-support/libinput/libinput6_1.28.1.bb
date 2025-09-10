@@ -32,7 +32,7 @@ do_configure:append() {
 
 PACKAGECONFIG ??= "${@bb.utils.contains('PTEST_ENABLED', '1', 'tests', '', d)}"
 PACKAGECONFIG[libwacom] = "-Dlibwacom=true,-Dlibwacom=false,libwacom"
-PACKAGECONFIG[gui] = "-Ddebug-gui=true,-Ddebug-gui=false,cairo gtk+3 wayland-native"
+PACKAGECONFIG[gui] = "-Ddebug-gui=true,-Ddebug-gui=false,cairo gtk+3 wayland6-native"
 PACKAGECONFIG[tests] = "-Dtests=true -Dinstall-tests=true,-Dtests=false -Dinstall-tests=false"
 
 UDEVDIR = "`pkg-config --variable=udevdir udev`"
@@ -42,7 +42,7 @@ EXTRA_OEMESON += "-Dudev-dir=${UDEVDIR} \
                   -Dzshcompletiondir=no"
 
 # package name changed in 1.8.1 upgrade: make sure package upgrades work
-RPROVIDES:${PN} = "libinput"
+RPROVIDES:${PN} = "libinput6"
 RREPLACES:${PN} = "libinput"
 RCONFLICTS:${PN} = "libinput"
 

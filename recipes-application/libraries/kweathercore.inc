@@ -11,9 +11,9 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    qtlocation \
-    ki18n \
+    qtbase6 \
+    qtlocation6 \
+    ki18n6 \
     kholidays \
 "
 

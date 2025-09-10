@@ -9,12 +9,12 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 inherit packagegroup
 
 RDEPENDS:${PN} = " \
-    alligator \
-    kasts \
-    kclock \
-    koko \
-    kongress \
-    krecorder \
-    ktrip \
-    kweather \
+    alligator6 \
+    kasts6 \
+    kclock6 \
+    koko6 \
+    kongress6 \
+    krecorder6 \
+    ktrip6 \
+    kweather6 \
 "

@@ -11,13 +11,13 @@ LIC_FILES_CHKSUM = " \
 "
 
 DEPENDS = " \
-    kcoreaddons \
-    qtbase \
-    qtdeclarative \
+    kcoreaddons6 \
+    qtbase6 \
+    qtdeclarative6 \
     systemd \
     kcrash \
-    kirigami \
-    kirigami-addons \
+    kirigami6 \
+    kirigami6-addons6 \
 "
 
 inherit cmake_kdeapp
@@ -25,5 +25,5 @@ inherit pkgconfig
 inherit kf6-kconfig
 
 RDEPENDS:${PN} += " \
-    qtdeclarative-qmlplugins \
+    qtdeclarative6-qmlplugins \
 "

@@ -18,21 +18,21 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS += " \
-    kdbusaddons \
-    kglobalaccel \
-    kio \
-    kirigami-addons \
-    kjobwidgets \
+    kdbusaddons6 \
+    kglobalaccel6 \
+    kio6 \
+    kirigami6-addons6 \
+    kjobwidgets6 \
     knotifications \
-    kpackage \
-    kwayland \
-    libplasma \
-    modemmanager-qt \
-    networkmanager-qt \
-    plasma-workspace \
-    qcoro \
-    qtwayland \
-    qtwayland-native \
+    kpackage6 \
+    kwayland6 \
+    libplasma6 \
+    modemmanager-qt6 \
+    networkmanager-qt6 \
+    plasma-workspace6 \
+    qcoro6 \
+    qtwayland6 \
+    qtwayland6-native \
 "
 
 inherit cmake_plasma
@@ -70,13 +70,13 @@ FILES:${PN} += " \
 "
 
 RDEPENDS:${PN} += " \
-    breeze \
-    kded \
-    kirigami \
-    kirigami-addons \
-    plasma-nano \
-    qqc2-breeze-style \
-    kde-cli-tools \
+    breeze6 \
+    kded6 \
+    kirigami6 \
+    kirigami6-addons6 \
+    plasma-nano6 \
+    qqc2-breeze6-style6 \
+    kde6-cli-tools-kde6 \
 "
 
 do_compile:append() {

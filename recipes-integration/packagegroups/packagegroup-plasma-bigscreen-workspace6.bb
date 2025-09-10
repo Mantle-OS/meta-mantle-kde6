@@ -12,9 +12,9 @@ inherit packagegroup features_check
 require plasma-workspace-common.inc
 
 RDEPENDS:${PN} += " \
-    plasma-bigscreen \
-    plasma-remotecontrollers \
-    plank-player \
+    plasma-bigscreen6 \
+    plasma-remotecontrollers6 \
+    plank-player6 \
 "
 
 # TODO currently excluded because of high appstream dependency

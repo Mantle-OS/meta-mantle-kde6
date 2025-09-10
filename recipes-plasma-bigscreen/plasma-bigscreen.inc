@@ -13,16 +13,16 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    plasma-activities \
-    plasma-activities-stats \
-    plasma-workspace \
-    kirigami \
-    kdeclarative \
+    plasma-activities6 \
+    plasma-activities6-stats6 \
+    plasma-workspace6 \
+    kirigami6 \
+    kdeclarative6 \
     knotifications \
-    kio \
-    kwayland \
-    kwindowsystem \
-    qtmultimedia \
+    kio6 \
+    kwayland6 \
+    kwindowsystem6 \
+    qtmultimedia6 \
 "
 
 RDEPENDS:${PN} += " \

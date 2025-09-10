@@ -10,16 +10,16 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-or-later.txt;md5=9e2385fe012386d34dc
 PR = "r0"
 
 DEPENDS += " \
-    qtbase \
-    qtdeclarative \
-    karchive \
-    kconfigwidgets \
-    kguiaddons \
+    qtbase6 \
+    qtdeclarative6 \
+    karchive6 \
+    kconfigwidgets6 \
+    kguiaddons6 \
     kcolorscheme \
-    kiconthemes \
-    knewstuff \
+    kiconthemes6 \
+    knewstuff6 \
     kdnssd \
-    kxmlgui \
+    kxmlgui6 \
     openal-soft \
 "
 

@@ -9,12 +9,12 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-or-later.txt;md5=9e2385fe012386d34dc
 PR = "r0"
 
 DEPENDS = " \
-    kwindowsystem \
-    kdbusaddons \
-    kwidgetsaddons \
-    kcoreaddons \
+    kwindowsystem6 \
+    kdbusaddons6 \
+    kwidgetsaddons6 \
+    kcoreaddons6 \
     kcrash \
-    kiconthemes \
+    kiconthemes6 \
     polkit-qt-1 \
 "
 

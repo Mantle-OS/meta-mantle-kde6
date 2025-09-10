@@ -9,7 +9,7 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.1-or-later.txt;md5=2a4f4fd2128ea2f650
 PR = "r0"
 
 DEPENDS = " \
-    qtdeclarative \
+    qtdeclarative6 \
 "
 
 SRC_URI = "git://invent.kde.org/libraries/${BPN};nobranch=1;protocol=https"

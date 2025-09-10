@@ -10,8 +10,8 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.1-only.txt;md5=fabba2a3bfeb22a6483d44
 PR = "r0"
 
 DEPENDS = " \
-    extra-cmake-modules \
-    qtbase \
+    ecm-kf6 \
+    qtbase6 \
     pulseaudio \
 "
 

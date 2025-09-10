@@ -12,7 +12,7 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    qtdeclarative \
+    qtdeclarative6 \
 "
 
 inherit cmake_kdeapp

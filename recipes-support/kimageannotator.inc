@@ -10,10 +10,10 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=3000208d539ec061b899bce1d9ce9404"
 PR = "r0"
 
 DEPENDS = " \
-    kcolorpicker \
-    qtbase \
-    qtsvg \
-    qttools-native \
+    kcolorpicker6 \
+    qtbase6 \
+    qtsvg6 \
+    qttools6-native \
 "
 
 SRC_URI = "git://github.com/ksnip/kImageAnnotator.git;nobranch=1;protocol=https"

@@ -15,10 +15,10 @@ LIC_FILES_CHKSUM = " \
 REQUIRED_DISTRO_FEATURES = "wayland"
 
 DEPENDS = " \
-    qtdeclarative \
-    qttools \
-    qttools-native \
-    extra-cmake-modules \
+    qtdeclarative6 \
+    qttools6 \
+    qttools6-native \
+    ecm-kf6 \
     libpam \
     libxcb \
 "
@@ -75,9 +75,9 @@ do_install:append() {
 }
 
 PACKAGES =+ " \
-    ${PN}-config-plasma-mobile \
-    ${PN}-config-plasma-bigscreen \
-    ${PN}-config-plasma-desktop \
+    ${PN}-config-plasma-mobile6 \
+    ${PN}-config-plasma-bigscreen6 \
+    ${PN}-config-plasma-desktop6 \
 "
 
 FILES:${PN} += " \
@@ -107,9 +107,9 @@ USERADD_PARAM:${PN} = "--system --home ${localstatedir}/lib/sddm --shell /bin/fa
 RDEPENDS:${PN} += "\
     bash \
     xcb-util \
-    qtbase-plugins \
-    qtdeclarative-plugins \
-    qtdeclarative-qmlplugins \
+    qtbase6-plugins \
+    qtdeclarative6-plugins \
+    qtdeclarative6-qmlplugins \
 "
 
 RRECOMMENDS:${PN} += " \

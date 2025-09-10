@@ -18,12 +18,12 @@ PR = "r0"
 inherit kf6-cmake kf6-kdoctools kf6-kconfig mime-xdg
 
 DEPENDS = " \
-    futuresql \
-    kirigami-addons \
+    futuresql6 \
+    kirigami6-addons6 \
     purpose \
-    qcoro \
-    qqc2-desktop-style \
-    qtwebengine \
+    qcoro6 \
+    qqc2-desktop-style6 \
+    qtwebengine6 \
 "
 
 FILES:${PN} += " \

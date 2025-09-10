@@ -9,14 +9,14 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-3.0-or-later.txt;md5=1c76c4cc354acaac30e
 PR = "r0"
 
 DEPENDS = " \
-    qtdeclarative \
-    qtsvg \
-    kcalendarcore \
-    kdbusaddons \
-    kirigami \
-    kirigami-addons \
+    qtdeclarative6 \
+    qtsvg6 \
+    kcalendarcore6 \
+    kdbusaddons6 \
+    kirigami6 \
+    kirigami6-addons6 \
     knotifications \
-    kosmindoormap \
+    kosmindoormap6 \
 "
 
 inherit cmake_kdeapp

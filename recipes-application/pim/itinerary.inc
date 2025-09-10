@@ -10,21 +10,21 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.0-or-later.txt;md5=6d2d9952d88b50a51a
 PR = "r0"
 
 DEPENDS += " \
-    qtbase \
-    qtdeclarative \
-    qtpositioning \
-    qtkeychain \
-    kirigami \
-    kirigami-addons \
+    qtbase6 \
+    qtdeclarative6 \
+    qtpositioning6 \
+    qtkeychain6 \
+    kirigami6 \
+    kirigami6-addons6 \
     kcontacts \
-    kcalendarcore \
+    kcalendarcore6 \
     kholidays \
-    kunitconversion \
-    kpkpass \
-    kitinerary \
-    kosmindoormap \
-    kpublictransport \
-    qqc2-desktop-style \
+    kunitconversion6 \
+    kpkpass6 \
+    kitinerary6 \
+    kosmindoormap6 \
+    kpublictransport6 \
+    qqc2-desktop-style6 \
 "
 
 inherit cmake_kdeapp
@@ -40,7 +40,7 @@ FILES_SOLIBSDEV = ""
 
 RDEPENDS:${PN} += " \
     prison \
-    solid \
-    qtlocation-qmlplugins \
-    qtmultimedia-qmlplugins \
+    solid6 \
+    qtlocation6-qmlplugins \
+    qtmultimedia6-qmlplugins \
 "

@@ -9,6 +9,6 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 inherit packagegroup
 
 RDEPENDS:${PN} = " \
-    packagegroup-plasma-mobile-workspace \
-    packagegroup-plasma-mobile-applications \
+    packagegroup-plasma-mobile6-workspace6 \
+    packagegroup-plasma-mobile6-applications6 \
 "

@@ -11,16 +11,16 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS += " \
-    kirigami \
-    qtdeclarative \
-    qtmultimedia \
+    kirigami6 \
+    qtdeclarative6 \
+    qtmultimedia6 \
 "
 
 RDEPENDS:${PN} += " \
-    qtmultimedia \
-    qtmultimedia-plugins \
-    qtmultimedia-qmlplugins \
-    qqc2-desktop-style \
+    qtmultimedia6 \
+    qtmultimedia6-plugins \
+    qtmultimedia6-qmlplugins \
+    qqc2-desktop-style6 \
 "
 
 inherit cmake_plasma

@@ -10,24 +10,24 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-or-later.txt;md5=fed54355545ffd980b8
 PR = "r0"
 
 DEPENDS += " \
-    qtdeclarative \
-    qtmultimedia \
-    qtwayland-native \
-    qtconnectivity \
+    qtdeclarative6 \
+    qtmultimedia6 \
+    qtwayland6-native \
+    qtconnectivity6 \
     qca \
     libfakekey \
-    kconfigwidgets \
-    kdbusaddons \
-    kiconthemes \
+    kconfigwidgets6 \
+    kdbusaddons6 \
+    kiconthemes6 \
     knotifications \
-    kio \
-    kirigami \
-    kirigami-addons \
-    kpeople \
-    kwayland \
-    pulseaudio-qt \
-    qqc2-desktop-style \
-    kstatusnotifieritem \
+    kio6 \
+    kirigami6 \
+    kirigami6-addons6 \
+    kpeople6 \
+    kwayland6 \
+    pulseaudio-qt6-kde6 \
+    qqc2-desktop-style6 \
+    kstatusnotifieritem6 \
 "
 
 inherit cmake_kdeapp
@@ -54,5 +54,5 @@ FILES:${PN} += " \
 "
 
 RDEPENDS:${PN} += " \
-    kpeople \
+    kpeople6 \
 "

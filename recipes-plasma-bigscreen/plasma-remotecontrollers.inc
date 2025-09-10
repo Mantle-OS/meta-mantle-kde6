@@ -13,16 +13,16 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    qtwayland \
-    qtwayland-native \
-    kirigami \
-    solid \
-    kcoreaddons \
-    kdeclarative \
+    qtwayland6 \
+    qtwayland6-native \
+    kirigami6 \
+    solid6 \
+    kcoreaddons6 \
+    kdeclarative6 \
     knotifications \
-    kpackage \
-    kwindowsystem \
-    plasma-workspace \
+    kpackage6 \
+    kwindowsystem6 \
+    plasma-workspace6 \
 "
 
 inherit cmake_plasma

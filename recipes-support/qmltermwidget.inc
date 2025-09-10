@@ -9,11 +9,11 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=4641e94ec96f98fabc56ff9cc48be14b"
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    qtdeclarative \
-    qttools \
-    qttools-native \
-    qt5compat \
+    qtbase6 \
+    qtdeclarative6 \
+    qttools6 \
+    qttools6-native \
+    qt5compat6 \
 "
 
 SRC_URI = " \

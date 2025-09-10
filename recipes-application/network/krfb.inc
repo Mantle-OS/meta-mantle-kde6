@@ -12,21 +12,21 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    kconfig \
-    kconfig-native \
-    kdbusaddons \
+    kconfig6 \
+    kconfig6-native \
+    kdbusaddons6 \
     kdnssd \
     knotifications \
-    kpipewire \
-    kstatusnotifieritem \
-    kwallet \
-    kwidgetsaddons \
-    kwindowsystem \
-    kxmlgui \
+    kpipewire6 \
+    kstatusnotifieritem6 \
+    kwallet6 \
+    kwidgetsaddons6 \
+    kwindowsystem6 \
+    kxmlgui6 \
     libvncserver \
-    qtbase \
-    qtwayland \
-    qtwayland-native \
+    qtbase6 \
+    qtwayland6 \
+    qtwayland6-native \
 "
 
 inherit cmake_kdeapp

@@ -9,14 +9,14 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-or-later.txt;md5=fed54355545ffd980b8
 PR = "r0"
 
 DEPENDS = " \
-    kconfig \
-    kcoreaddons \
-    ki18n \
-    kio \
-    kidletime \
-    kservice \
-    kxmlgui \
-    libksysguard \
+    kconfig6 \
+    kcoreaddons6 \
+    ki18n6 \
+    kio6 \
+    kidletime6 \
+    kservice6 \
+    kxmlgui6 \
+    libksysguard6 \
 "
 
 inherit cmake_plasma

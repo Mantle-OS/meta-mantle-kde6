@@ -14,20 +14,20 @@ DEPENDS += " \
     lcms \
     jpeg \
     baloo \
-    kio \
-    kitemmodels \
-    ki18n \
-    kparts \
-    kwindowsystem \
-    kiconthemes \
-    kimageannotator \
+    kio6 \
+    kitemmodels6 \
+    ki18n6 \
+    kparts6 \
+    kwindowsystem6 \
+    kiconthemes6 \
+    kimageannotator6 \
     knotifications \
-    kwidgetsaddons \
-    plasma-activities \
+    kwidgetsaddons6 \
+    plasma-activities6 \
     phonon \
     purpose \
-    qtwayland \
-    qtwayland-native \
+    qtwayland6 \
+    qtwayland6-native \
 "
 
 inherit cmake_kdeapp

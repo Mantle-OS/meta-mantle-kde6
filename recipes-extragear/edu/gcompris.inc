@@ -12,20 +12,20 @@ PR = "r0"
 
 DEPENDS += " \
     kcrash \
-    ki18n \
-    kio \
+    ki18n6 \
+    kio6 \
     phonon \
-    qtbase \
-    qtcharts \
-    qtmultimedia \
-    qtsensors \
-    qtdeclarative \
-    qml-box2d \
+    qtbase6 \
+    qtcharts6 \
+    qtmultimedia6 \
+    qtsensors6 \
+    qtdeclarative6 \
+    qml-box2d6 \
 "
 
 RDEPENDS:${PN} += " \
-    qtdeclarative-qmlplugins \
-    qtmultimedia-qmlplugins \
+    qtdeclarative6-qmlplugins \
+    qtmultimedia6-qmlplugins \
 "
 
 SRC_URI = "git://invent.kde.org/education/${BPN};nobranch=1;protocol=https"

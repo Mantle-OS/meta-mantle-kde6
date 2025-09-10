@@ -12,14 +12,14 @@ PR = "r0"
 
 DEPENDS = " \
     fftw \
-    kconfigwidgets \
-    kcoreaddons \
-    kdecoration \
-    kguiaddons \
-    kirigami \
-    kpackage \
-    kwayland \
-    kwindowsystem \
+    kconfigwidgets6 \
+    kcoreaddons6 \
+    kdecoration6 \
+    kguiaddons6 \
+    kirigami6 \
+    kpackage6 \
+    kwayland6 \
+    kwindowsystem6 \
     frameworkintegration \
 "
 
@@ -40,5 +40,5 @@ FILES:${PN} += " \
 "
 
 RDEPENDS:${PN} += " \
-    breeze-icons \
+    breeze6-icons \
 "

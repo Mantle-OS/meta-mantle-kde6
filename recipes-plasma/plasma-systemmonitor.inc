@@ -10,22 +10,22 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=93e64b4a83c7e441e48bbde
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    qtdeclarative \
-    ki18n \
-    kitemmodels \
-    kconfig \
-    kdeclarative \
-    kservice \
-    kglobalaccel \
-    kio \
-    kdbusaddons \
-    knewstuff \
-    libksysguard \
-    kirigami-addons \
+    qtbase6 \
+    qtdeclarative6 \
+    ki18n6 \
+    kitemmodels6 \
+    kconfig6 \
+    kdeclarative6 \
+    kservice6 \
+    kglobalaccel6 \
+    kio6 \
+    kdbusaddons6 \
+    knewstuff6 \
+    libksysguard6 \
+    kirigami6-addons6 \
 "
 
-RDEPENDS:${PN} = "ksystemstats"
+RDEPENDS:${PN} = "ksystemstats6"
 
 inherit cmake_plasma
 inherit kf6-kdoctools

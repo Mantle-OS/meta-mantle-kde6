@@ -9,11 +9,11 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-or-later.txt;md5=9e2385fe012386d34dc
 PR = "r0"
 
 DEPENDS = " \
-    kitemmodels \
-    modemmanager-qt \
-    networkmanager-qt \
-    kirigami-addons \
-    libplasma \
+    kitemmodels6 \
+    modemmanager-qt6 \
+    networkmanager-qt6 \
+    kirigami6-addons6 \
+    libplasma6 \
 "
 
 inherit cmake_plasma

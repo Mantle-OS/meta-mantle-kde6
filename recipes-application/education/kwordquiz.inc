@@ -10,13 +10,13 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-or-later.txt;md5=9e2385fe012386d34dc
 PR = "r0"
 
 DEPENDS += " \
-    qtbase \
-    qtdeclarative \
+    qtbase6 \
+    qtdeclarative6 \
     kcrash \
-    kirigami \
-    kirigami-addons \
-    knewstuff \
-    libkeduvocdocument \
+    kirigami6 \
+    kirigami6-addons6 \
+    knewstuff6 \
+    libkeduvocdocument6 \
 "
 
 inherit cmake_kdeapp

@@ -10,18 +10,18 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.0-only.txt;md5=da48810c4ddf8e49efa031
 PR = "r0"
 
 DEPENDS = " \
-    qtdeclarative \
-    qtwayland-native \
-    kconfig \
-    kconfigwidgets \
-    kiconthemes \
-    kio \
+    qtdeclarative6 \
+    qtwayland6-native \
+    kconfig6 \
+    kconfigwidgets6 \
+    kiconthemes6 \
+    kio6 \
     knotifications \
-    kstatusnotifieritem \
-    kwayland \
-    kwidgetsaddons \
-    kwindowsystem \
-    breeze \
+    kstatusnotifieritem6 \
+    kwayland6 \
+    kwidgetsaddons6 \
+    kwindowsystem6 \
+    breeze6 \
     libxcursor \
 "
 

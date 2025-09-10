@@ -9,22 +9,22 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=9e2385fe012386d34dcc5c9
 PR = "r0"
 
 DEPENDS += " \
-    kcmutils \
-    kconfig \
-    kdbusaddons \
-    kiconthemes \
-    kio \
-    kirigami \
-    kitemviews \
-    kitemmodels \
-    kjobwidgets \
-    krunner \
-    kservice \
-    kwidgetsaddons \
-    kwindowsystem \
-    kxmlgui \
+    kcmutils6 \
+    kconfig6 \
+    kdbusaddons6 \
+    kiconthemes6 \
+    kio6 \
+    kirigami6 \
+    kitemviews6 \
+    kitemmodels6 \
+    kjobwidgets6 \
+    krunner6 \
+    kservice6 \
+    kwidgetsaddons6 \
+    kwindowsystem6 \
+    kxmlgui6 \
     \
-    plasma-activities \
+    plasma-activities6 \
 "
 
 inherit cmake_plasma

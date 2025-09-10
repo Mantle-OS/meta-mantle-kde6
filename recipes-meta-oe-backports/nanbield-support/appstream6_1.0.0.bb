@@ -4,7 +4,7 @@ LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=435ed639f84d4585d93824e7da3d85da"
 
 DEPENDS = " \
-    appstream-native \
+    appstream6-native \
     curl-native \
     curl \
     docbook-xml-dtd4-native \

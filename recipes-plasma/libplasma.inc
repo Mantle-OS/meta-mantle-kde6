@@ -11,33 +11,33 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.1-only.txt;md5=fabba2a3bfeb22a6483d44
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    plasma-activities \
-    karchive \
-    kcmutils \
-    kcmutils-native \
-    kconfig \
-    kconfig-native \
-    kconfigwidgets \
-    kdbusaddons \
-    kdeclarative \
-    kglobalaccel \
-    kguiaddons \
-    kiconthemes \
-    kio \
-    kcoreaddons-native \
+    qtbase6 \
+    plasma-activities6 \
+    karchive6 \
+    kcmutils6 \
+    kcmutils6-native \
+    kconfig6 \
+    kconfig6-native \
+    kconfigwidgets6 \
+    kdbusaddons6 \
+    kdeclarative6 \
+    kglobalaccel6 \
+    kguiaddons6 \
+    kiconthemes6 \
+    kio6 \
+    kcoreaddons6-native \
     kauth-native \
-    kservice \
-    ksvg \
-    kwindowsystem \
-    kxmlgui \
+    kservice6 \
+    ksvg6 \
+    kwindowsystem6 \
+    kxmlgui6 \
     knotifications \
-    kpackage \
-    kpackage-native \
-    kwayland \
-    kirigami \
+    kpackage6 \
+    kpackage6-native \
+    kwayland6 \
+    kirigami6 \
     gzip-native \
-    qtwayland-native \
+    qtwayland6-native \
 "
 
 inherit cmake_plasma

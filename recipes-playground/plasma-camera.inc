@@ -9,11 +9,11 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-3.0-or-later.txt;md5=1c76c4cc354acaac30e
 PR = "r0"
 
 DEPENDS = " \
-    kcoreaddons \
-    kirigami \
-    libplasma \
-    kconfig \
-    kconfig-native \
+    kcoreaddons6 \
+    kirigami6 \
+    libplasma6 \
+    kconfig6 \
+    kconfig6-native \
 "
 
 SRC_URI = "git://invent.kde.org/plasma-mobile/${BPN};nobranch=1;protocol=https"
@@ -21,4 +21,4 @@ S = "${WORKDIR}/git"
 
 inherit cmake_kdeapp
 
-RDEPENDS:${PN} += "qtmultimedia-qmlplugins"
+RDEPENDS:${PN} += "qtmultimedia6-qmlplugins"

@@ -14,6 +14,6 @@ inherit packagegroup features_check
 require plasma-workspace-common.inc
 
 RDEPENDS:${PN}:append = " \
-    plasma-mobile \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'desktop-portal', 'discover', '', d)} \
+    plasma-mobile6 \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'desktop-portal', 'discover6', '', d)} \
 "

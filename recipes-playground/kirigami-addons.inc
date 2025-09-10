@@ -12,11 +12,11 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    kirigami \
-    ki18n \
-    qt5compat \
-    qtdeclarative \
-    plasma-activities \
+    kirigami6 \
+    ki18n6 \
+    qt5compat6 \
+    qtdeclarative6 \
+    plasma-activities6 \
 "
 
 SRC_URI = "git://invent.kde.org/libraries/${BPN};nobranch=1;protocol=https"

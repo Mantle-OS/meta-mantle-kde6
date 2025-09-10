@@ -21,16 +21,16 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    qtsvg \
-    kconfig \
-    kiconthemes \
-    kcmutils \
-    kio \
-    kservice \
-    kwindowsystem \
-    plasma-activities \
-    kdesu \
-    plasma-workspace \
+    qtsvg6 \
+    kconfig6 \
+    kiconthemes6 \
+    kcmutils6 \
+    kio6 \
+    kservice6 \
+    kwindowsystem6 \
+    plasma-activities6 \
+    kdesu6 \
+    plasma-workspace6 \
 "
 
 inherit cmake_plasma

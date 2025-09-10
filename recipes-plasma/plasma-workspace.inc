@@ -11,54 +11,54 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=9e2385fe012386d34dcc5c9
 PR = "r0"
 
 DEPENDS = " \
-    qtdeclarative \
-    qtwayland-native \
-    qtpositioning \
-    qtlocation \
+    qtdeclarative6 \
+    qtwayland6-native \
+    qtpositioning6 \
+    qtlocation6 \
     \
-    kcoreaddons \
+    kcoreaddons6 \
     kcrash \
-    kdbusaddons \
+    kdbusaddons6 \
     kholidays \
-    kidletime \
-    kitemmodels \
-    knewstuff \
+    kidletime6 \
+    kitemmodels6 \
+    knewstuff6 \
     knotifications \
-    kpackage \
-    kpeople \
-    kquickcharts \
-    krunner \
-    kstatusnotifieritem \
-    ksvg \
-    ktexteditor \
-    kunitconversion \
+    kpackage6 \
+    kpeople6 \
+    kquickcharts6 \
+    krunner6 \
+    kstatusnotifieritem6 \
+    ksvg6 \
+    ktexteditor6 \
+    kunitconversion6 \
     kuserfeedback \
-    kwallet \
-    kwallet \
-    networkmanager-qt \
-    plasma5support \
+    kwallet6 \
+    kwallet6 \
+    networkmanager-qt6 \
+    plasma5support6 \
     prison \
-    solid \
+    solid6 \
     \
     baloo \
-    breeze \
-    kded \
-    kdesu \
-    kpipewire \
-    kscreenlocker \
-    kwayland \
-    kwin \
-    libkscreen \
-    libksysguard \
-    libplasma \
-    plasma-activities \
-    plasma-activities-stats \
+    breeze6 \
+    kded6 \
+    kdesu6 \
+    kpipewire6 \
+    kscreenlocker6 \
+    kwayland6 \
+    kwin6 \
+    libkscreen6 \
+    libksysguard6 \
+    libplasma6 \
+    plasma-activities6 \
+    plasma-activities6-stats6 \
     \
-    knotifyconfig \
-    libqalculate \
+    knotifyconfig6 \
+    libqalculate6 \
     libxft \
     phonon \
-    qcoro \
+    qcoro6 \
 "
 
 inherit cmake_plasma
@@ -126,12 +126,12 @@ FILES:${PN}-dev += " \
 INSANE_SKIP:${PN} = "dev-so"
 
 RDEPENDS:${PN} += " \
-    kquickcharts \
-    milou \
-    ocean-sound-theme \
+    kquickcharts6 \
+    milou6 \
+    ocean-sound-theme6 \
     xprop \
     xset \
-    qttools-tools \
+    qttools6-tools \
 "
 
 do_install:append() {

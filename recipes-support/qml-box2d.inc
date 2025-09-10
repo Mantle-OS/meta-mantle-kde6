@@ -9,9 +9,9 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=7c1ecaedec0d10ec77d289e71b42165f"
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    qtdeclarative \
-    qtdeclarative-native \
+    qtbase6 \
+    qtdeclarative6 \
+    qtdeclarative6-native \
 "
 
 SRC_URI = " \

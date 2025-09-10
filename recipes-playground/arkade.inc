@@ -9,12 +9,12 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-3.0-or-later.txt;md5=1c76c4cc354acaac30e
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    qtdeclarative \
-    kdeclarative \
-    kiconthemes \
-    kirigami \
-    kpackage \
+    qtbase6 \
+    qtdeclarative6 \
+    kdeclarative6 \
+    kiconthemes6 \
+    kirigami6 \
+    kpackage6 \
 "
 
 SRC_URI = "git://invent.kde.org/games/${BPN};nobranch=1;protocol=https"
@@ -24,7 +24,7 @@ inherit cmake_kdeapp
 inherit mime-xdg
 
 RDEPENDS:${PN} += " \
-    qtdeclarative \
+    qtdeclarative6 \
 "
 
 FILES:${PN} += "\

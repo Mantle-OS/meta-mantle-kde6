@@ -16,12 +16,12 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    kcoreaddons \
-    solid \
-    kio \
+    kcoreaddons6 \
+    solid6 \
+    kio6 \
     kcrash \
-    libksysguard \
-    networkmanager-qt \
+    libksysguard6 \
+    networkmanager-qt6 \
 "
 
 inherit cmake_plasma

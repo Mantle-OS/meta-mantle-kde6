@@ -13,8 +13,8 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    karchive \
+    qtbase6 \
+    karchive6 \
 "
 
 inherit cmake_kdeapp

@@ -15,25 +15,25 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS += " \
-    kcoreaddons \
-    karchive \
+    kcoreaddons6 \
+    karchive6 \
     kcompletion \
-    kconfig \
-    kconfigwidgets \
-    kdbusaddons \
-    ki18n \
-    kiconthemes \
-    kitemmodels \
-    kio \
-    ktexteditor \
-    kwidgetsaddons \
-    ksvg \
-    libplasma \
-    plasma5support \
+    kconfig6 \
+    kconfigwidgets6 \
+    kdbusaddons6 \
+    ki18n6 \
+    kiconthemes6 \
+    kitemmodels6 \
+    kio6 \
+    ktexteditor6 \
+    kwidgetsaddons6 \
+    ksvg6 \
+    libplasma6 \
+    plasma5support6 \
 "
 
 RDEPENDS:${PN} += " \
-    kirigami \
+    kirigami6 \
 "
 
 inherit cmake_plasma

@@ -19,15 +19,15 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS += " \
-    qtdeclarative \
-    kcoreaddons \
-    kdeclarative \
-    kglobalaccel \
-    kstatusnotifieritem \
-    ksvg \
-    libplasma \
+    qtdeclarative6 \
+    kcoreaddons6 \
+    kdeclarative6 \
+    kglobalaccel6 \
+    kstatusnotifieritem6 \
+    ksvg6 \
+    libplasma6 \
     pulseaudio \
-    pulseaudio-qt \
+    pulseaudio-qt6-kde6 \
     libcanberra \
 "
 

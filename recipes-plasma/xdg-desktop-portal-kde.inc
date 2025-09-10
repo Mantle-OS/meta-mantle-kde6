@@ -16,17 +16,17 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS += " \
-    kcoreaddons \
+    kcoreaddons6 \
     knotifications \
-    kwayland \
-    kwidgetsaddons \
-    kirigami \
-    kio \
-    kdeclarative \
-    kstatusnotifieritem \
-    libplasma \
+    kwayland6 \
+    kwidgetsaddons6 \
+    kirigami6 \
+    kio6 \
+    kdeclarative6 \
+    kstatusnotifieritem6 \
+    libplasma6 \
     pipewire \
-    qtwayland-native \
+    qtwayland6-native \
 "
 
 inherit cmake_plasma

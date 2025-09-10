@@ -9,21 +9,21 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=5c213a7de3f013310bd272cdb6eb7a24"
 PR = "r0"
 
 DEPENDS = " \
-    qtwayland-native \
-    plasma-activities \
-    kidletime \
-    kconfig \
-    kdbusaddons \
-    solid \
-    kglobalaccel \
-    kio \
-    knotifyconfig \
-    libkscreen \
-    kwayland \
-    kitemmodels \
-    plasma-workspace \
-    bluez-qt \
-    ddcutil \
+    qtwayland6-native \
+    plasma-activities6 \
+    kidletime6 \
+    kconfig6 \
+    kdbusaddons6 \
+    solid6 \
+    kglobalaccel6 \
+    kio6 \
+    knotifyconfig6 \
+    libkscreen6 \
+    kwayland6 \
+    kitemmodels6 \
+    plasma-workspace6 \
+    bluez-qt6 \
+    ddcutil6 \
 "
 
 inherit cmake_plasma

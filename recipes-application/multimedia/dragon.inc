@@ -10,13 +10,13 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=93e64b4a83c7e441e48bbde
 PR = "r0"
 
 DEPENDS += " \
-    kconfigwidgets \
-    ki18n \
-    kparts \
-    kxmlgui \
+    kconfigwidgets6 \
+    ki18n6 \
+    kparts6 \
+    kxmlgui6 \
     phonon \
-    qtbase \
-    solid \
+    qtbase6 \
+    solid6 \
 "
 
 inherit cmake_kdeapp

@@ -12,13 +12,13 @@ PR = "r0"
 
 DEPENDS = " \
     boost \
-    kconfig \
-    kcoreaddons \
-    kdbusaddons \
-    kglobalaccel \
-    kio \
-    kwindowsystem \
-    kxmlgui \
+    kconfig6 \
+    kcoreaddons6 \
+    kdbusaddons6 \
+    kglobalaccel6 \
+    kio6 \
+    kwindowsystem6 \
+    kxmlgui6 \
 "
 
 inherit cmake_plasma

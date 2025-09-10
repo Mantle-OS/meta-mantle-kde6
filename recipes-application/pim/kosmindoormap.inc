@@ -10,10 +10,10 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.0-or-later.txt;md5=6d2d9952d88b50a51a
 PR = "r0"
 
 DEPENDS += " \
-    qtdeclarative \
-    ki18n \
-    kopeninghours \
-    kpublictransport \
+    qtdeclarative6 \
+    ki18n6 \
+    kopeninghours6 \
+    kpublictransport6 \
     bison-native \
 "
 

@@ -9,9 +9,9 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-3.0-only.txt;md5=852ecadc0ac7e6f4d7144d
 PR = "r0"
 
 DEPENDS = " \
-    qtdeclarative \
-    kirigami \
-    kquickcharts \
+    qtdeclarative6 \
+    kirigami6 \
+    kquickcharts6 \
 "
 
 inherit cmake_plasma

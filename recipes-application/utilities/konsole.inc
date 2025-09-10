@@ -9,13 +9,13 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=5c213a7de3f013310bd272cdb6eb7a24"
 PR = "r0"
 
 DEPENDS += " \
-    kio \
-    knewstuff \
+    kio6 \
+    knewstuff6 \
     knotifications \
-    knotifyconfig \
-    kparts \
-    kpty \
-    kxmlgui \
+    knotifyconfig6 \
+    kparts6 \
+    kpty6 \
+    kxmlgui6 \
 "
 
 inherit cmake_kdeapp

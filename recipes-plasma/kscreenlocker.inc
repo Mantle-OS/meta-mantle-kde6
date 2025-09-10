@@ -10,24 +10,24 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
 PR = "r0"
 
 DEPENDS = " \
-    qtdeclarative \
+    qtdeclarative6 \
     \
     kcrash \
-    kglobalaccel \
-    kidletime \
+    kglobalaccel6 \
+    kidletime6 \
     knotifications \
-    ksvg \
-    kwindowsystem \
-    kxmlgui \
-    solid \
+    ksvg6 \
+    kwindowsystem6 \
+    kxmlgui6 \
+    solid6 \
     \
-    libplasma \
-    libkscreen \
-    layer-shell-qt \
+    libplasma6 \
+    libkscreen6 \
+    layer-shell-qt6-kde6 \
     \
     libpam \
     libxcb \
-    wayland-native \
+    wayland6-native \
 "
 
 SRC_URI:append = " \
@@ -57,5 +57,5 @@ FILES:${PN} += " \
 
 RDEPENDS:${PN} += " \
     perl \
-    qqc2-breeze-style \
+    qqc2-breeze6-style6 \
 "

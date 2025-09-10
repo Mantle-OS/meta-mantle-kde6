@@ -10,15 +10,15 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.1-only.txt;md5=fabba2a3bfeb22a6483d44
 PR = "r0"
 
 DEPENDS = " \
-    qtlocation \
-    kdeclarative \
-    kiconthemes \
-    kio \
-    kirigami \
-    kirigami-addons \
-    kfilemetadata \
+    qtlocation6 \
+    kdeclarative6 \
+    kiconthemes6 \
+    kio6 \
+    kirigami6 \
+    kirigami6-addons6 \
+    kfilemetadata6 \
     knotifications \
-    kquickimageeditor \
+    kquickimageeditor6 \
     exiv2 \
     purpose \
 "
@@ -30,11 +30,11 @@ inherit kf6-kauth
 inherit mime-xdg
 
 RDEPENDS:${PN} += " \
-    qtdeclarative-qmlplugins \
+    qtdeclarative6-qmlplugins \
     purpose \
-    kirigami \
-    kirigami-addons \
-    kquickimageeditor \
+    kirigami6 \
+    kirigami6-addons6 \
+    kquickimageeditor6 \
 "
 
 KOKO_CITIES1000="cities1000.zip"

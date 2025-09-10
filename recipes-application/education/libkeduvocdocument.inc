@@ -10,9 +10,9 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-or-later.txt;md5=9e2385fe012386d34dc
 PR = "r0"
 
 DEPENDS += " \
-    karchive \
-    ki18n \
-    kio \
+    karchive6 \
+    ki18n6 \
+    kio6 \
 "
 
 inherit cmake_kdeapp

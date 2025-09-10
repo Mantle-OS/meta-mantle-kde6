@@ -12,10 +12,10 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    kirigami \
-    qtdeclarative \
-    qtmultimedia \
-    qtwebengine \
+    kirigami6 \
+    qtdeclarative6 \
+    qtmultimedia6 \
+    qtwebengine6 \
 "
 
 inherit cmake_plasma

@@ -14,10 +14,10 @@ PR = "r0"
 
 DEPENDS = " \
     libepoxy \
-    qtdeclarative \
-    qtwayland-native \
+    qtdeclarative6 \
+    qtwayland6-native \
     pipewire \
-    kwayland \
+    kwayland6 \
     ffmpeg \
     libva \
 "

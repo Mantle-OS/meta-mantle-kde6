@@ -12,10 +12,10 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    kpeople \
+    qtbase6 \
+    kpeople6 \
     kcontacts \
-    ki18n \
+    ki18n6 \
 "
 
 SRC_URI = "git://invent.kde.org/pim/${BPN};nobranch=1;protocol=https"

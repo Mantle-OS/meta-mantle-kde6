@@ -12,12 +12,12 @@ PR = "r0"
 
 DEPENDS += " \
     kcrash \
-    ki18n \
-    kio \
-    knewstuff \
+    ki18n6 \
+    kio6 \
+    knewstuff6 \
     knotifications \
-    knotifyconfig \
-    libkeduvocdocument \
+    knotifyconfig6 \
+    libkeduvocdocument6 \
 "
 
 inherit cmake_kdeapp
@@ -27,7 +27,7 @@ inherit kf6-kauth
 inherit mime-xdg
 
 RDEPENDS:${PN} += " \
-    kdeedu-data \
+    kdeedu-data6 \
 "
 
 FILES:${PN} += " \

@@ -10,11 +10,11 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=4fbd65380cdd255951079008b364516c"
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    packagekit \
+    qtbase6 \
+    packagekit6 \
 "
 
-RDEPENDS:${PN} += "qtbase"
+RDEPENDS:${PN} += "qtbase6"
 
 inherit qt6-cmake xmlcatalog
 

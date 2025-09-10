@@ -10,18 +10,18 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=93e64b4a83c7e441e48bbde
 PR = "r0"
 
 DEPENDS = " \
-    bluez-qt \
-    kcoreaddons \
-    kdbusaddons \
-    kded \
-    kiconthemes \
-    kio \
+    bluez-qt6 \
+    kcoreaddons6 \
+    kdbusaddons6 \
+    kded6 \
+    kiconthemes6 \
+    kio6 \
     knotifications \
-    ksvg \
-    kwidgetsaddons \
-    kwindowsystem \
-    libplasma \
-    qtdeclarative \
+    ksvg6 \
+    kwidgetsaddons6 \
+    kwindowsystem6 \
+    libplasma6 \
+    qtdeclarative6 \
     shared-mime-info \
     shared-mime-info-native \
 "

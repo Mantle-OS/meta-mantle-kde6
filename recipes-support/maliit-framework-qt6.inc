@@ -14,14 +14,14 @@ SRC_URI = "git://github.com/maliit/framework.git;branch=qt6-support;protocol=htt
 S = "${WORKDIR}/git"
 
 DEPENDS += " \
-    qtbase \
-    qtdeclarative \
-    qtmultimedia \
-    qtwayland \
-    qtwayland-native \
+    qtbase6 \
+    qtdeclarative6 \
+    qtmultimedia6 \
+    qtwayland6 \
+    qtwayland6-native \
     glibc \
     glib-2.0-native \
-    wayland \
+    wayland6 \
     python3-packaging-native \
 "
 

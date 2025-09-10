@@ -11,47 +11,47 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=93e64b4a83c7e441e48bbde
 PR = "r0"
 
 DEPENDS:class-target = " \
-    breeze \
+    breeze6 \
     fontconfig \
     hwdata \
     kcompletion \
-    kconfigwidgets \
+    kconfigwidgets6 \
     kcrash \
-    kdeclarative \
-    kdecoration \
-    kglobalaccel \
-    kglobalacceld \
-    kidletime \
-    knewstuff \
+    kdeclarative6 \
+    kdecoration6 \
+    kglobalaccel6 \
+    kglobalacceld6 \
+    kidletime6 \
+    knewstuff6 \
     knotifications \
-    kpackage \
-    kpackage-native \
-    krunner \
-    kscreenlocker \
-    kservice \
-    ktextwidgets \
-    kwayland \
-    kwin-native \
-    kwindowsystem \
-    kxmlgui \
+    kpackage6 \
+    kpackage6-native \
+    krunner6 \
+    kscreenlocker6 \
+    kservice6 \
+    ktextwidgets6 \
+    kwayland6 \
+    kwin6-native \
+    kwindowsystem6 \
+    kxmlgui6 \
     lcms \
-    libdisplay-info \
-    libinput \
-    libplasma \
+    libdisplay-info6 \
+    libinput6 \
+    libplasma6 \
     libxcb \
     libxcvt \
     pipewire \
-    qtdeclarative \
-    qtsensors \
-    qtwayland-native \
-    wayland \
-    wayland-protocols \
+    qtdeclarative6 \
+    qtsensors6 \
+    qtwayland6-native \
+    wayland6 \
+    wayland6-protocols6 \
     xcb-util-cursor \
 "
 
 DEPENDS:class-native = " \
-    qtbase-native \
-    extra-cmake-modules-native \
+    qtbase6-native \
+    ecm-kf6-native \
 "
 
 SRC_URI:append = " \
@@ -139,7 +139,7 @@ FILES:${PN}-dev += " \
 "
 
 RDEPENDS:${PN}:append:class-target = " \
-    qtwayland-plugins \
+    qtwayland6-plugins \
     xwayland \
     perl \
 "

@@ -19,15 +19,15 @@ inherit kf6-kauth
 inherit mime-xdg
 
 DEPENDS += " \
-    qtbase \
+    qtbase6 \
     libkexiv2 \
     libzip \
-    kirigami \
-    kparts \
-    threadweaver \
-    kwallet \
-    plasma-activities \
-    kpty \
+    kirigami6 \
+    kparts6 \
+    threadweaver6 \
+    kwallet6 \
+    plasma-activities6 \
+    kpty6 \
     phonon \
     poppler \
     purpose \
@@ -95,7 +95,7 @@ FILES:${PN}-desktop = " \
 
 RDEPENDS:${PN} += " \
     ${PN}-shared \
-    kirigami-addons \
+    kirigami6-addons6 \
 "
 
 RDEPENDS:${PN}-desktop += " \

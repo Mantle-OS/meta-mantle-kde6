@@ -14,16 +14,16 @@ S = "${WORKDIR}/git"
 
 DEPENDS += " \
     maliit-framework-qt6 \
-    qtbase \
-    qtdeclarative \
-    qtdeclarative-native \
-    qt5compat \
-    qtmultimedia \
+    qtbase6 \
+    qtdeclarative6 \
+    qtdeclarative6-native \
+    qt5compat6 \
+    qtmultimedia6 \
     glibc \
     hunspell \
     anthy \
-    libpinyin \
-    libchewing \
+    libpinyin6 \
+    libchewing6 \
 "
 
 inherit qt6-cmake

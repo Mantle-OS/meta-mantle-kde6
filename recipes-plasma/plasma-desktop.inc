@@ -15,10 +15,10 @@ LIC_FILES_CHKSUM = " \
 "
 
 DEPENDS += " \
-    kwayland \
-    libplasma \
-    plasma-workspace \
-    qtwayland-native \
+    kwayland6 \
+    libplasma6 \
+    plasma-workspace6 \
+    qtwayland6-native \
     libxkbfile \
 "
 
@@ -60,9 +60,9 @@ INSANE_SKIP:${PN} = "dev-so"
 
 RDEPENDS:${PN} += " \
     gawk \
-    kded \
-    plasma-nano \
-    kirigami \
-    kirigami-addons \
-    qqc2-desktop-style \
+    kded6 \
+    plasma-nano6 \
+    kirigami6 \
+    kirigami6-addons6 \
+    qqc2-desktop-style6 \
 "

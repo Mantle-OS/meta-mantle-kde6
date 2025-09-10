@@ -10,23 +10,23 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=93e64b4a83c7e441e48bbde
 PR = "r0"
 
 DEPENDS = " \
-    attica \
-    karchive \
-    kconfig \
-    kcoreaddons \
+    attica6 \
+    karchive6 \
+    kconfig6 \
+    kcoreaddons6 \
     kcrash \
-    kdbusaddons \
-    kdeclarative \
-    kidletime \
-    kio \
-    kirigami \
-    kitemmodels \
-    knewstuff \
+    kdbusaddons6 \
+    kdeclarative6 \
+    kidletime6 \
+    kio6 \
+    kirigami6 \
+    kitemmodels6 \
+    knewstuff6 \
     knotifications \
-    kxmlgui \
+    kxmlgui6 \
     purpose \
-    qtdeclarative \
-    qtwebview \
+    qtdeclarative6 \
+    qtwebview6 \
 "
 
 inherit cmake_plasma

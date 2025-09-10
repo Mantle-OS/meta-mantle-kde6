@@ -14,11 +14,11 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    qtwayland \
-    qtwayland-native \
-    wayland-native \
-    wayland \
-    wayland-protocols \
+    qtwayland6 \
+    qtwayland6-native \
+    wayland6-native \
+    wayland6 \
+    wayland6-protocols6 \
 "
 
 inherit cmake_plasma

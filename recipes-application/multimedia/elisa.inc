@@ -11,19 +11,19 @@ PR = "r0"
 
 DEPENDS += " \
     baloo \
-    qtbase \
-    qtdeclarative \
-    qtmultimedia \
-    kirigami \
-    kirigami-addons \
-    ki18n \
-    kdeclarative \
-    kfilemetadata \
-    kxmlgui \
-    kconfigwidgets \
+    qtbase6 \
+    qtdeclarative6 \
+    qtmultimedia6 \
+    kirigami6 \
+    kirigami6-addons6 \
+    ki18n6 \
+    kdeclarative6 \
+    kfilemetadata6 \
+    kxmlgui6 \
+    kconfigwidgets6 \
     kcrash \
-    kdbusaddons \
-    qqc2-desktop-style \
+    kdbusaddons6 \
+    qqc2-desktop-style6 \
 "
 
 inherit cmake_kdeapp

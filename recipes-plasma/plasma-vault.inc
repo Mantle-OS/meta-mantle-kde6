@@ -9,14 +9,14 @@ LICENSE = "LGPL-2.1-only & (GPL-2.0-only | GPL-3.0-only | LicenseRef-KDE-Accepte
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    kconfig \
-    kitemmodels \
-    kservice \
-    kio \
-    networkmanager-qt \
-    libplasma \
-    libksysguard \
+    qtbase6 \
+    kconfig6 \
+    kitemmodels6 \
+    kservice6 \
+    kio6 \
+    networkmanager-qt6 \
+    libplasma6 \
+    libksysguard6 \
 "
 
 inherit cmake_plasma

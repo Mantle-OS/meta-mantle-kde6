@@ -22,7 +22,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=fce5baa9b16328f04e2afc29f6e4e882"
 
 S = "${WORKDIR}/git"
 
-PACKAGES = "ttf-noto"
+PACKAGES = "ttf-noto6"
 FONT_PACKAGES = "ttf-noto"
 
 FILES:${PN}  = " ${datadir}/fonts/truetype/ "

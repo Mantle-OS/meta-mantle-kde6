@@ -9,12 +9,12 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-3.0-only.txt;md5=1c76c4cc354acaac30ed4d5
 PR = "r0"
 
 DEPENDS = " \
-    qtdeclarative \
+    qtdeclarative6 \
     syndication \
-    kirigami \
-    kirigami-addons \
-    ki18n \
-    libplasma \
+    kirigami6 \
+    kirigami6-addons6 \
+    ki18n6 \
+    libplasma6 \
 "
 
 inherit cmake_kdeapp

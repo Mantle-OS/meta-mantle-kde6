@@ -14,11 +14,11 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    qtdeclarative \
-    kwayland \
-    kitemmodels \
-    kwindowsystem \
-    libplasma \
+    qtdeclarative6 \
+    kwayland6 \
+    kitemmodels6 \
+    kwindowsystem6 \
+    libplasma6 \
 "
 
 inherit cmake_plasma
@@ -30,8 +30,8 @@ FILES:${PN} += " \
 "
 
 RDEPENDS:${PN} += " \
-    qtdeclarative \
-    plasma-workspace \
-    breeze \
-    qqc2-desktop-style \
+    qtdeclarative6 \
+    plasma-workspace6 \
+    breeze6 \
+    qqc2-desktop-style6 \
 "

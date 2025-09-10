@@ -9,15 +9,15 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-or-later.txt;md5=9e2385fe012386d34dc
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    qtdeclarative \
-    kconfig \
-    kconfig-native \
-    ki18n \
-    kirigami \
-    kirigami-addons \
-    kwindowsystem \
-    kpty \
+    qtbase6 \
+    qtdeclarative6 \
+    kconfig6 \
+    kconfig6-native \
+    ki18n6 \
+    kirigami6 \
+    kirigami6-addons6 \
+    kwindowsystem6 \
+    kpty6 \
 "
 
 inherit cmake_kdeapp
@@ -25,6 +25,6 @@ inherit kf6-kcoreaddons
 inherit mime-xdg
 
 RDEPENDS:${PN} += " \
-    qtdeclarative-qmlplugins \
-    qmltermwidget \
+    qtdeclarative6-qmlplugins \
+    qmltermwidget6 \
 "

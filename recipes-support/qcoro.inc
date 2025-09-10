@@ -9,10 +9,10 @@ LIC_FILES_CHKSUM = "file://LICENSES/MIT.txt;md5=387248cdf922178ee3fdc379e28542dc
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    qtdeclarative \
-    qttools \
-    qttools-native \
+    qtbase6 \
+    qtdeclarative6 \
+    qttools6 \
+    qttools6-native \
 "
 
 SRC_URI = "git://github.com/danvratil/qcoro.git;nobranch=1;protocol=https"

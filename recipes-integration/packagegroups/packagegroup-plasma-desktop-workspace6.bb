@@ -12,7 +12,7 @@ inherit packagegroup features_check
 require plasma-workspace-common.inc
 
 RDEPENDS:${PN} += " \
-    plasma-desktop \
-    plasma-welcome \
-    systemsettings \
+    plasma-desktop6 \
+    plasma-welcome6 \
+    systemsettings6 \
 "

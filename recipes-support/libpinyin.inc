@@ -26,7 +26,7 @@ S = "${WORKDIR}/git"
 DEPENDS = " \
     db \
     glib-2.0 \
-    libpinyin-native \
+    libpinyin6-native \
 "
 DEPENDS:class-native = " \
     db-native \

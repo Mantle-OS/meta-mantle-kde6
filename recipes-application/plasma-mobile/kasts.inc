@@ -10,19 +10,19 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-3.0-or-later.txt;md5=8da5784ab1c72e63ac7
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    qtdeclarative \
-    qtsvg \
-    qtmultimedia \
+    qtbase6 \
+    qtdeclarative6 \
+    qtsvg6 \
+    qtmultimedia6 \
     syndication \
-    ki18n \
+    ki18n6 \
     taglib \
-    threadweaver \
-    networkmanager-qt \
-    qtkeychain \
+    threadweaver6 \
+    networkmanager-qt6 \
+    qtkeychain6 \
     kcolorscheme \
-    kirigami \
-    kirigami-addons \
+    kirigami6 \
+    kirigami6-addons6 \
 "
 
 inherit cmake_kdeapp

@@ -14,7 +14,7 @@ PR = "r0"
 DEPENDS = " \
     libpam \
     libgcrypt \
-    kwallet \
+    kwallet6 \
 "
 
 RDEPENDS:${PN} += "socat"

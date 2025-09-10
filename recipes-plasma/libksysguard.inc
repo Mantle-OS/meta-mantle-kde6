@@ -15,17 +15,17 @@ DEPENDS = " \
     libpcap \
     lmsensors \
     kcompletion \
-    kconfig \
-    kconfigwidgets \
-    kcoreaddons \
-    kiconthemes \
-    knewstuff \
-    kservice \
-    kwidgetsaddons \
-    kwindowsystem \
-    networkmanager-qt \
-    libplasma \
-    qtwebchannel \
+    kconfig6 \
+    kconfigwidgets6 \
+    kcoreaddons6 \
+    kiconthemes6 \
+    knewstuff6 \
+    kservice6 \
+    kwidgetsaddons6 \
+    kwindowsystem6 \
+    networkmanager-qt6 \
+    libplasma6 \
+    qtwebchannel6 \
 "
 
 inherit cmake_plasma

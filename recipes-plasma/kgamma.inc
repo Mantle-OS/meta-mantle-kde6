@@ -9,13 +9,13 @@ LICENSE = "GPL-2.0-or-later"
 PR = "r0"
 
 DEPENDS = " \
-    plasma-wayland-protocols \
-    qtbase \
-    qtwayland \
-    qtwayland-native \
-    wayland-native \
-    wayland \
-    wayland-protocols \
+    plasma-wayland6-protocols6 \
+    qtbase6 \
+    qtwayland6 \
+    qtwayland6-native \
+    wayland6-native \
+    wayland6 \
+    wayland6-protocols6 \
     virtual/egl \
 "
 

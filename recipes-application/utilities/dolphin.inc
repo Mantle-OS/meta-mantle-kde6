@@ -8,24 +8,24 @@ LICENSE = "GPL-2.0-or-later"
 LIC_FILES_CHKSUM = "file://COPYING;md5=5c213a7de3f013310bd272cdb6eb7a24"
 
 DEPENDS += " \
-    kbookmarks \
-    kcodecs \
+    kbookmarks6 \
+    kcodecs6 \
     kcompletion \
-    kconfig \
+    kconfig6 \
     kcrash \
-    kdbusaddons \
-    kguiaddons \
-    ki18n \
-    kiconthemes \
-    kio \
-    knewstuff \
+    kdbusaddons6 \
+    kguiaddons6 \
+    ki18n6 \
+    kiconthemes6 \
+    kio6 \
+    knewstuff6 \
     knotifications \
-    kparts \
-    ktextwidgets \
+    kparts6 \
+    ktextwidgets6 \
     kuserfeedback \
-    kwindowsystem \
+    kwindowsystem6 \
     phonon \
-    solid \
+    solid6 \
 "
 
 inherit cmake_kdeapp

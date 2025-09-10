@@ -10,7 +10,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=3000208d539ec061b899bce1d9ce9404"
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
+    qtbase6 \
 "
 
 SRC_URI = "git://github.com/ksnip/kColorPicker.git;nobranch=1;protocol=https"

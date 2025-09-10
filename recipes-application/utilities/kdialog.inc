@@ -8,12 +8,12 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-or-later.txt;md5=9e2385fe012386d34dc
 PR = "r0"
 
 DEPENDS += " \
-    ktextwidgets \
-    kio \
+    ktextwidgets6 \
+    kio6 \
     knotifications \
-    kguiaddons \
-    kiconthemes \
-    kwindowsystem \
+    kguiaddons6 \
+    kiconthemes6 \
+    kwindowsystem6 \
     kdbusaddons\
 "
 

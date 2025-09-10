@@ -11,8 +11,8 @@ PR = "r0"
 
 DEPENDS += " \
     kcrash \
-    ki18n \
-    kio \
+    ki18n6 \
+    kio6 \
     phonon \
 "
 

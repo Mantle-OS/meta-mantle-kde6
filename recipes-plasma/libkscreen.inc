@@ -16,8 +16,8 @@ LIC_FILES_CHKSUM = " \
 PR = "r0"
 
 DEPENDS = " \
-    qtwayland-native \
-    kwayland \
+    qtwayland6-native \
+    kwayland6 \
 "
 
 inherit cmake_plasma

@@ -12,15 +12,15 @@ PR = "r0"
 DEPENDS += " \
     gpsd \
     kcrash \
-    ki18n \
-    kio \
-    knewstuff \
-    kparts \
+    ki18n6 \
+    kio6 \
+    knewstuff6 \
+    kparts6 \
     phonon \
     protobuf \
     protobuf-native \
-    qtlocation \
-    qtserialport \
+    qtlocation6 \
+    qtserialport6 \
 "
 
 inherit cmake_kdeapp

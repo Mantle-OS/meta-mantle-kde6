@@ -9,17 +9,17 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=9e2385fe012386d34dcc5c9
 PR = "r0"
 
 DEPENDS = " \
-    kconfigwidgets \
-    kdbusaddons \
-    kglobalaccel \
-    kwidgetsaddons \
-    kxmlgui \
-    layer-shell-qt \
-    libkscreen \
-    libplasma \
-    qtdeclarative \
-    qtsensors \
-    qtwayland-native \
+    kconfigwidgets6 \
+    kdbusaddons6 \
+    kglobalaccel6 \
+    kwidgetsaddons6 \
+    kxmlgui6 \
+    layer-shell-qt6-kde6 \
+    libkscreen6 \
+    libplasma6 \
+    qtdeclarative6 \
+    qtsensors6 \
+    qtwayland6-native \
 "
 
 inherit cmake_plasma

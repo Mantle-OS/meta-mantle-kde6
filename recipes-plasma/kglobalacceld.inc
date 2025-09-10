@@ -11,13 +11,13 @@ PR = "r0"
 
 DEPENDS = " \
     kcrash \
-    kdbusaddons \
-    kglobalaccel \
-    kio \
+    kdbusaddons6 \
+    kglobalaccel6 \
+    kio6 \
     knotifications \
-    kservice \
-    kwindowsystem \
-    qtbase \
+    kservice6 \
+    kwindowsystem6 \
+    qtbase6 \
 "
 
 inherit cmake_plasma

@@ -10,13 +10,13 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.1-only.txt;md5=fabba2a3bfeb22a6483d44
 PR = "r0"
 
 DEPENDS = " \
-    qtbase \
-    qtdeclarative \
-    kcoreaddons \
-    kcoreaddons-native \
-    kconfig \
-    kconfig-native \
-    kwindowsystem \
+    qtbase6 \
+    qtdeclarative6 \
+    kcoreaddons6 \
+    kcoreaddons6-native \
+    kconfig6 \
+    kconfig6-native \
+    kwindowsystem6 \
     boost \
 "
 

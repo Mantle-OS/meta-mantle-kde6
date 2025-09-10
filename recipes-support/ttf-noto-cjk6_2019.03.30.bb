@@ -16,7 +16,7 @@ SRC_URI = "git://github.com/googlefonts/noto-cjk.git;protocol=https;nobranch=1"
 SRCREV = "9326451d9b4f32ec7f8640581c5053cc192039f2"
 S = "${WORKDIR}/git"
 
-PACKAGES = "ttf-noto-cjk"
+PACKAGES = "ttf-noto6-cjk6"
 FONT_PACKAGES = "ttf-noto-cjk"
 
 FILES:${PN}  = " ${datadir}/fonts/truetype/ "
