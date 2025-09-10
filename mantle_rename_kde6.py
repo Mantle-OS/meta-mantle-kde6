@@ -287,7 +287,7 @@ def rewrite_content(buf: str, mapping: Dict[str, str]) -> str:
     return "".join(out)
 
 def suffixed_name(old: str) -> str:
-    return OVERRIDE_SUFFIX_MAP.get(old, f"{old}-kde6")
+    return OVERRIDE_SUFFIX_MAP.get(old, f"{old}6")
 
 def new_recipe_filename(src: Path, old: str, new: str) -> Path:
     name = src.name
