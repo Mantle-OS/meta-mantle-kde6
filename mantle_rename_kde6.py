@@ -397,9 +397,8 @@ def main():
 
     # Mmapping from:
     #  - explicit file list (entries)
-    #  - Qt module names from meta-qt6/scripts
-    #  - KF6 names / KDE component names (KF6_NAMES, KDE6_NAMES), defined in meta-kf6
-    #  - EXTRA_NAME_SETS defined in meta-kf6
+    #  - QT_NAMES defined in meta-qt6/scripts
+    #  - KF6_NAMES defined in meta-kf6
     mapping: Dict[str, str] = {}
 
     def add_name(old: str):
@@ -409,24 +408,17 @@ def main():
             return
         mapping[old] = suffixed_name(old)
 
-    # explicit
+    # explicit(find . -name *.bb)
     for e in entries:
         add_name(e.name)
 
-    # meta-qt6/scripts
+    # meta-qt6/scripts/convert-to-new-modules.sh
     for q in QT_NAMES:
         add_name(q.strip())
 
-    # KF6_NAMES KDE6_NAMES
+    # meta-kf6/mantle_rename_kf6.yml
     for k in KF6_NAMES:
         add_name(k.strip())
-    for k in KDE6_NAMES:
-        add_name(k.strip())
-
-    # meta-kf6 & friends
-    for extra_set in EXTRA_NAME_SETS:
-        for nm in extra_set:
-            add_name(nm.strip())
 
     rename_bb_files(entries, mapping, root, delete_file=args.delete_file)
     rename_inc_files(root, mapping)
@@ -439,7 +431,6 @@ def main():
     preview_sets = [
         ("QT_NAMES", QT_NAMES),
         ("KF6_NAMES", KF6_NAMES),
-        ("KDE6_NAMES", KDE6_NAMES),
     ]
     for label, arr in preview_sets:
         shown = 0
