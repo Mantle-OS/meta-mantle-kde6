@@ -176,15 +176,19 @@ OVERRIDE_SUFFIX_MAP: Dict[str, str] = {
     "libdmtx": "libdmtx-kf6",
     "extra-cmake-modules": "ecm-kf6",
     # oddballs
-    "polkit-kde-agent-1": "polkit-kde-agent-1-kde6",
-    "pulseaudio-qt": "pulseaudio-qt6",
+    "layer-shell-qt": "layer-shell-qt6-kde6",
+    "packagekit-qt": "packagekit-qt6-kde6",
+    "polkit-kde-agent-1": "polkit-kde6-agent-1-kde6",
+    "pulseaudio-qt": "pulseaudio-qt6-kde6",
     "xdg-desktop-portal-kde": "xdg-desktop-portal-kde6",
+    "kde-cli-tools": "kde6-cli-tools-kde6",
+    "packagegroup-kde-applications": "packagegroup-applications-kde6",
+    "kdeconnect-kde": "kdeconnect-kde6"
 }
 
 # do NOT rename dirs
 EXCLUDE_DIR_PREFIXES = [
-    "recipes-meta-oe-backports/",
-    "recipes-extragear/"
+    "recipes-meta-oe-backports/"
 ]
 
 # data
