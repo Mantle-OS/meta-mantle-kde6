@@ -177,13 +177,14 @@ OVERRIDE_SUFFIX_MAP: Dict[str, str] = {
     "extra-cmake-modules": "ecm-kf6",
     # oddballs
     "polkit-kde-agent-1": "polkit-kde-agent-1-kde6",
-    "libreoffice-dictionaries": "libreoffice-dictionaries-kde6"
+    "pulseaudio-qt": "pulseaudio-qt6",
+    "xdg-desktop-portal-kde": "xdg-desktop-portal-kde6",
 }
 
 # do NOT rename dirs
 EXCLUDE_DIR_PREFIXES = [
     "recipes-meta-oe-backports/",
-    "extragear/"
+    "recipes-extragear/"
 ]
 
 # data
