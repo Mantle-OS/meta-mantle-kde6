@@ -1,7 +1,35 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: 2018-2020 Volker Krause <vkrause@kde.org>
+# SPDX-FileCopyrightText: 2019 Alistair Francis <alistair.francis@wdc.com>
+#
+# SPDX-License-Identifier: MIT
 
-require ${PN}.inc
+DESCRIPTION = "Plasma Integration"
+HOMEPAGE = ""
+LICENSE = "LGPL-2.0-only"
+LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.0-only.txt;md5=da48810c4ddf8e49efa031294a26b98c"
+PR = "r0"
+
+inherit cmake_plasma
+
 SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/plasma-integration-6.4.4.tar.xz"
 SRC_URI[sha256sum] = "0d384ff9528d7fe7fd474d01008b256806e0c6cf0e79ccc81f34a08dbc449b2f"
 
+DEPENDS = " \
+    kconfig6 \
+    kconfigwidgets6 \
+    kiconthemes6 \
+    kio6 \
+    knotifications6 \
+    kstatusnotifieritem6 \
+    kwayland6 \
+    kwidgetsaddons6 \
+    kwindowsystem6 \
+    breeze6 \
+    libxcursor \
+    qtdeclarative6 \
+    qtwayland6-native \
+"
+
+RDEPENDS:${PN} += " perl"

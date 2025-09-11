@@ -17,9 +17,9 @@ IMAGE_INSTALL += " \
     ${CORE_IMAGE_BASE_INSTALL} \
     wayland \
     dbus \
-    sddm \
-    sddm-config-plasma-bigscreen \
-    packagegroup-plasma-bigscreen-workspace \
+    sddm6 \
+    sddm-config-plasma-bigscreen6 \
+    packagegroup-plasma-bigscreen-workspace6 \
 "
 
 SYSTEMD_DEFAULT_TARGET="graphical.target"

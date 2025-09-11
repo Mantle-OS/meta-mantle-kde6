@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: 2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
-
 SUMMARY = "Layer Shell Qt"
 DESCRIPTION = "Qt component to allow applications to make use of the Wayland wl-layer-shell protocol"
 HOMEPAGE = "https://invent.kde.org/plasma/layer-shell-qt"
@@ -13,15 +12,18 @@ LIC_FILES_CHKSUM = " \
 "
 PR = "r0"
 
+inherit cmake_plasma
+
+SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/layer-shell-qt-6.4.4.tar.xz"
+SRC_URI[sha256sum] = "84b31a3e73b150fa611fb51150987600eddd0edc578888e953e7fd37f550643d"
+
 DEPENDS = " \
-    qtwayland6 \
-    qtwayland6-native \
-    wayland6-native \
-    wayland6 \
-    wayland6-protocols6 \
+    qtwayland6 qtwayland6-native \
+    wayland-native \
+    wayland \
+    wayland-protocols \
 "
 
-inherit cmake_plasma
 
 FILES:${PN} += " \
     ${libdir}/qml/org/kde/layershell/* \

@@ -1,1 +1,2 @@
+# # FIXME LICENSE CHECK
 PACKAGECONFIG:append = " ffmpeg"
