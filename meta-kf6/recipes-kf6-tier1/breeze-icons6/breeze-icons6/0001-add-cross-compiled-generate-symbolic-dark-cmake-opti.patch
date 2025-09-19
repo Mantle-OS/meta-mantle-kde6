@@ -1,0 +1,45 @@
+From 09a349b6bc645be38834ba0dac72139783521552 Mon Sep 17 00:00:00 2001
+From: Joseph Mills <josephjamesmills@gmail.com>
+Date: Sun, 14 Sep 2025 04:40:48 +0000
+Subject: [PATCH] add cross compiled generate-symbolic-dark cmake option
+
+Signed-off-by: Joseph Mills <josephjamesmills@gmail.com>
+---
+ CMakeLists.txt            | 7 +++++++
+ icons-dark/CMakeLists.txt | 2 +-
+ 2 files changed, 8 insertions(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f3f1bf9..491cddb 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -65,6 +65,13 @@ else()
+     set(WITH_ICON_GENERATION OFF)
+ endif()
+ 
++## allow for  passing in the native vs target in yocto land else fall back to this target
++set(GEN_SYM_DARK_EXE "" CACHE STRING "Path to generate-symbolic-dark executable (native host tool)")
++if(NOT GEN_SYM_DARK_EXE)
++    set(GEN_SYM_DARK_EXE $<TARGET_FILE:generate-symbolic-dark>)
++endif()
++
++
+ add_feature_info("Icon generation" ${WITH_ICON_GENERATION} "for 24x24 and symbolic dark icons.
+    This feature requires Python 3 and the lxml Python 3 module."
+ ) # The exact amount of indentation used in the line(s) above is intentional
+diff --git a/icons-dark/CMakeLists.txt b/icons-dark/CMakeLists.txt
+index 567a7b1..43f0e9c 100644
+--- a/icons-dark/CMakeLists.txt
++++ b/icons-dark/CMakeLists.txt
+@@ -15,7 +15,7 @@ if(WITH_ICON_GENERATION)
+     # No trainling slashes on dirs. It will break scripts.
+     add_custom_target(breeze-generate-symbolic-dark ALL
+         COMMENT "Generating symbolic dark icons"
+-        COMMAND $<TARGET_FILE:generate-symbolic-dark> ${CMAKE_SOURCE_DIR}/icons ${ICON_GEN_DIR}
++        COMMAND "${GEN_SYM_DARK_EXE}" ${CMAKE_SOURCE_DIR}/icons ${ICON_GEN_DIR}
+     )
+     # Auto-generate 24px monochrome icons from 22px versions
+     add_custom_target(breeze-generate-24px-versions-dark ALL
+-- 
+2.51.0
+

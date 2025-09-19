@@ -1,0 +1,29 @@
+From 593c00ffc7fa1bf44f33b6247f9eedd6660af586 Mon Sep 17 00:00:00 2001
+From: JosephMillsAtWork <josephjamesmills@gmail.com>
+Date: Tue, 16 Sep 2025 03:02:43 +0000
+Subject: [PATCH] error-when-no-py-native-fix
+
+Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+---
+ cmake/KF6I18nMacros.cmake.in | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/cmake/KF6I18nMacros.cmake.in b/cmake/KF6I18nMacros.cmake.in
+index d9c7c96..f4c77ac 100644
+--- a/cmake/KF6I18nMacros.cmake.in
++++ b/cmake/KF6I18nMacros.cmake.in
+@@ -8,7 +8,10 @@ find_package(Gettext REQUIRED)
+ # solution if it cannot be found in $PATH when building applications.
+ find_program(KI18N_PYTHON_EXECUTABLE NAMES python3 python2 python)
+ if(NOT KI18N_PYTHON_EXECUTABLE)
+-    set(KI18N_PYTHON_EXECUTABLE "@FALLBACK_KI18N_PYTHON_EXECUTABLE@")
++    message(FATAL_ERROR
++        "KI18N: Python 3 interpreter not found in PATH.\n"
++        "Install python3 or configure CMake with "
++        "-DKI18N_PYTHON_EXECUTABLE=/full/path/to/python3")
+ endif()
+ 
+ set(_ki18n_pmap_compile_script ${CMAKE_CURRENT_LIST_DIR}/ts-pmap-compile.py)
+-- 
+2.51.0
+
