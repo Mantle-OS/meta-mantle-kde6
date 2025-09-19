@@ -10,6 +10,7 @@ PR = "r0"
 
 def kde6_rs_real_name(d, name=None):
     override_map = {
+        "libkexiv2-kf6" : "libkexiv2",
     }
 
     bpn = name or d.getVar("BPN") or ""
@@ -20,11 +21,11 @@ def kde6_rs_real_name(d, name=None):
     return bpn
 
 
-SRC_URI ?= "${KDE6_RS_MIRROR}/${@kde6_rs_real_name(d)}-${KDE6_RS_VERSION}.tar.xz;name=${BPN}"
+SRC_URI = "${KDE6_RS_MIRROR}/${@kde6_rs_real_name(d)}-${KDE6_RS_VERSION}.tar.xz;name=${BPN}"
 S = "${WORKDIR}/${@kde6_rs_real_name(d)}-${KDE6_RS_VERSION}"
 
 DEPENDS:append = " \
-    kpackage-native \
+    kpackage6-native \
 "
 
 PACKAGECONFIG:append = " \

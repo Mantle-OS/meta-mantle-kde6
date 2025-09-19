@@ -12,7 +12,7 @@ inherit rs6
 inherit systemd
 
 PACKAGECONFIG:append = " \
-    kconfig 
+    kconfig \ 
     kcoreaddons \
     ki18n \
 "

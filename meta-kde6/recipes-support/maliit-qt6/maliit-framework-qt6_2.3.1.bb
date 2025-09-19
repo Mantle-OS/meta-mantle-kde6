@@ -10,7 +10,7 @@ LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://LICENSE.LGPL;md5=5c917f6ce94ceb8d8d5e16e2fca5b9ad"
 
 inherit kde6-cmake kde6-packaging
-inherit featuires_check
+inherit features_check
 
 ## FIXME support x11 ??
 REQUIRED_DISTRO_FEATURES = "wayland"

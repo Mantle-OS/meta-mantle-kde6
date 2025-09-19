@@ -8,7 +8,6 @@
 SUMMARY = "Abstraction to system policy and authentication features"
 HOMEPAGE = "https://api.kde.org/frameworks/kauth/html/index.html"
 LICENSE = "LGPL-2.0-or-later & LGPL-2.1-or-later & BSD-3-Clause"
-PR = "r0"
 
 inherit kf6
 

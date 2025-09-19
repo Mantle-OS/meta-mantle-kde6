@@ -12,4 +12,6 @@ LICENSE = "BSD-3-Clause & GPL-2.0-or-later"
 
 inherit rs6
 
-DEPENDS:append = " exiv2"
+DEPENDS:append = " \
+    exiv2 \
+"

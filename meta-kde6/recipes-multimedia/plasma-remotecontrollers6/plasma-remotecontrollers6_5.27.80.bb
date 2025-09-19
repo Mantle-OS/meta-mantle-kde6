@@ -11,28 +11,24 @@ LIC_FILES_CHKSUM = " \
     file://LICENSES/GPL-3.0-only.txt;md5=1c76c4cc354acaac30ed4d5eefea7245 \
     file://LICENSES/LicenseRef-KDE-Accepted-GPL.txt;md5=b4c280013bbbadfbe92219498dc5228c \
 "
-PR = "r0"
 
-inherit cmake_plasma
-inherit mime-xdg
+inherit plasma6
 
-SRCREV = "16d347453db2d03f158994b5c1dd2de0eea15772"
 SRC_URI = "git://invent.kde.org/plasma-bigscreen/${BPN};nobranch=1;protocol=https"
+SRCREV = "16d347453db2d03f158994b5c1dd2de0eea15772"
 S = "${WORKDIR}/git"
 
-DEPENDS = " \
+PACKAGECONFIG:append = " \
+    kcoreaddons \
+"
+
+DEPENDS:append = " \
     kirigami6 \
     solid6 \
-    kcoreaddons6 \
     kdeclarative6 \
     knotifications6 \
     kpackage6 \
     kwindowsystem6 \
     plasma-workspace6 \
     qtwayland6 qtwayland6-native \
-"
-
-FILES:${PN} += " \
-    ${datadir}/kpackage/kcms/kcm_mediacenter_remotecontrollers/* \
-    ${libdir}/qml/org/kde/plasma/remotecontrollers/* \
 "

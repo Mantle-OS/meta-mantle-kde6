@@ -15,7 +15,7 @@ LIC_FILES_CHKSUM = " \
     file://LICENSES/LGPL-3.0-only.txt;md5=8d51f5b5fd447f7a1040c3dc9f0a8de6 \
     file://LICENSES/LicenseRef-KDE-Accepted-GPL.txt;md5=b4c280013bbbadfbe92219498dc5228c \
 "
-inherit plasma
+inherit plasma6
 
 DEPENDS:append = " \
     kwayland6 \

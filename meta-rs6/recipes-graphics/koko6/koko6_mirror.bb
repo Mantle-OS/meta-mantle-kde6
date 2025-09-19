@@ -11,6 +11,10 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.1-only.txt;md5=fabba2a3bfeb22a6483d44
 
 inherit rs6
 
+SRC_URI:append = " git://invent.kde.org/packaging/geonames-data.git;prototol=https;name=geodata;nobranch=1;destsuffix=geonames-data"
+SRCREV_geodata = "608af80ddf04265496eccd0c63b2945042cdccdc"
+
+
 PACKAGECONFIG:append = " \
     kconfig \
     kcoreaddons \
@@ -42,7 +46,7 @@ RDEPENDS:${PN} += " \
 KOKO_CITIES1000 = "cities1000.zip"
 KOKO_ADMIN1CODES = "admin1CodesASCII.txt"
 KOKO_ADMIN2CODES = "admin2Codes.txt"
-SRC_URI:append = " git://invent.kde.org/packaging/geonames-data.git;prototol=https;name=geodata;nobranch=1;destsuffix=geonames-data;rev=608af80ddf04265496eccd0c63b2945042cdccdc"
+
 
 # To build Koko, it is required to import a few files from outside
 # this repository. These files are licensed under the CC-BY-4.0 and

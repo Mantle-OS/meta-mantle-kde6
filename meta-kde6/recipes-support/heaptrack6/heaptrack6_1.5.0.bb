@@ -9,7 +9,7 @@ HOMEPAGE = "https://invent.kde.org/sdk/heaptrack"
 LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.1-only.txt;md5=41890f71f740302b785c27661123bff5"
 
-inherit kde-cmake
+inherit kde6-cmake
 
 SRC_URI = " \
     git://invent.kde.org/sdk/heaptrack;nobranch=1;protocol=https \
@@ -18,7 +18,7 @@ SRC_URI = " \
 SRCREV = "b54e92e88b0895f910a5b107f499d1155a086b80"
 S = "${WORKDIR}/git"
 
-DEPENDS = " \
+DEPENDS:append = " \
     zlib \
     boost \
     libunwind \

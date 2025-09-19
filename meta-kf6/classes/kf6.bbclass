@@ -1,8 +1,8 @@
-inherit ${@bb.utils.contains('PACKAGECONFIG','ki18n', ' gettext  kde6-ecm kf6-checksums', ' kde6-ecm kf6-checksums',d)}
-
 inherit kde6-ecm 
+
 inherit kf6-checksums
 inherit kf6-packageconfig
+inherit ${@bb.utils.contains('PACKAGECONFIG','ki18n', ' gettext  kde6-ecm kf6-checksums', ' kde6-ecm kf6-checksums',d)}
 
 KF6_MODULE ?= "${BPN}"
 PV = "${KDE6_KF6_VERSION}"
@@ -29,7 +29,8 @@ def kf6_real_name(d, name=None):
         return bpn[:-1]
     return bpn
 
-SRC_URI ?= "${KDE6_KF6_MIRROR}/${@kf6_real_name(d)}-${KDE6_KF6_VERSION}.tar.xz;name=${BPN}"
+SRC_URI = "${KDE6_KF6_MIRROR}/${@kf6_real_name(d)}-${KDE6_KF6_VERSION}.tar.xz;name=${BPN}"
+
 S = "${WORKDIR}/${@kf6_real_name(d)}-${KDE6_KF6_VERSION}"
 
 # remove self

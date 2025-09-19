@@ -12,7 +12,7 @@ LIC_FILES_CHKSUM = " \
 
 inherit rs6
 
-PACKAGECONFIG:append  " \
+PACKAGECONFIG:append = " \
     ki18n \
 " 
 
