@@ -4,7 +4,6 @@
 # SPDX-FileCopyrightText: 2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
-
 DESCRIPTION = "Plasma PA"
 HOMEPAGE = ""
 LICENSE = "BSD-3-Clause & GPL-2.0-only"
@@ -18,22 +17,17 @@ LIC_FILES_CHKSUM = " \
     file://LICENSES/LicenseRef-KDE-Accepted-GPL.txt;md5=b4c280013bbbadfbe92219498dc5228c \
     file://LICENSES/LicenseRef-KDE-Accepted-LGPL.txt;md5=e4b79a181b6483b37d39a27f4d75e60a \
 "
-PR = "r0"
 
-inherit cmake_plasma
-inherit kf6-kdoctools
+inherit plasma6
 
-SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/plasma-pa-6.4.4.tar.xz"
-SRC_URI[sha256sum] = "2e18bb284a1cba07e43b19ae7a192b574aaef94bc635d751d1eb21fcd569ca8a"
-
-DEPENDS += " \
-    kcoreaddons6 \
+DEPENDS:append = " \
     kdeclarative6 \
     kglobalaccel6 \
     kstatusnotifieritem6 \
     ksvg6 \
     libplasma6 \
     pulseaudio-qt6-kde6 \
+    \
     pulseaudio \
     libcanberra \
     qtdeclarative6 \
@@ -42,15 +36,5 @@ DEPENDS += " \
 RDEPENDS:${PN} += " \
     libcanberra-alsa \
     libcanberra-pulse \
+    perl \
 "
-
-
-FILES:${PN} += " \
-    ${libdir}/qml/org/kde/plasma/private/volume/* \
-    ${libdir}/plugins/plasma/kcms/systemsettings/kcm_pulseaudio.so \
-    ${datadir}/kpackage/kcms/kcm_pulseaudio \
-    ${datadir}/plasma/plasmoids/org.kde.plasma.volume \
-    ${datadir}/kde4/apps/kconf_update/* \
-"
-
-RDEPENDS:${PN} += "perl"

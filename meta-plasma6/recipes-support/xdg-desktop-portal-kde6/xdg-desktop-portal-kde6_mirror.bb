@@ -4,7 +4,6 @@
 # SPDX-FileCopyrightText: 2020-2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
-
 DESCRIPTION = "XDG Desktop Portal KDE"
 HOMEPAGE = ""
 LICENSE = "LGPL-2.1-only & GPL-2.0-or-later"
@@ -15,13 +14,10 @@ LIC_FILES_CHKSUM = " \
     file://LICENSES/LGPL-3.0-only.txt;md5=8d51f5b5fd447f7a1040c3dc9f0a8de6 \
     file://LICENSES/LicenseRef-KDE-Accepted-LGPL.txt;md5=e4b79a181b6483b37d39a27f4d75e60a \
 "
-PR = "r0"
 
-SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/xdg-desktop-portal-kde-6.4.4.tar.xz"
-SRC_URI[sha256sum] = "dcd501b11a785c0b0f0b30bf1d09ba120d83885276841c47feed51d77e1440a5"
-inherit cmake_plasma
+inherit plasma6
 
-DEPENDS += " \
+DEPENDS:append = " \
     kcoreaddons6 \
     knotifications \
     kwayland6 \
@@ -35,9 +31,6 @@ DEPENDS += " \
     qtwayland6-native \
 "
 
-FILES:${PN} += " \
-    ${datadir}/xdg-desktop-portal \
-"
 RDEPENDS:${PN} += " \
     xdg-desktop-portal \
 "

@@ -4,17 +4,14 @@
 # SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
-
 DESCRIPTION = "Bluedevil"
 HOMEPAGE = ""
 LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=93e64b4a83c7e441e48bbdeeea05c977"
 
+inherit plasma6
 
-inherit cmake_plasma
-SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/bluedevil-6.4.4.tar.xz"
-SRC_URI[sha256sum] = "7e5d386a7c42a1b4ef00e79469c8f47300944c9c42023647f2efd3a12ecc3175"
-DEPENDS = " \
+DEPENDS:append = " \
     bluez-qt6 \
     kcoreaddons6 \
     kdbusaddons6 \
@@ -27,18 +24,5 @@ DEPENDS = " \
     kwindowsystem6 \
     libplasma6 \
     qtdeclarative6 \
-    shared-mime-info \
-    shared-mime-info-native \
-"
-
-
-
-FILES:${PN} += " \
-    ${datadir}/bluedevilwizard \
-    ${datadir}/kpackage/kcms/ \
-    ${datadir}/mime/packages \
-    ${datadir}/plasma \
-    ${datadir}/remoteview \
-    ${libdir}/qml \
-    ${libdir}/plugins/plasma/kcms/systemsettings/ \
+    shared-mime-info shared-mime-info-native \
 "

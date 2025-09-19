@@ -19,10 +19,7 @@ LIC_FILES_CHKSUM = " \
 "
 PR = "r0"
 
-inherit cmake_plasma
-
-SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/plasma-mobile-6.4.4.tar.xz"
-SRC_URI[sha256sum] = "8481ca63a93575fa443248be0b86e0536f4452538479cddfa6cf958e0f9112f1"
+inherit plasma6
 
 DEPENDS += " \
     kdbusaddons6 \
@@ -39,39 +36,6 @@ DEPENDS += " \
     plasma-workspace6 \
     qcoro6 \
     qtwayland6 qtwayland6-native \
-"
-
-
-FILES:${PN} += " \
-    ${datadir}/kpackage/genericqml/org.kde.phone.dialer/* \
-    ${datadir}/kpackage/kcms/kcm_mobileshell/* \
-    ${datadir}/kwin/effects/* \
-    ${datadir}/kwin/scripts/* \
-    ${datadir}/plasma/layout-templates \
-    ${datadir}/plasma/look-and-feel/* \
-    ${datadir}/plasma/mobileinitialstart \
-    ${datadir}/plasma/plasmoids/* \
-    ${datadir}/plasma/quicksettings/* \
-    ${datadir}/plasma/shells/org.kde.plasma.mobileshell/* \
-    ${datadir}/telepathy/clients/Plasma.Dialer.client \
-    ${datadir}/wallpapers/org.kde.plasma.phone.lockers/* \
-    ${datadir}/wayland-sessions/*.desktop \
-    ${datadir}/plasma-mobile-apn-info \
-    ${libdir}/plugins/kwin/effects/plugins/* \
-    ${libdir}/plugins/plasma/kcms/systemsettings/* \
-    ${libdir}/qml/QtQuick/VirtualKeyboard/Styles/Plasma/* \
-    ${libdir}/qml/org/kde/plasma/mm/* \
-    ${libdir}/qml/org/kde/plasma/mobileinitialstart/* \
-    ${libdir}/qml/org/kde/plasma/private/kpeoplehelper/* \
-    ${libdir}/qml/org/kde/plasma/private/mobilehomescreencomponents/* \
-    ${libdir}/qml/org/kde/plasma/private/mobileshell/* \
-    ${libdir}/qml/org/kde/plasma/quicksetting/flashlight/* \
-    ${libdir}/qml/org/kde/plasma/quicksetting/nightcolor/* \
-    ${libdir}/qml/org/kde/plasma/quicksetting/powermenu/* \
-    ${libdir}/qml/org/kde/plasma/quicksetting/record/* \
-    ${libdir}/qml/org/kde/plasma/quicksetting/screenrotation/* \
-    ${libdir}/qml/org/kde/plasma/quicksetting/screenshot/* \
-    ${libdir}/qml/org/kde/private/mobile/homescreen/* \
 "
 
 RDEPENDS:${PN} += " \

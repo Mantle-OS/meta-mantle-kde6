@@ -4,7 +4,6 @@
 # SPDX-FileCopyrightText: 2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
-
 DESCRIPTION = "KDE Cli Tools"
 HOMEPAGE = ""
 LICENSE = "GPL-2.0-or-later & LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL) & (GPL-2.0-only | GPL-3.0-only | LicenseRef-KDE-Accepted-GPL) & LGPL-2.0-only & Artistic-2.0"
@@ -20,14 +19,10 @@ LIC_FILES_CHKSUM = " \
     file://LICENSES/LicenseRef-KDE-Accepted-GPL.txt;md5=b4c280013bbbadfbe92219498dc5228c \
     file://LICENSES/LicenseRef-KDE-Accepted-LGPL.txt;md5=e4b79a181b6483b37d39a27f4d75e60a \
 "
-PR = "r0"
-inherit cmake_plasma
-inherit mime-xdg
 
-SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/kde-cli-tools-6.4.4.tar.xz"
-SRC_URI[sha256sum] = "1cd1e21cacc1c73f4a25d5e98f3fbe8425ba8f2faa13e4aad83030cbf21fcf4c"
+inherit plasma6
 
-DEPENDS = " \
+DEPENDS:append = " \
     qtsvg6 \
     kconfig6 \
     kiconthemes6 \
@@ -40,11 +35,4 @@ DEPENDS = " \
     plasma-workspace6 \
 "
 
-
-FILES:${PN} += " \
-    ${libdir}/plugins/plasma/kcms/systemsettings_qwidgets/kcm_filetypes.so \
-    ${datadir}/zsh/site-functions/_kde-inhibit \
-"
-
 FILES_SOLIBSDEV = ""
-

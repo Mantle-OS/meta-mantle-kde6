@@ -9,12 +9,10 @@ DESCRIPTION = "KSysGuard library"
 HOMEPAGE = ""
 LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.1-only.txt;md5=147a320ed8b16b036829a0c71d424153"
-PR = "r0"
-inherit cmake_plasma
 
-SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/libksysguard-6.4.4.tar.xz"
-SRC_URI[sha256sum] = "f12fd2e11d2d504d57556cb520a442ed9660f59c7d4b1fbbb17bee02eba0fb2f"
-DEPENDS = " \
+inherit plasma6
+
+DEPENDS:append = " \
     libnl \
     libcap \
     libpcap \

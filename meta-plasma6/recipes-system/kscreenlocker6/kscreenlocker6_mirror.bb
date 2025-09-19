@@ -4,17 +4,12 @@
 # SPDX-FileCopyrightText: 2020-2023 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
-
 DESCRIPTION = "KScreenLocker"
 HOMEPAGE = "https://invent.kde.org/plasma/kscreenlocker"
 LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
-PR = "r0"
 
-inherit cmake_plasma
-
-SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/kscreenlocker-6.4.4.tar.xz"
-SRC_URI[sha256sum] = "5cc1dd23be325f1ddcf005556f0ac14077789524aa0b3e1e83b97ff77d4932a8"
+inherit plasma6
 
 DEPENDS = " \
     qtdeclarative6 \
@@ -42,7 +37,6 @@ SRC_URI:append = " \
     file://kscreenlockerrc \
     file://kscreensaverrc \
 "
-
 
 do_install:append() {
     # compatibility workaround for Yocto versions older than Styhead

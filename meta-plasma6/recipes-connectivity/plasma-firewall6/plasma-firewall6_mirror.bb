@@ -3,21 +3,15 @@
 # SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
-
 DESCRIPTION = "Plasma Firewall"
 SUMMARY = "Control Panel for your system firewall"
 HOMEPAGE = "https://invent.kde.org/plasma/plasma-firewall"
 LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=93e64b4a83c7e441e48bbdeeea05c977"
-PR = "r0"
 
-inherit cmake_plasma
-inherit mime-xdg
+inherit plasma6
 
-SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/plasma-firewall-6.4.4.tar.xz"
-SRC_URI[sha256sum] = "6b7b29043d8b0979da99f92ed7f9db9074b8da42d025c3ed497f2df862898842"
-
-DEPENDS = " \
+DEPENDS:append = " \
     kconfig6 \
     kcoreaddons6 \
     kcmutils6 \

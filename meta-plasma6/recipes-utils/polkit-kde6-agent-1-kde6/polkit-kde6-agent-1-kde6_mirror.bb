@@ -7,18 +7,13 @@ DESCRIPTION = "KDE Polkit Agent"
 HOMEPAGE = ""
 LICENSE = "GPL-2.0-or-later"
 LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-or-later.txt;md5=9e2385fe012386d34dcc5c9863070881"
-PR = "r0"
 
-inherit cmake_plasma
+inherit plasma6
 
-SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/polkit-kde-agent-1-6.4.4.tar.xz"
-SRC_URI[sha256sum] = "2c218f4e66f5f933b9cdd0c6886f53625a2bf7f1c8df64bb485835ae72877e3d"
-
-DEPENDS = " \
+DEPENDS:append = " \
     kwindowsystem6 \
     kdbusaddons6 \
     kwidgetsaddons6 \
-    kcoreaddons6 \
     kcrash6 \
     kiconthemes6 \
     polkit-qt-16 \

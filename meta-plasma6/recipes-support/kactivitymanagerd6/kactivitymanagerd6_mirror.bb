@@ -5,17 +5,14 @@
 # SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
-
 DESCRIPTION = "KActivity Manager Daemon"
 HOMEPAGE = ""
 LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=93e64b4a83c7e441e48bbdeeea05c977"
 
-inherit cmake_plasma
+inherit plasma6
 
-SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/kactivitymanagerd-6.4.4.tar.xz"
-SRC_URI[sha256sum] = "38f24d9529810495db1a2d0f102a89885d22813f131fb6453b79d898bfcbe2a4"
-DEPENDS = " \
+DEPENDS:append = " \
     boost \
     kconfig6 \
     kcoreaddons6 \
@@ -38,13 +35,4 @@ EXTRA_OECMAKE += " \
     -DHAVE_CXX11_UNIQUE_PTR=ON \
     -DHAVE_CXX11_VARIADIC_TEMPLATES=ON \
     -DHAVE_CXX11_INITIALIZER_LISTS=ON \
-"
-
-FILES:${PN} += " \
-    ${libdir}/*.so \
-    ${datadir}/krunner/dbusplugins/plasma-runnners-activities.desktop \
-"
-
-FILES:${PN}-dev = " \
-    ${datadir}/qlogging-categories5 \
 "

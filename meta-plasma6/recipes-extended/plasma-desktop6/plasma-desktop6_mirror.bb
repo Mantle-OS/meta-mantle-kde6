@@ -15,12 +15,9 @@ LIC_FILES_CHKSUM = " \
     file://LICENSES/LGPL-3.0-only.txt;md5=8d51f5b5fd447f7a1040c3dc9f0a8de6 \
     file://LICENSES/LicenseRef-KDE-Accepted-GPL.txt;md5=b4c280013bbbadfbe92219498dc5228c \
 "
-inherit cmake_plasma
+inherit plasma
 
-SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/plasma-desktop-6.4.4.tar.xz"
-SRC_URI[sha256sum] = "4d70b9bf99f59b3bdea7b8240a0b7df803bd16c0ae9cc534ca3617a9f9c54013"
-
-DEPENDS += " \
+DEPENDS:append = " \
     kwayland6 \
     libplasma6 \
     plasma-workspace6 \
@@ -35,31 +32,6 @@ EXTRA_OECMAKE += " \
     -DBUILD_KCM_TABLET=OFF \
 "
 
-FILES:${PN} += " \
-    ${datadir}/plasma/desktoptheme/* \
-    ${datadir}/plasma/emoji/* \
-    ${datadir}/plasma/plasmoids/* \
-    ${datadir}/plasma/packages/* \
-    ${datadir}/plasma/services/* \
-    ${datadir}/plasma/layout-templates/* \
-    ${datadir}/plasma/shells/org.kde.plasma.desktop/* \
-    ${datadir}/solid/devices/* \
-    ${datadir}/kglobalaccel/* \
-    ${datadir}/kcmkeys/* \
-    ${datadir}/kcmmouse/* \
-    ${datadir}/kcmsolidactions/* \
-    ${datadir}/kcm_recentFiles/* \
-    ${datadir}/sddm/themes/breeze/* \
-    ${libdir}/qml/org/kde/plasma/activityswitcher/* \
-    ${libdir}/qml/org/kde/plasma/emoji/* \
-    ${libdir}/qml/org/kde/plasma/private/pager/* \
-    ${libdir}/qml/org/kde/plasma/private/taskmanager/* \
-    ${libdir}/qml/org/kde/plasma/private/kimpanel/* \
-    ${libdir}/qml/org/kde/plasma/private/trash/* \
-    ${libdir}/qml/org/kde/plasma/private/showdesktop/* \
-    ${libdir}/qml/org/kde/plasma/private/kcm_keyboard/* \
-    ${libdir}/qml/org/kde/private/desktopcontainment/* \
-"
 
 INSANE_SKIP:${PN} = "dev-so"
 

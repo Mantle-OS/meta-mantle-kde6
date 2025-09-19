@@ -1,10 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-
-require ${PN}.inc
-SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/kwin-6.4.4.tar.xz"
-SRC_URI[sha256sum] = "b0742a12133b052519cb5af09132114ebf4d96b44e320015cc0d2d0bf055dae6"
-
 # SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
 # SPDX-FileCopyrightText: 2018 Alistair Francis <alistair.francis@wdc.com>
 # SPDX-FileCopyrightText: 2020-2022 Andreas Cord-Landwehr <cordlandwehr@kde.org>
@@ -15,9 +8,11 @@ DESCRIPTION = "KWin"
 HOMEPAGE = ""
 LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=93e64b4a83c7e441e48bbdeeea05c977"
-PR = "r0"
+
+inherit plasma6
 
 DEPENDS:class-target = " \
+    kcmutils6 \
     breeze6 \
     kcompletion6 \
     kconfigwidgets6 \
@@ -75,75 +70,22 @@ EXTRA_OECMAKE:append:class-target = " \
     -DBUILD_TESTING=OFF \
 "
 
-inherit kf6-kauth
-inherit kf6-kcmutils
-inherit kf6-kconfig
-inherit kf6-kdoctools
-inherit qt6-cmake
-inherit pkgconfig
+
+PACKAGECONFIG:append = " \
+    kauth \
+    kconfig \
+    kdoctools \
+"
 # TODO skip inherit of cmake_plasma for now because it leads to build errors for native package
-
 do_install:append() {
-    # compatibility workaround for Yocto versions older than Styhead
-    [ -z ${UNPACKDIR+x} ] && UNPACKDIR=${WORKDIR}
-
     # dirty workaround for aurora crash on Wayland
     rm -rf ${D}/${libdir}/plugins/org.kde.kdecoration2/
 
     install -d ${D}/${sysconfdir}/xdg
-    install -m 644 ${UNPACKDIR}/kwinrc ${D}/${sysconfdir}/xdg/kwinrc
+    install -m 644 ${WORKDIR}/kwinrc ${D}/${sysconfdir}/xdg/kwinrc
 }
 
 FILES_SOLIBSDEV = ""
-FILES:${PN} += " \
-    ${datadir}/config.kcfg/*.kcfg \
-    ${datadir}/icons/hicolor \
-    ${datadir}/kconf_update/* \
-    ${datadir}/knotifications6/*.notifyrc \
-    ${datadir}/knsrcfiles/* \
-    ${datadir}/kpackage \
-    ${datadir}/krunner/dbusplugins/*.desktop \
-    ${datadir}/kservices6/*.desktop \
-    ${datadir}/kservices6/kwin/*.desktop \
-    ${datadir}/kservicetypes6/*.desktop \
-    ${datadir}/kwincompositing/qml/*.qml \
-    ${datadir}/kwin-wayland \
-    ${datadir}/qlogging-categories6 \
-    ${libdir}/kconf_update_bin/kwin-6.0-delete-desktop-switching-shortcuts \
-    ${libdir}/kconf_update_bin/kwin-6.0-remove-breeze-tabbox-default \
-    ${libdir}/kconf_update_bin/kwin-6.0-reset-active-mouse-screen \
-    ${libdir}/kconf_update_bin/kwin-6.1-remove-gridview-expose-shortcuts \
-    ${libdir}/kconf_update_bin/kwin5_update_default_rules \
-    ${libdir}/plugins/*.so \
-    ${libdir}/plugins/kf6/org.kde.kidletime.platforms/*.so \
-    ${libdir}/plugins/kf6/packagestructure/*.so \
-    ${libdir}/plugins/kpackage/packagestructure/*.so \
-    ${libdir}/plugins/kwin/effects/configs/*.so \
-    ${libdir}/plugins/kwin/plugins/*.so \
-    ${libdir}/plugins/org.kde.kdecoration3.kcm/kcm_auroraedecoration.so \
-    ${libdir}/plugins/org.kde.kdecoration3/org.kde.kwin.aurorae.so \
-    ${libdir}/plugins/org.kde.kglobalaccel6.platforms/*.so \
-    ${libdir}/plugins/org.kde.kwin.platforms/*.so \
-    ${libdir}/plugins/org.kde.kwin.scenes/*.so \
-    ${libdir}/plugins/org.kde.kwin.waylandbackends/*.so \
-    ${libdir}/plugins/plasma/kcms/systemsettings/*.so \
-    ${libdir}/plugins/plasma/kcms/systemsettings_qwidgets/*.so \
-    ${libdir}/plugins/platforms/*.so \
-    ${libdir}/qml/org/kde/kwin.2/* \
-    ${libdir}/qml/org/kde/kwin/decoration/* \
-    ${libdir}/qml/org/kde/kwin/decorations/plastik/* \
-    ${libdir}/qml/org/kde/kwin/effects/* \
-    ${libdir}/qml/org/kde/kwin/private/effects/* \
-    ${libdir}/qml/org/kde/kwin/private/kdecoration/* \
-    ${libdir}/qml/org/kde/plasma/quicksetting/nightcolor/* \
-    ${libdir}/systemd/user/*.service \
-"
-
-
-FILES:${PN}-dev += " \
-    ${libdir}/libkwin*.so \
-    ${datadir}/dbus-1/interfaces/*.xml \
-"
 
 RDEPENDS:${PN}:append:class-target = " \
     qtwayland6-plugins \

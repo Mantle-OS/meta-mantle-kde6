@@ -9,13 +9,13 @@ LICENSE = "GPL-3.0-or-later"
 LIC_FILES_CHKSUM = "file://LICENSES/GPL-3.0-or-later.txt;md5=1c76c4cc354acaac30ed4d5eefea7245"
 PR = "r0"
 
-inherit cmake_kdeapp
+inherit kde6-cmake
 
 SRC_URI = "git://invent.kde.org/plasma-mobile/${BPN};nobranch=1;protocol=https"
 SRCREV = "73de8e63ed969595cc70ce88686e3458aa997da0"
 S = "${WORKDIR}/git"
 
-DEPENDS = " \
+DEPENDS:apppend = " \
     kcoreaddons6 \
     kirigami6 \
     libplasma6 \

@@ -5,7 +5,6 @@
 # SPDX-FileCopyrightText: 2020-2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
-
 DESCRIPTION = "Milou"
 HOMEPAGE = ""
 LICENSE = "(LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL) & (GPL-2.0-only | GPL-3.0-only | LicenseRef-KDE-Accepted-GPL) & GPL-2.0-or-later"
@@ -18,12 +17,10 @@ LIC_FILES_CHKSUM = " \
     file://LICENSES/LicenseRef-KDE-Accepted-GPL.txt;md5=b4c280013bbbadfbe92219498dc5228c \
     file://LICENSES/LicenseRef-KDE-Accepted-LGPL.txt;md5=e4b79a181b6483b37d39a27f4d75e60a \
 "
-PR = "r0"
-inherit cmake_plasma
 
-SRC_URI += "https://download.kde.org/stable/plasma/6.4.4/milou-6.4.4.tar.xz"
-SRC_URI[sha256sum] = "a644e5965b33c20f82ce51660fa3b7c2d41810b068cf21f77658824cb3ea6b1e"
-DEPENDS = " \
+inherit plasma6
+
+DEPENDS:append = " \
     kcoreaddons6 \
     kitemmodels6 \
     kdeclarative6 \
@@ -31,10 +28,4 @@ DEPENDS = " \
     libplasma6 \
     krunner6 \
     qtdeclarative6 \
-"
-
-
-FILES:${PN} += " \
-    ${libdir}/qml/org/kde/milou/* \
-    ${datadir}/plasma/plasmoids/org.kde.milou \
 "
