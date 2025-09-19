@@ -24,10 +24,10 @@ SRCREV = "031a368a87e8aa8db62794a9be6139c27baafc26"
 S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
-    qtbase \
-    qtdeclarative \
-    qtmultimedia \
-    qtwayland qtwayland-native \
+    qtbase6 \
+    qtdeclarative6 \
+    qtmultimedia6 \
+    qtwayland6 qtwayland6-native \
     \
     glibc glib-2.0-native \
     wayland \

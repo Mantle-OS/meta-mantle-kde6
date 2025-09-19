@@ -109,6 +109,6 @@ RDEPENDS:${PN} += "\
 "
 
 RRECOMMENDS:${PN} += " \
-    qtvirtualkeyboard-plugins \
-    qtvirtualkeyboard-qmlplugins \
+    qtvirtualkeyboard6-plugins \
+    qtvirtualkeyboard6-qmlplugins \
 "

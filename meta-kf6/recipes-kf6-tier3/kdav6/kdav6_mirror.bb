@@ -13,7 +13,7 @@ DEPENDS:append = " \
 "
 
 PACKAGECONFIG:append = " \
-    kcoreaddons6 \
+    kcoreaddons \
     ki18n \
     kconfig \
 "
