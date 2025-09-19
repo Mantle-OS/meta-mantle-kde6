@@ -11,11 +11,8 @@ LIC_FILES_CHKSUM = " \
     file://LICENSES/LGPL-2.0-or-later.txt;md5=6d2d9952d88b50a51a5c73dc431d06c7 \
 "
 
-inherit cmake_kdeapp
+inherit rs6
 
-SRC_URI = "https://download.kde.org/stable/release-service/25.08.0/src/kpublictransport-25.08.0.tar.xz"
-SRC_URI[sha256sum] = "fd0190081f4be172711ec1e0e5702805bcf9c00c73a08a42ba3790167cabab0a"
-
-DEPENDS += " \
+DEPENDS:append = " \
     qtdeclarative6 \
 "

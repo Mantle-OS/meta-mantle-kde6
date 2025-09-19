@@ -12,13 +12,9 @@ LIC_FILES_CHKSUM = " \
     file://LICENSES/LGPL-2.0-or-later.txt;md5=6d2d9952d88b50a51a5c73dc431d06c7 \
 "
 
-inherit cmake_kdeapp
+inherit rs6
 
-SRC_URI = "https://download.kde.org/stable/release-service/25.08.0/src/kpkpass-25.08.0.tar.xz"
-SRC_URI[sha256sum] = "2ee2a25ff90f23026dd687e2b62ac1a908c1c55fdf685a42583d67472a1badbb"
-
-DEPENDS += " \
-    qtbase6 \
+DEPENDS:append = " \
     karchive6 \
 "
 
