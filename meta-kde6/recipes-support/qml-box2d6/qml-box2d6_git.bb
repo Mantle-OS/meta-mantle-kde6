@@ -3,9 +3,9 @@
 # SPDX-FileCopyrightText: 2025 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
-
-DESCRIPTION = "QML Box2D plugin"
+DESCRIPTION = "QML Box2D plugin(qt6)"
 HOMEPAGE = "https://github.com/qml-box2d/qml-box2d"
+SECTION = "libs"
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://COPYING;md5=7c1ecaedec0d10ec77d289e71b42165f"
 PR = "r0"
@@ -13,7 +13,8 @@ PR = "r0"
 inherit kde6-cmake
 
 SRC_URI = " \
-    git://github.com/qml-box2d/qml-box2d.git;nobranch=1;protocol=https \
+    git://github.com/qml-box2d/qml-box2d.git;branch=master;protocol=https \
+    file://0001-update-install-paths-as-needed-for-qt6.patch \
 "
 SRCREV = "3a85439726d1ac4d082308feba45f23859ba71e0"
 S = "${WORKDIR}/git"
@@ -21,4 +22,10 @@ S = "${WORKDIR}/git"
 DEPENDS = " \
     qtbase6 \
     qtdeclarative6 qtdeclarative6-native \
+"
+
+EXTRA_OECMAKE:append = " \
+    -DUSE_QT6=ON \
+    -DBUILD_SHARED_LIBS=ON \
+    -DBUILD_EXAMPLES=OFF \
 "

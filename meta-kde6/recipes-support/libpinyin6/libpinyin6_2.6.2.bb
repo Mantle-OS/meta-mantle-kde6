@@ -29,10 +29,18 @@ SRC_URI:class-native = " \
 SRCREV = "3cc27bd3759a6791c6fbdb0ad3a2f6e2dd07260e"
 S = "${WORKDIR}/git"
 
+
+
 DEPENDS:append = " \
     db \
     glib-2.0 \
-    libpinyin6-native \
+"
+
+DEPENDS:append:class-target = " \
+    ${PN}-native \
+"
+DEPENDS:append:class-nativesdk = " \ 
+    ${PN}-native \
 "
 DEPENDS:append:class-native = " \
     db-native \
@@ -41,5 +49,9 @@ DEPENDS:append:class-native = " \
 
 EXTRA_OECMAKE += "-DDOWNLOAD_MODEL_DATA_ARCHIVE=OFF"
 EXTRA_OECMAKE:class-native += "-DINSTALL_UTILS=ON -DDISABLE_DATA_GENERATION=ON"
+
+FILES:${PN} += " \
+    ${datadir}/libpinyin \
+"
 
 BBCLASSEXTEND = "native"

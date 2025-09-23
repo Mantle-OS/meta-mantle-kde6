@@ -15,9 +15,9 @@ LIC_FILES_CHKSUM = " \
 PV = "0.2"
 PR = "r0"
 
-inherit kde6-ecm kf6-packageconfig
+inherit kde6-ecm
 
-SRC_URI = "git://invent.kde.org/pim/${BPN};nobranch=1;protocol=https"
+SRC_URI = "git://invent.kde.org/pim/kpeoplevcard;nobranch=1;protocol=https"
 SRCREV = "13db8a52125ec8abd830b3ffcd02691880e15c38"
 S = "${WORKDIR}/git"
 

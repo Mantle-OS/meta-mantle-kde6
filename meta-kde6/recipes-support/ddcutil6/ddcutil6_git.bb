@@ -11,6 +11,7 @@ inherit pkgconfig
 inherit features_check
 
 REQUIRED_DISTRO_FEATURES  = "x11 systemd"
+
 SRC_URI = " \
     git://github.com/rockowitz/ddcutil.git;protocol=https;branch=master \
     file://0001-Fix-out-of-tree-build.patch \
@@ -27,24 +28,26 @@ DEPENDS:append = " \
 
 CFLAGS += "-Wno-unused-but-set-variable"
 
-EXTRA_OECONF += "--enable-build-timestamp=no"
+EXTRA_OECONF:append = "--enable-build-timestamp=no"
 
-PACKAGECONFIG ??= " \
+PACKAGECONFIG:append = " \
     ${@bb.utils.filter('DISTRO_FEATURES', 'x11', d)} \
     ${@bb.utils.filter('DISTRO_FEATURES', 'systemd', d)}  \
     drm \
 "
 
-PACKAGECONFIG[drm] = "--enable-drm=yes,--enable-drm=no,libdrm"
-PACKAGECONFIG[systemd] = "--enable-udev=yes,--enable-udev=no,udev"
-PACKAGECONFIG[usb] = "--enable-usb=yes,--enable-usb=no,libusb1"
-PACKAGECONFIG[x11] = "--enable-x11=yes,--enable-x11=no,libx11 xrandr"
+PACKAGECONFIG[drm] = "--enable-drm=yes, --enable-drm=no, libdrm"
+PACKAGECONFIG[systemd] = "--enable-udev=yes, --enable-udev=no, udev"
+PACKAGECONFIG[usb] = "--enable-usb=yes,--enable-usb=no, libusb1"
+PACKAGECONFIG[x11] = "--enable-x11=yes,--enable-x11=no, virtual/libx11 xrandr"
 
 do_install:append () {
 	install -d ${D}${sysconfdir}/udev/rules.d
 	cp -rf ${D}${datadir}/ddcutil/data/* ${D}${sysconfdir}/udev/rules.d
 }
 
+
 FILES:${PN} += " \
-    ${sysconfdir} ${libdir}/modules-load.d/ddcutil.conf \
+    ${datadir}/ddcutil \
+    ${nonarch_libdir}/modules-load.d/ddcutil.conf \
 "

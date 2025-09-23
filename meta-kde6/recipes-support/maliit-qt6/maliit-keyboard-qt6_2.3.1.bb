@@ -12,10 +12,11 @@ inherit kde6-cmake kde6-packaging
 inherit gsettings
 inherit pkgconfig
 
-SRC_URI = "git://github.com/maliit/keyboard.git;nobranch=1;protocol=https \
-           file://0001-qml-Fix-for-qt6.patch \
-           file://0001-cmake-add-Qt6-support.patch \
-           "
+SRC_URI = " \
+    git://github.com/maliit/keyboard.git;nobranch=1;protocol=https \
+    file://0001-qml-Fix-for-qt6.patch \
+    file://0001-cmake-add-Qt6-support.patch \
+"
 SRCREV = "9673c8e8bd64e091df6a07346919e476285fb04f"
 S = "${WORKDIR}/git"
 

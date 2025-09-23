@@ -1,0 +1,13 @@
+diff --git a/capi/Cargo.toml b/capi/Cargo.toml
+index d4839402..3a035586 100644
+--- a/capi/Cargo.toml
++++ b/capi/Cargo.toml
+@@ -7,7 +7,7 @@ rust-version = "1.85"
+ edition = "2024"
+ 
+ [lib]
+-crate-type = ["rlib", "staticlib"]
++crate-type = ["cdylib",  "rlib", "staticlib"]
+ 
+ [dependencies]
+ chewing = { version = "0.10.3", path = ".." }

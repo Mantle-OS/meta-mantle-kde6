@@ -24,3 +24,4 @@ DEPENDS:append = " \
     qcoro6 \
 "
 
+# all packageconfig is set already in parent classes.

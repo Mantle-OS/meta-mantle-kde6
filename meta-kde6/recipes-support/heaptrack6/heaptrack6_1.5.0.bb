@@ -20,9 +20,18 @@ S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     zlib \
+    zstd \
     boost \
     libunwind \
-    elfutils \
+    elfutils elfutils-native \
 "
 
-EXTRA_OECMAKE += " -DHEAPTRACK_BUILD_GUI=OFF"
+# APPIMAGE_BUILD
+
+EXTRA_OECMAKE:append = " \
+    -DHEAPTRACK_BUILD_TRACK=OFF \
+    -DHEAPTRACK_BUILD_INTERPRET=OFF \
+    -DHEAPTRACK_BUILD_GUI=OFF \
+    -DHEAPTRACK_BUILD_PRINT=OFF \
+    -DHEAPTRACK_USE_QT6=ON \
+"

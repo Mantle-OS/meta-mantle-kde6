@@ -20,6 +20,7 @@ SRC_URI = "git://github.com/maliit/framework.git;branch=qt6-support;protocol=htt
            file://0002-maliitpluginsconfig-fix-for-qt6.patch \
            file://0003-shellintegration-qwaylandinputpanelshellintegration-.patch \
            "
+
 SRCREV = "031a368a87e8aa8db62794a9be6139c27baafc26"
 S = "${WORKDIR}/git"
 
@@ -40,7 +41,7 @@ EXTRA_OECMAKE += " \
     -Denable-docs=OFF \
     -Denable-tests=OFF \
     -Denable-dbus-activation=ON \
-    -DQtWaylandScanner_EXECUTABLE=${RECIPE_SYSROOT_NATIVE}/${libexecdir}/qtwaylandscanner \
+    -DQtWaylandScanner_EXECUTABLE=${RECIPE_SYSROOT_NATIVE}/${libexecdir}/qt6/qtwaylandscanner \
     -DQT_PLUGINS_INSTALL_DIR=${QT6_INSTALL_PLUGINSDIR} \
     -DQT_MKSPECS_INSTALL_DIR=${QT6_INSTALL_MKSPECSDIR} \
     -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
