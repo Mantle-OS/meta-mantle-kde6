@@ -16,7 +16,7 @@ inherit features_check
 
 REQUIRED_DISTRO_FEATURES = "webengine"
 
-SRC_URI = "git://invent.kde.org/plasma-bigscreen/${BPN};nobranch=1;protocol=https"
+SRC_URI = "git://invent.kde.org/plasma-bigscreen/aura-browser;nobranch=1;protocol=https"
 SRCREV = "69bf5a2234ce490edc7018adcb82949c987fcf43"
 S = "${WORKDIR}/git"
 

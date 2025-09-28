@@ -51,7 +51,7 @@ RRECOMMENDS:${PN}-support = " \
     ddcutil6 \
     qcoro6 \
     oxygen-icons-kf6 \
-    libphonenumber6 \
+    libphonenumber-cpp \
     qca-kf6 \
     libpinyin6 \
     futuresql6 \

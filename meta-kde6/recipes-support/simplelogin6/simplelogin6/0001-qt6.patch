@@ -1,0 +1,50 @@
+From 15e6ef8b73efb3b79824c163c9972160ab3f1755 Mon Sep 17 00:00:00 2001
+From: JosephMillsAtWork <josephjamesmills@gmail.com>
+Date: Sat, 27 Sep 2025 19:57:56 +0000
+Subject: [PATCH] qt6
+
+Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+---
+ CMakeLists.txt | 15 ++++++++-------
+ 1 file changed, 8 insertions(+), 7 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 9ac4307..e965f9a 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -12,13 +12,10 @@ if(POLICY CMP0043)
+     cmake_policy(SET CMP0043 OLD)
+ endif()
+ 
+-find_package(Qt5Core REQUIRED)
+-find_package(Qt5DBus REQUIRED)
+-
++find_package(Qt6 REQUIRED COMPONENTS DBus Core)
+ find_package(PAM REQUIRED)
+ add_definitions(-DUSE_PAM)
+ 
+-
+ add_definitions(-Wall -std=c++11)
+ 
+ include_directories(
+@@ -36,10 +33,14 @@ set(HELPER_SOURCES
+ 
+ add_executable(simplelogin ${HELPER_SOURCES})
+ 
+-target_link_libraries(simplelogin Qt5::Core ${PAM_LIBRARIES})
+-
++target_link_libraries(simplelogin
++    Qt6::Core
++    Qt6::Dbus
++    ${PAM_LIBRARIES}
++)
+ 
+-install(TARGETS simplelogin RUNTIME DESTINATION /usr/bin)
++include(GNUInstallDirs)
++install(TARGETS simplelogin RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+ install(FILES upstart/simplelogin.conf DESTINATION /etc/init)
+ install(FILES upstart/simplelogin.override DESTINATION /etc/init)
+ add_subdirectory(systemd)
+-- 
+2.51.0
+

@@ -16,14 +16,19 @@ SRCREV = "ab68812b70703fdc357eb05d2cce43669d74f7cb"
 S = "${WORKDIR}/git"
 
 DEPENDS = " \
-    kdeclarative6 \
-    kiconthemes6 \
     kirigami6 \
-    kpackage6 \
+    ki18n6-native ki18n6 \
+    kcoreaddons6 \
+    kcrash6 \
     \
     qtdeclarative6 \
+    qtsvg6 \
 "
-## FIXME
+
 RDEPENDS:${PN} += " \
-    qtdeclarative6 \
+    qtdeclarative6-qmlplugins \
+"
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
 "

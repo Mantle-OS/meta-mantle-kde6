@@ -1,3 +1,4 @@
+
 # SPDX-FileCopyrightText: 2019 Alistair Francis <alistair.francis@wdc.com>
 # SPDX-FileCopyrightText: 2019-2020 Volker Krause <vkrause@kde.org>
 # SPDX-FileCopyrightText: 2023-2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
@@ -90,26 +91,7 @@ PACKAGES =+ " \
     ${PN}-config-plasma-desktop6 \
 "
 
-FILES:${PN} += " \
-    ${libdir}/qt6/qml/* \
-    ${libdir}/sysusers.d/* \
-    ${libdir}/tmpfiles.d/* \
-    ${datadir}/dbus-1/system.d/* \
-"
-
-FILES:${PN}-config-plasma-desktop = " \
-    ${sysconfdir}/sddm.conf.d/00-plasma-desktop.conf \
-"
-
-FILES:${PN}-config-plasma-mobile = " \
-    ${sysconfdir}/sddm.conf.d/01-plasma-mobile.conf \
-"
-
-FILES:${PN}-config-plasma-bigscreen = " \
-    ${sysconfdir}/sddm.conf.d/02-plasma-bigscreen.conf \
-"
-
-SYSTEMD_SERVICE:${PN} = "ssdm.service"
+#SYSTEMD_SERVICE:${PN} = "ssdm.service"
 USERADD_PACKAGES = "${PN}"
 USERADD_PARAM:${PN} = "--system --home ${localstatedir}/lib/sddm --shell /bin/false --user-group --groups video sddm"
 
@@ -124,4 +106,36 @@ RDEPENDS:${PN} += "\
 RRECOMMENDS:${PN} += " \
     qtvirtualkeyboard6-plugins \
     qtvirtualkeyboard6-qmlplugins \
+"
+
+PACKAGE_BEFORE_PN:append  = " \
+  ${PN}-maya-theme \
+  ${PN}-maldives-theme \
+  ${PN}-elarun-theme \
+"
+
+FILES:${PN}-maya-theme = " \
+    ${datadir}/sddm/themes/maya \
+"
+RDEPENDS:${PN}-maya-theme:append = " ${PN}"
+
+
+FILES:${PN}-maldives-theme = " \
+    ${datadir}/sddm/themes/maldives \
+"
+RDEPENDS:${PN}-maldives-theme:append = " ${PN}"
+
+
+FILES:${PN}-elarun-theme = " \
+    ${datadir}/sddm/themes/elarun \
+"
+RDEPENDS:${PN}-elarun-theme = " ${PN}"
+
+FILES:${PN} += " \
+    ${nonarch_base_libdir}/sysusers.d/sddm.conf  \
+    ${nonarch_base_libdir}/tmpfiles.d/sddm.conf \
+    ${datadir}/sddm/flags \
+    ${datadir}/sddm/faces \
+    ${datadir}/sddm/scripts \
+    ${datadir}/sddm/translations-qt6 \
 "

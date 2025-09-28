@@ -17,17 +17,21 @@ SRCREV = "0ac513480426c8ce7fce983505111e7a61b02b9e"
 S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
+    openssl \
+    libogg \
+    p7zip-native \
+    python3-native \
+    \
+    qtcharts6 \    
+    qtmultimedia6 \
+    qtsensors6 \    
+    qtdeclarative6 \
+    qtsvg6 \
+    \
     kcrash6 \
     kio6 \
-    \
-    qtcharts6 \
-    qtmultimedia6 \
-    qtsensors6 \
-    qtdeclarative6 \
-    \
     qml-box2d6 \
-    \
-    phonon \
+    phonon-kf6 \
 "
 
 RDEPENDS:${PN} += " \
@@ -35,16 +39,27 @@ RDEPENDS:${PN} += " \
     qtmultimedia6-qmlplugins \
 "
 
+PACKAGECONFIG[icu] = "-DSHIP_SYSTEM_ICU=ON, -DSHIP_SYSTEM_ICU=OFF, icu"
+PACKAGECONFIG[compile-docs] = "-DCOMPILE_DOC=ON, -DCOMPILE_DOC=OFF,"
+PACKAGECONFIG[rcc] = "-DWITH_RCC=ON, -DWITH_RCC=OFF, "
+PACKAGECONFIG[skip-translations] = "-DSKIP_TRANSLATIONS=ON, -DSKIP_TRANSLATIONS=OFF, "
+PACKAGECONFIG[kiosk] = "-DWITH_KIOSK_MODE=ON, -DWITH_KIOSK_MODE=OFF, "
+
+
+EXTRA_OECMAKE:append = " -DBUILD_STANDALONE=OFF "
+
 PACKAGECONFIG:append = " \
     kcoreaddons \
     kconfig \
     kauth \
     ki18n \
+    rcc \
 "
 
-EXTRA_OECMAKE += "-DQML_BOX2D_MODULE=system -DQML_BOX2D_LIBRARY=${STAGING_DIR_TARGET}/usr/lib/Box2D/libqmlbox2d.so"
+EXTRA_OECMAKE:append = " -DQML_BOX2D_MODULE=system -DQML_BOX2D_LIBRARY=${STAGING_DIR_TARGET}/usr/lib/Box2D/libqmlbox2d.so"
 
 FILES:${PN} += " \
     ${datadir}/gcompris-qt/rcc \
     ${datadir}/gcompris-qt/translations \
+    ${datadir}/metainfo \
 "

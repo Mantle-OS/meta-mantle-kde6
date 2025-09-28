@@ -1,6 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# this hash is slightly ahead of the 0.2.0 release
 # SPDX-FileCopyrightText: 2023 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -19,6 +16,7 @@ SRC_URI = " \
     file://0002-Vt102Emulation-improve-QKeyPress-event-management.patch \
     file://0003-Remove-duplicate-files-from-install.patch \
 "
+# This hash is slightly ahead of the 0.2.0 release
 SRCREV = "63228027e1f97c24abb907550b22ee91836929c5"
 
 S = "${WORKDIR}/git"

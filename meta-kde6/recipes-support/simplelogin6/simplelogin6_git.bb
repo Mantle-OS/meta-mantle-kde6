@@ -1,7 +1,4 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2019 Volker Krause <vkrause@kde.org>
-#
 # SPDX-License-Identifier: MIT
 DESCRIPTION = "super simple sans display display desktop manager mockup mitigating mir"
 HOMEPAGE = "https://github.com/bhush9/simplelogin"
@@ -15,6 +12,7 @@ inherit systemd
 
 SRC_URI = " \
     git://invent.kde.org/bshah/simplelogin.git;nobranch=1;protocol=https \
+    file://0001-qt6.patch \
 "
 SRCREV = "ffa841ec9766e4428f2f960b966bcc5b4e7e4982"
 S = "${WORKDIR}/git"
@@ -24,3 +22,6 @@ DEPENDS:append = " \
 "
 
 SYSTEMD_SERVICE:${PN} = "${BPN}.service"
+
+
+## note not a fan of this has memory leaks and needs as facelift.
