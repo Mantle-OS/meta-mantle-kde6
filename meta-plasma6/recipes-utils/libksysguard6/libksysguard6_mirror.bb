@@ -13,28 +13,26 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.1-only.txt;md5=147a320ed8b16b036829a0
 inherit plasma6
 
 DEPENDS:append = " \
+    zlib \
+    qtdeclarative6 \
     libnl \
-    libcap \
-    libpcap \
+    libpcap libcap \
     lmsensors \
+    libdrm \    
     \
-    kcompletion6 \
-    kconfig6 \
-    kconfigwidgets6 \
-    kcoreaddons6 \
-    kiconthemes6 \
-    knewstuff6 \
     kservice6 \
-    kwidgetsaddons6 \
-    kwindowsystem6 \
-    networkmanager-qt6 \
-    libplasma6 \
-    \
-    qtwebchannel6 \
+    kpackage6 kpackage6-native \
+    knewstuff6 \
+    solid6 \
 "
 
+PACKAGECONFIG[kuath-helper] = "-DENABLE_KAUTH_HELPER=ON, -DENABLE_KAUTH_HELPER=OFF, kauth kauth-native polkit-qt6-1"
+PACKAGECONFIG:append = " \
+    kauth-helper \
+"
 
 FILES:${PN} += " \
     ${datadir}/ksysguard \
-    ${libdir}/qml \
+    ${datadir}/knsrcfiles \
+    ${datadir}/polkit-1 \
 "

@@ -34,3 +34,4 @@ PACKAGECONFIG:append = " \
     dbus \
     ki18n \
 "
+BBCLASSEXTEND = "native nativesdk"

@@ -19,11 +19,15 @@ def plasma_real_name(d, name=None):
     return bpn
 
 SRC_URI = "${KDE6_PLASMA_MIRROR}/${@plasma_real_name(d)}-${PV}.tar.xz;name=${BPN}"
+S = "${WORKDIR}/${@plasma_real_name(d)}-${PV}" 
 
 DEPENDS:append = " \
     kpackage6-native \
     kcmutils6 \
 "
+
+EXTRA_OECMAKE:append:class-target = " -DKF6_HOST_TOOLING=${STAGING_LIBDIR_NATIVE}/cmake"
+EXTRA_OECMAKE:append:class-nativesdk = " -DKF6_HOST_TOOLING=${STAGING_LIBDIR_NATIVE}/cmake"
 
 PACKAGECONFIG:append = " \
     ki18n \

@@ -10,10 +10,10 @@ LICENSE = "LGPL-2.0-only"
 
 inherit kf6
 
-DEPENDS:append = " \
+
+DEPENDS:append:class-target = " \
     libxml2 libxml2-native \
     qtdeclarative6 \
-    \
     kio6 \
     kitemviews6 \
     kconfigwidgets6 \
@@ -22,7 +22,7 @@ DEPENDS:append = " \
     kwidgetsaddons6 \
 "
 
-PACKAGECONFIG[tools-only] = "-DTOOLS_ONLY=ON, TOOLS_ONLY=OFF, "
+PACKAGECONFIG[tools-only] = "-DTOOLS_ONLY=ON, -DTOOLS_ONLY=OFF, "
 PACKAGECONFIG[dbus] = "-DUSE_DBUS=ON, -DUSE_DBUS=OFF, "
 
 PACKAGECONFIG:append = " \
@@ -31,4 +31,5 @@ PACKAGECONFIG:append = " \
     dbus \
 "
 
-PACKAGECONFIG:append:class-native = " tools-only"
+PACKAGECONFIG:class-native = "tools-only"
+BBCLASSEXTEND = "native nativesdk"

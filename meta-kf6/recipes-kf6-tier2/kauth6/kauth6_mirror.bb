@@ -11,7 +11,9 @@ LICENSE = "LGPL-2.0-or-later & LGPL-2.1-or-later & BSD-3-Clause"
 
 inherit kf6
 
-SRC_URI:append = " file://0001-Fix-build-when-KAUTH_BUILD_CODEGENERATOR_ONLY-ON.patch"
+SRC_URI:append = " \
+    file://0001-Fix-build-when-KAUTH_BUILD_CODEGENERATOR_ONLY-ON.patch \
+"
 
 DEPENDS:append = " \
     kcoreaddons6 \
@@ -21,7 +23,8 @@ DEPENDS:append = " \
 DEPENDS:append:class-target = " ${PN}-native polkit-qt6-1"
 DEPENDS:append:class-nativesdk = " ${PN}-native"
 
-PACKAGECONFIG[codegen-only] = "-DKAUTH_BUILD_CODEGENERATOR_ONLY=ON, KAUTH_BUILD_CODEGENERATOR_ONLY=OFF, "
+PACKAGECONFIG[codegen-only] = "-DKAUTH_BUILD_CODEGENERATOR_ONLY=ON, -DKAUTH_BUILD_CODEGENERATOR_ONLY=OFF, "
+
 PACKAGECONFIG:append:class-native  = " codegen-only"
 PACKAGECONFIG:append:class-nativesdk  = " codegen-only"
 
@@ -30,3 +33,4 @@ EXTRA_OECMAKE:append:class-native = " \
     -DKAUTH_POLICY_FILES_INSTALL_DIR=${datadir}/polkit-1/actions \
 "
 
+BBCLASSEXTEND = "native nativesdk"

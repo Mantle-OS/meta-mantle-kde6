@@ -35,3 +35,5 @@ PACKAGECONFIG:append:class-target = " qml"
 
 RDEPENDS:${PN} += " python3-core"
 RDEPENDS:${PN}:class-target += " iso-codes"
+
+BBCLASSEXTEND = "native nativesdk"

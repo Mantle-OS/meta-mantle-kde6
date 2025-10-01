@@ -29,3 +29,9 @@ DEPENDS:append = " \
     krunner6 \
     qtdeclarative6 \
 "
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${datadir}/plasma \
+"
+ 

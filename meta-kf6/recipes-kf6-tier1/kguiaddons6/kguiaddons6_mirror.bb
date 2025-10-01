@@ -21,7 +21,7 @@ EXTRA_OECMAKE:append  = " \
 "
 
 PACKAGECONFIG[wayland] = "-DWITH_WAYLAND=ON, -DWITH_WAYLAND=OFF, \
-    qtwayland6 qtwayland6-native wayland-protocols plasma-wayland-protocols-kf6 "
+    qtwayland6 qtwayland6-native wayland-protocols plasma-wayland-protocols-kf6"
 
 PACKAGECONFIG[x11] = "-DWITH_X11=ON, -DWITH_X11=OFF, virtual/libx11 libxcb xcb-util-keysyms"
 PACKAGECONFIG[dbus] = "-DUSE_DBUS=ON, -DUSE_DBUS=OFF, "
@@ -30,8 +30,16 @@ PACKAGECONFIG[py-bindings] = "-DBUILD_PYTHON_BINDINGS=ON, \
     -DBUILD_PYTHON_BINDINGS=OFF, python3-native python3-pyside6  python3-shiboken6-native"
 
 PACKAGECONFIG:append = " \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'x11', '', d)} \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'wayland', '', d)} \
+    ${@bb.utils.filter('DISTRO_FEATURES', 'x11', d)} \
+    ${@bb.utils.filter('DISTRO_FEATURES', 'wayland', d)} \
     dbus \
     qml \
 "
+PACKAGECONFIG:remove:class-native = " \
+    ${@bb.utils.contains('DISTRO_FEATURES_NATIVE', 'x11', 'wayland x11', '', d)} \
+"
+
+PACKAGECONFIG:remove:class-nativesdk = " \
+    ${@bb.utils.contains('DISTRO_FEATURES_NATIVESDK', 'x11', 'wayland x11', '', d)} \
+"
+BBCLASSEXTEND = "native nativesdk"

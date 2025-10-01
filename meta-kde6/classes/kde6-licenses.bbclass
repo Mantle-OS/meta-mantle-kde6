@@ -10,7 +10,10 @@ do_populate_lic:prepend() {
 
     # unfortunatly license text may differ in whitespaces and empty lines
     checksum_map = {
-        'LGPL-2.0-only': [ '6d2d9952d88b50a51a5c73dc431d06c7' ],
+        'LGPL-2.0-only': [ 
+            '6d2d9952d88b50a51a5c73dc431d06c7',
+            '41890f71f740302b785c27661123bff5'
+        ],
         'LGPL-2.0-or-later': [
             '6d2d9952d88b50a51a5c73dc431d06c7',
             '65d3616852dbf7b1a6d4b53b00626032'

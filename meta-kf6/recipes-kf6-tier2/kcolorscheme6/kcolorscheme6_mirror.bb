@@ -9,6 +9,7 @@ HOMEPAGE = "https://api.kde.org/frameworks/kcolorscheme/html/index.html"
 LICENSE = "BSD-2-Clause & LGPL-2.0-or-later & LGPL-2.1-only & LGPL-3.0-only"
 
 inherit kf6
+
 DEPENDS:append = " \
     kguiaddons6 \
 "
@@ -17,3 +18,5 @@ PACKAGECONFIG:append = " \
     ki18n \
     kconfig \
 "
+
+BBCLASSEXTEND = "native nativesdk"

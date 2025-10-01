@@ -31,3 +31,5 @@ FILES:${PN} += " \
     ${libdir}/cmake \
     ${datadir}/plasma-wayland-protocols/* \
 "
+
+BBCLASSEXTEND = "native nativesdk"

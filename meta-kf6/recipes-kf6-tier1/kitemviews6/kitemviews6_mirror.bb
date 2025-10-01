@@ -11,3 +11,4 @@ HOMEPAGE = "https://api.kde.org/frameworks/kitemviews/html/index.html"
 SECTION = "libs"
 LICENSE = "LGPL-2.0-or-later"
 inherit kf6
+BBCLASSEXTEND = "native nativesdk"

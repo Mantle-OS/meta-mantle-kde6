@@ -9,9 +9,22 @@ LICENSE = "LGPL-3.0-only"
 LIC_FILES_CHKSUM = "file://LICENSES/LGPL-3.0-only.txt;md5=852ecadc0ac7e6f4d7144d5544a3815b"
 
 inherit plasma6
+inherit features_check
 
-DEPENDS = " \
+REQUIRED_DISTRO_FEATURES = "x11"
+
+DEPENDS:append = " \
     qtdeclarative6 \
+    \
+    kguiaddons6 \
+    kcolorscheme6 \
     kirigami6 \
-    kquickcharts6 \
+    kiconthemes6 \
+    \
+    virtual/libx11 \
+"
+
+PACKAGECONFIG[dbus] = "-DUSE_DBUS=ON, -DUSE_DBUS=OFF, dbus"
+PACKAGECONFIG:append = " \
+    dbus \
 "

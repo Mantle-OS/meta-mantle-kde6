@@ -7,14 +7,15 @@ HOMEPAGE = "https://invent.kde.org/plasma/layer-shell-qt"
 LICENSE = "BSD-3-Clause & MIT & LGPL-3.0-or-later"
 
 inherit plasma6
+inherit features_check
 
-DEPENDS = " \
+REQUIRED_DISTRO_FEATURES = "wayland"
+
+DEPENDS:append = " \
+    qtdeclarative6 \
     qtwayland6 qtwayland6-native \
     wayland-native wayland \
     wayland-protocols \
+    libxkbcommon \
+    xkeyboard-config \
 "
-
-FILES:${PN} += " \
-    ${libdir}/qml/org/kde/layershell/* \
-"
-

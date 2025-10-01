@@ -22,3 +22,4 @@ PACKAGECONFIG[multimedia] = "-DWITH_MULTIMEDIA=ON,-DWITH_MULTIMEDIA=OFF , qtmult
 
 PACKAGECONFIG:append = " qml multimedia"
 PACKAGECONFIG:remove:class-native = " qml multimedia"
+BBCLASSEXTEND = "native nativesdk"

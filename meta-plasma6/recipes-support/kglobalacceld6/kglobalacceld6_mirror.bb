@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2018-2020 Volker Krause <vkrause@kde.org>
 # SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
@@ -11,12 +9,25 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.1-only.txt;md5=41890f71f740302b785c27
 
 inherit plasma6
 
-DEPENDS = " \
+DEPENDS:append = " \
     kcrash6 \
     kdbusaddons6 \
-    kglobalaccel6 \
-    kio6 \
-    knotifications6 \
-    kservice6 \
     kwindowsystem6 \
+    kglobalaccel6 \
+    kservice6 \
+    kio6 \
+    kjobwidgets6 \
+"
+
+PACKAGECONFIG[x11] = "-DWITH_X11=ON, -DWITH_X11=OFF, \
+ virtual/libx11 \
+ libxcb \
+ xcb-util-keysyms \
+ xorgproto xcb-proto \
+ libxkbcommon \
+ libxtst \ 
+"
+
+PACKAGECONFIG:append = " \
+    ${@bb.utils.filter('DISTRO_FEATURES', 'x11', d)} \
 "

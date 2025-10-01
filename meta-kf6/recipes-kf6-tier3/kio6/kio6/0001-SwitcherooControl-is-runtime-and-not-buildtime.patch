@@ -1,0 +1,35 @@
+From eb60254efad82185f9f97326da4c41785829bf85 Mon Sep 17 00:00:00 2001
+From: JosephMillsAtWork <josephjamesmills@gmail.com>
+Date: Mon, 29 Sep 2025 22:10:48 +0000
+Subject: [PATCH] SwitcherooControl is runtime and not buildtime
+
+Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+---
+ CMakeLists.txt | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 73b8f0f..9d5c2f4 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -82,11 +82,12 @@ set_package_properties(KF6KDED PROPERTIES DESCRIPTION "Daemon providing session
+                        PURPOSE "KDED is used at runtime for proxy management and cookie storage"
+                       )
+ 
+-find_package(SwitcherooControl)
+-set_package_properties(SwitcherooControl PROPERTIES
+-    TYPE RUNTIME
+-    PURPOSE "Hybrid GPU support"
+-)
++## we dont need this here we ship
++#find_package(SwitcherooControl)
++#set_package_properties(SwitcherooControl PROPERTIES
++#    TYPE RUNTIME
++#    PURPOSE "Hybrid GPU support"
++#)
+ 
+ endif()
+ 
+-- 
+2.51.0
+

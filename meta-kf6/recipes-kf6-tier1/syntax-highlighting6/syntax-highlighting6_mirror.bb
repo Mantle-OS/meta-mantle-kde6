@@ -33,3 +33,4 @@ sysroot_stage_all:append:class-native () {
     install -d ${SYSROOT_DESTDIR}/${bindir}
     cp ${B}/bin/katehighlightingindexer ${SYSROOT_DESTDIR}/${bindir}
 }
+BBCLASSEXTEND = "native nativesdk"

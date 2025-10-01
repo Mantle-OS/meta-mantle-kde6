@@ -23,3 +23,5 @@ PACKAGECONFIG:append = " \
     kconfig \
     kauth \
 "
+
+BBCLASSEXTEND = "native nativesdk"

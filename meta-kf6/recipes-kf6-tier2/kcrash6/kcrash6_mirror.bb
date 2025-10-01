@@ -13,16 +13,19 @@ REUSE_LICENSECHECK_WHITELIST = "CC0-1.0"
 
 inherit kf6
 
-DEPENDS:append = " kwindowsystem6"
-
-PACKAGECONFIG[x11] = "-DWITH_X11=ON, -DWITH_X11=OFF, virtual/libx11"
+DEPENDS:append = " \
+    kwindowsystem6 \
+"
 
 # "Enables raising signals to kernel core patterns (iff the pattern is a process). 
 # You may wish to not install drkonqi if this can cause a UI conflict."
 PACKAGECONFIG[pattern_raise] = "-DKCRASH_CORE_PATTERN_RAISE=ON, -DKCRASH_CORE_PATTERN_RAISE=OFF, "
-
 PACKAGECONFIG[x11] = "-DWITH_X11=ON, -DWITH_X11=OFF, virtual/libx11"
 PACKAGECONFIG:append = " \
     kcoreaddons \
+"
+PACKAGECONFIG:append:class-target = " \
     ${@bb.utils.filter('DISTRO_FEATURES', 'x11', d)} \
 "
+
+BBCLASSEXTEND = "native nativesdk"

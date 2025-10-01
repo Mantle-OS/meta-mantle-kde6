@@ -13,19 +13,23 @@ LICENSE = "BSD-3-Clause & LGPL-2.1-or-later & (LGPL-2.1-only | LGPL-3.0-only | L
 
 inherit kf6
 
-DEPENDS += " \
+DEPENDS:append = " \
     flex-native \
     bison-native \
-    upower \
     util-linux \
 "
 
+DEPENDS:append:class-target = " upower"
+
 PACKAGECONFIG[udev] = "-DUDEV_DISABLED=OFF, -DUDEV_DISABLED=ON, udev"
 PACKAGECONFIG[dbus] = "-DUSE_DBUS=ON, -DUSE_DBUS=OFF, "
-PACKAGECONFIG:append = " udev dbus"
-PACKAGECONFIG:remove:class-native = "udev"
 
-RRECOMMENDS:${PN}:append = " \
+PACKAGECONFIG:append = " dbus"
+PACKAGECONFIG:append:class-target = " udev"
+
+RRECOMMENDS:${PN}:append:class-target = " \
     udisks2 \
     upower \
 "
+
+BBCLASSEXTEND = "native nativesdk"

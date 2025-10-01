@@ -64,3 +64,4 @@ do_install:append() {
 }
 
 FILES:${PN}-dev += " ${libdir}/cmake/Qca-qt6/* "
+BBCLASSEXTEND = "native nativesdk"

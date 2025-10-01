@@ -33,3 +33,5 @@ PACKAGECONFIG:append = " \
 PACKAGECONFIG:append:class-target = " \
     ${@bb.utils.filter('DISTRO_FEATURES', 'x11', d)} \
 "
+
+BBCLASSEXTEND = "native nativesdk"

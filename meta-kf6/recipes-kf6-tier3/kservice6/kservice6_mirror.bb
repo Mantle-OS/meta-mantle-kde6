@@ -22,3 +22,5 @@ PACKAGECONFIG:append = " \
     ki18n \
     kdoctools \
 "
+
+BBCLASSEXTEND = "native nativesdk"

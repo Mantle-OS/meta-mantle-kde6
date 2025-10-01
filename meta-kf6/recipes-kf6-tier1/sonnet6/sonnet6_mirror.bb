@@ -28,3 +28,4 @@ PACKAGECONFIG:remove:class-native = "widgets qml"
 PACKAGECONFIG:append:class-native = " no-backend"
 
 EXTRA_OECMAKE:append:class-target = " -DPARSETRIGRAMS_EXECUTABLE=${STAGING_DIR_NATIVE}${bindir}/parsetrigrams6"
+BBCLASSEXTEND = "native nativesdk"

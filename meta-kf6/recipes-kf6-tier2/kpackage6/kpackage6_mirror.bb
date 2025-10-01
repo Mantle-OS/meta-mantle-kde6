@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
 # SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 # SPDX-FileCopyrightText: 2022 MBition GmbH
@@ -12,7 +10,6 @@ SECTION = "libs"
 LICENSE = "LGPL-2.0-or-later & GPL-2.0-or-later"
 
 inherit kf6
-
 
 DEPENDS:append = " \
     karchive6 \
@@ -29,3 +26,5 @@ PACKAGECONFIG:append = " \
     kdoctools \
     dbus \
 " 
+
+BBCLASSEXTEND = "native nativesdk"

@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
 # SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
@@ -11,7 +9,7 @@ LICENSE = "LGPL-2.1-only"
 
 inherit kf6
 
-DEPENDS += " \
+DEPENDS:append = " \
     qtdeclarative6 \
     kwindowsystem6 \
     libcanberra \
@@ -26,3 +24,5 @@ PACKAGECONFIG:append = " \
     kcoreaddons \
     dbus \
 "
+
+BBCLASSEXTEND = "native nativesdk"

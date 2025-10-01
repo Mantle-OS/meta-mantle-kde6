@@ -20,6 +20,7 @@ PACKAGECONFIG[gui] = "-DKCONFIG_USE_GUI=ON, -DKCONFIG_USE_GUI=OFF,  "
 PACKAGECONFIG[dbus] = "-DUSE_DBUS=ON, -DUSE_DBUS=OFF, "
 PACKAGECONFIG[qml] = "-DKCONFIG_USE_QML=ON, -DKCONFIG_USE_QML=OFF, qtdeclarative6"
 
-PACKAGECONFIG:append:class-target = " gui dbus qml"
-PACKAGECONFIG:remove:class-native = " gui qml"
+PACKAGECONFIG  = " gui dbus qml"
+#PACKAGECONFIG:append:class-native = " gui dbus qml"
 
+BBCLASSEXTEND = "native nativesdk"

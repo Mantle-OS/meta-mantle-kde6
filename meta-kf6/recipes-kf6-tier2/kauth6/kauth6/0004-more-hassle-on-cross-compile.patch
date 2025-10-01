@@ -1,0 +1,40 @@
+From 51a25047f0e1503bb8a0a6c7a64d8185d68dd6cc Mon Sep 17 00:00:00 2001
+From: JosephMillsAtWork <josephjamesmills@gmail.com>
+Date: Mon, 29 Sep 2025 23:46:21 +0000
+Subject: [PATCH] more hassle on cross compile
+
+Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+---
+ src/ConfigureChecks.cmake | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+diff --git a/src/ConfigureChecks.cmake b/src/ConfigureChecks.cmake
+index 0bcf060..3e10e13 100644
+--- a/src/ConfigureChecks.cmake
++++ b/src/ConfigureChecks.cmake
+@@ -4,6 +4,22 @@ set(KAUTH_BACKEND_NAME "" CACHE STRING "Specifies the KAuth backend to build. Cu
+                                    PolkitQt6-1, Fake, OSX. Not setting this variable will build the most
+                                    appropriate backend for your system")
+ 
++# Tools-only on FAKE backend: keep deps minimal and skip DBus/polkit paths
++if (KAUTH_BUILD_CODEGENERATOR_ONLY AND KAUTH_BACKEND_NAME STREQUAL "FAKE")
++  # Minimal dependencies for the generator
++  set(KAUTH_POLICY_GEN_LIBRARIES Qt6::Core)
++
++  # Ensure generator sources are defined
++  if (NOT KAUTH_POLICY_GEN_SRCS)
++    # Adjust filename if your tree differs; upstream uses this path:
++    set(KAUTH_POLICY_GEN_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/policy-gen/policy-gen.cpp)
++  endif()
++
++  # Avoid running the rest of this file (which sets up DBus/polkit and calls qt_add_dbus_adaptor)
++  return()
++endif()
++
++
+ # Case-insensitive
+ string(TOUPPER "${KAUTH_BACKEND_NAME}" KAUTH_BACKEND_NAME)
+ 
+-- 
+2.51.0
+

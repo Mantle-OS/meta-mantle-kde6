@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
 # SPDX-FileCopyrightText: 2018 Alistair Francis <alistair.francis@wdc.com>
 # SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
@@ -28,4 +26,7 @@ PACKAGECONFIG:append = " \
     dbus \
 "
 
-RDEPENDS:${PN}-dev += "perl"
+RDEPENDS:${PN}-dev += " \
+    perl \
+"
+BBCLASSEXTEND = "native nativesdk"

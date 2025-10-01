@@ -10,17 +10,29 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=9e2385fe012386d34dcc5c9
 
 inherit plasma6
 
+
 DEPENDS:append = " \
-    kconfigwidgets6 \
     kdbusaddons6 \
-    kglobalaccel6 \
-    kwidgetsaddons6 \
+    kcmutils6 kcmutils6-native \
+    ksvg6 \
     kxmlgui6 \
-    layer-shell-qt6-kde6 \
-    libkscreen6 \
-    libplasma6 \
+    kcrash6 \
     \
     qtdeclarative6 \
     qtsensors6 \
-    qtwayland6-native \
+    wayland qtwayland6 qtwayland6-native \
+    \
+    layer-shell-qt6 \
+    libkscreen6 \
+    libplasma6 \
+"
+
+PACKAGECONFIG[x11] = "-DWITH_X11=ON, -DWITH_X11=OFF, libxcb virtual/libx11"
+PACKAGECONFIG:append = " \
+    ${@bb.utils.filter('DISTRO_FEATURES', 'x11', d)} \
+"
+
+FILES:${PN} += " \
+    ${datadir}/kscreen \
+    ${datadir}/kglobalaccel \
 "

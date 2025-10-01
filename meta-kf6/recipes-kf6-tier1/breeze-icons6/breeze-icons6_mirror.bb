@@ -42,3 +42,5 @@ do_install:append:class-native() {
     install -m 0755 ${B}/bin/qrcAlias ${D}/${bindir}
     install -m 0755 ${B}/bin/generate-symbolic-dark ${D}${bindir}
 }
+
+BBCLASSEXTEND = "native nativesdk"

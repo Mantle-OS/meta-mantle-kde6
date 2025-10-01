@@ -28,3 +28,4 @@ do_configure:prepend() {
         ${S}/src/CMakeLists.txt
 }
 
+BBCLASSEXTEND = "native nativesdk"

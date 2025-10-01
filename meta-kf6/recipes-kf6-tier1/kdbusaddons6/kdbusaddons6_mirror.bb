@@ -11,10 +11,13 @@ HOMEPAGE = "https://api.kde.org/frameworks/kdbusaddons/html/index.html"
 SECTION = "libs"
 LICENSE = "LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
 
-inherit kf6 features_check
+inherit kf6 
+inherit features_check
 ANY_OF_DISTRO_FEATURES = "opengl wayland"
 
 PACKAGECONFIG[x11] = "-DWITH_X11=ON, -DWITH_X11=OFF, virtual/libx11"
-PACKAGECONFIG:append = " \
+PACKAGECONFIG:append:class-target = " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'x11', '', d)} \
 "
+
+BBCLASSEXTEND = "native nativesdk"

@@ -1,0 +1,37 @@
+From 77d6a67310799667dbce82287044e2a9f99507a0 Mon Sep 17 00:00:00 2001
+From: JosephMillsAtWork <josephjamesmills@gmail.com>
+Date: Tue, 30 Sep 2025 03:00:56 +0000
+Subject: [PATCH] add so version and install path plugin
+
+Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+---
+ src/service/CMakeLists.txt | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/src/service/CMakeLists.txt b/src/service/CMakeLists.txt
+index 2094598..16f5c67 100644
+--- a/src/service/CMakeLists.txt
++++ b/src/service/CMakeLists.txt
+@@ -20,6 +20,11 @@ find_package (KF6Crash ${KF6_MIN_VERSION} CONFIG REQUIRED)
+ # Standard stuff
+ 
+ add_library(kactivitymanagerd_plugin SHARED Plugin.cpp Module.cpp Event.cpp)
++set_target_properties(kactivitymanagerd_plugin PROPERTIES
++    SOVERSION 6
++    VERSION 6.4.4
++)
++
+ generate_export_header(kactivitymanagerd_plugin)
+ target_link_libraries(kactivitymanagerd_plugin
+     PUBLIC Qt::Core Qt::DBus KF6::CoreAddons KF6::ConfigCore
+@@ -83,5 +88,6 @@ install (TARGETS
+    )
+ 
+ install (TARGETS
+-   kactivitymanagerd_plugin ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
++   kactivitymanagerd_plugin
++   DESTINATION ${KDE_INSTALL_LIBDIR}
+    )
+-- 
+2.51.0
+

@@ -28,3 +28,5 @@ PACKAGECONFIG:append = " \
     qml \
     dbus \
 "
+
+BBCLASSEXTEND = "native nativesdk"

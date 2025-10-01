@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2014 Johan Thelin <johan.thelin@pelagicore.com>
 # SPDX-FileCopyrightText: 2016 Sébastien Taylor <sebastien@au-zone.com>
 # SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
@@ -13,11 +11,12 @@ LICENSE = "LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-A
 
 inherit kf6
 
-EXTRA_OECMAKE += " \
+## fixme native sdk
+EXTRA_OECMAKE:append = " \
     -DBUILD_DESIGNERPLUGIN=OFF \
 "
 
 PACKAGECONFIG[py-bindings] = "-DBUILD_PYTHON_BINDINGS=ON, -DBUILD_PYTHON_BINDINGS=OFF, python3-native python3-pyside6  python3-shiboken6-native "
 #PACKAGECONFIG[designer] = " -DBUILD_DESIGNERPLUGIN=ON, -DBUILD_DESIGNERPLUGIN=OFF, qttools6-native"
 
-PACKAGECONFIG:append = " "
+BBCLASSEXTEND = "native nativesdk"

@@ -9,14 +9,15 @@ SECTION = "libs"
 LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.0-or-later.txt;md5=da48810c4ddf8e49efa031294a26b98c"
 
-inherit kde6-cmake gobject-introspection
+inherit kde6-cmake 
+inherit gobject-introspection
 
 SRC_URI = "git://invent.kde.org/libraries/polkit-qt-1.git;nobranch=1;protocol=https"
 SRCREV = "aa1c6c414ec021fd32e30492c00bb13347e228db"
 
 S = "${WORKDIR}/git"
 
-DEPENDS = " \
+DEPENDS:append = " \
     polkit \
     glib-2.0 \
 "

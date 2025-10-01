@@ -23,3 +23,4 @@ PACKAGECONFIG[inotify] = "-DENABLE_INOTIFY=ON, -DENABLE_INOTIFY=OFF, inotify-too
 PACKAGECONFIG[py-bindings] = "-DBUILD_PYTHON_BINDINGS=ON, -DBUILD_PYTHON_BINDINGS=OFF, python3-native python3-pyside6  python3-shiboken6-native "
 
 PACKAGECONFIG:append:class-target = " inotify pch qml"
+BBCLASSEXTEND = "native nativesdk"

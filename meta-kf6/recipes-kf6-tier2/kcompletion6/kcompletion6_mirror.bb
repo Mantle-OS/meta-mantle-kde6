@@ -15,4 +15,8 @@ DEPENDS:append = " \
     kcodecs6 \
 "
 
-PACKAGECONFIG:append = " kconfig"
+PACKAGECONFIG:append = " \
+    kconfig \
+"
+
+BBCLASSEXTEND = "native nativesdk"

@@ -16,7 +16,7 @@ CFLAGS:append   = " ${DEBUG_PREFIX_MAP}"
 CXXFLAGS:append = " ${DEBUG_PREFIX_MAP}"
 CPPFLAGS:append = " ${DEBUG_PREFIX_MAP}"
 
-PACKAGECONFIG ?= ""
+PACKAGECONFIG ??= ""
 PACKAGECONFIG[testing] = "-DBUILD_TESTING=ON,-DBUILD_TESTING=OFF,"
 PACKAGECONFIG[examples] = "-DBUILD_EXAMPLES=ON,-DBUILD_EXAMPLES=OFF,"
 PACKAGECONFIG[docs] = "-DBUILD_QCH=ON,-DBUILD_QCH=OFF, qttools6-native python3-sphinx-native"
@@ -31,7 +31,7 @@ EXTRA_OECMAKE:append:class-target = " \
 "
 
 # apply base line
-EXTRA_OECMAKE += " \
+EXTRA_OECMAKE:append = " \
     -DCMAKE_INSTALL_PREFIX=${prefix} \
     -DBUILD_SHARED_LIBS=ON \
     -DCMAKE_SKIP_RPATH=ON \
@@ -107,5 +107,3 @@ do_install:append() {
                 {} \;
     fi
 }
-
-BBCLASSEXTEND = "native nativesdk"
