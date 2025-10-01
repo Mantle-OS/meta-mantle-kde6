@@ -1,0 +1,29 @@
+From 4d8c83b1b000695d1825996c867635ecb4580f24 Mon Sep 17 00:00:00 2001
+From: JosephMillsAtWork <josephjamesmills@gmail.com>
+Date: Wed, 1 Oct 2025 20:57:58 +0000
+Subject: [PATCH] so versions to krdb
+
+Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+---
+ kcms/krdb/CMakeLists.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/kcms/krdb/CMakeLists.txt b/kcms/krdb/CMakeLists.txt
+index 857cc96..a64d6f8 100644
+--- a/kcms/krdb/CMakeLists.txt
++++ b/kcms/krdb/CMakeLists.txt
+@@ -12,6 +12,11 @@ if(HAVE_X11)
+   target_link_libraries(krdb PRIVATE XCB::XCB XCB::CURSOR)
+ endif()
+ 
++set_target_properties(krdb PROPERTIES
++    SOVERSION 6
++    VERSION 6.4.4
++)
++
+ install(TARGETS krdb ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
+ 
+ install(FILES krdb.h
+-- 
+2.51.0
+

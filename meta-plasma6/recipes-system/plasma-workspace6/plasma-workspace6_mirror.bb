@@ -15,6 +15,10 @@ inherit features_check
 REQUIRED_DISTRO_FEATURES = "wayland"
 
 
+SRC_URI:append = " \
+    file://0001-so-versions-to-krdb.patch \
+"
+
 ## MISSIONG or else where maybe kwin ?
 ## find_package(KWinDBusInterface CONFIG REQUIRED)
 # find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
@@ -28,7 +32,7 @@ DEPENDS:append = " \
     qtwayland6 qtwayland6-native \
     qtpositioning6 \
     qtlocation6 \
-    qtshadertools6 qtshadertools-native \
+    qtshadertools6 qtshadertools6-native \
     qtsvg6 \
     \
     qcoro6 \
@@ -41,7 +45,7 @@ DEPENDS:append = " \
     kguiaddons6 \
     kiconthemes6 \
     kitemmodels6 \
-    kcmutils kcmutils6-native \
+    kcmutils6 kcmutils6-native \
     kded6 \
     kio6 \
     knewstuff6 \
@@ -51,14 +55,14 @@ DEPENDS:append = " \
     kparts6 \
     prison6 \
     krunner6 \
-    kstatusnotifierttem6 \
+    kstatusnotifieritem6 \
     ksvg6 \
     ktexteditor6 \
     ktextwidgets6 \
     kunitconversion6 \
     kwallet6 \
     kcolorscheme6 \
-    kdoctools kdoctools-native \
+    kdoctools6 kdoctools6-native \
     \
     plasma5support6 \
     libplasma6 \
@@ -69,7 +73,6 @@ DEPENDS:append = " \
     kscreen6 \
     layer-shell-qt6 \
     kirigami6 \
-    kirigamiaddons6 \
     networkmanager-qt6 \
     kquickcharts6 \
     kuserfeedback6 \
@@ -114,13 +117,40 @@ PACKAGECONFIG:apend = " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'sddm-wayland-session', '',  d)} \
 " 
 
-FILES_SOLIBSDEV = ""
-INSANE_SKIP:${PN} = "dev-so"
 
-## FIXME  
-do_install:append() {
-    sed -i 's:${RECIPE_SYSROOT_NATIVE}::g' ${D}${systemd_user_unitdir}/plasma-ksplash-ready.service
+do_install:append(){
     sed -i 's:${RECIPE_SYSROOT_NATIVE}::g' ${D}${systemd_user_unitdir}/plasma-kcminit-phase1.service
-    sed -i 's:${RECIPE_SYSROOT_NATIVE}::g' ${D}${systemd_user_unitdir}/plasma-restoresession.service
     sed -i 's:${RECIPE_SYSROOT_NATIVE}::g' ${D}${datadir}/kconf_update/migrate-calendar-to-plugin-id.py
 }
+
+INSANE_SKIP:${PN}-plugins = "dev-so"
+
+FILES:${PN} += " \
+    ${datadir}/krunner \
+    ${datadir}/metainfo \
+    ${datadir}/solid \
+    ${datadir}/kstyle \
+    ${datadir}/kconf_update \
+    ${datadir}/config.kcfg \
+    ${datadir}/zsh \
+    ${datadir}/knotifications6 \
+    ${datadir}/polkit-1 \
+    ${datadir}/wayland-sessions \
+    ${datadir}/plasma \
+    ${datadir}/knsrcfiles \
+    ${datadir}/xsessions \
+    ${datadir}/applications \
+    ${datadir}/plasma5support \
+    ${datadir}/xdg-desktop-portal \
+    ${datadir}/kio_desktop \
+    ${datadir}/timezonefiles \
+    ${datadir}/desktop-directories \
+    ${datadir}/kglobalaccel \
+    \
+    ${confdir}/xdg \
+    ${libdir}/kconf_update_bin/ \
+"
+
+FILES:${PN}-plugins += " \
+    ${libdir}/qt6/plugins/plasmacalendarplugins \
+"
