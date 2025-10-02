@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2023 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -7,39 +5,71 @@
 DESCRIPTION = "Plasma for the Desktop"
 HOMEPAGE = "https://invent.kde.org/plasma/plasma-desktop"
 LICENSE = "(LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL) & (GPL-2.0-only | GPL-3.0-only | LicenseRef-KDE-Accepted-GPL)"
-LIC_FILES_CHKSUM = " \
-    file://LICENSES/GPL-2.0-only.txt;md5=9e2385fe012386d34dcc5c9863070881 \
-    file://LICENSES/GPL-2.0-or-later.txt;md5=9e2385fe012386d34dcc5c9863070881 \
-    file://LICENSES/GPL-3.0-only.txt;md5=49fc03046e56a282c0c743b5d3a55b7c \
-    file://LICENSES/LGPL-2.1-only.txt;md5=147a320ed8b16b036829a0c71d424153 \
-    file://LICENSES/LGPL-3.0-only.txt;md5=8d51f5b5fd447f7a1040c3dc9f0a8de6 \
-    file://LICENSES/LicenseRef-KDE-Accepted-GPL.txt;md5=b4c280013bbbadfbe92219498dc5228c \
-"
+
 inherit plasma6
 
+## missing ? 
+## KAccounts6 AccountsQt6
+
 DEPENDS:append = " \
-    kwayland6 \
+    qtwayland6 qtwayland6-native \
+    qt5compat6 \
+    qtsvg6 \
+    qtdeclarative6 \
+    \
+    kcrash6 \
+    kcmutils6 kcmutils6-native \
+    knewstuff6 \
+    kio6 \
+    knotifications6 \
+    knotifyconfig6 \
+    attica6 \
+    krunner6 \
+    kglobalaccel6 \
+    kguiaddons6 \
+    kdbusaddons6 \
+    kwidgetsaddons6 \
+    kcodecs6 \
+    sonnet6 \
+    kpackage6 kpackage6-native \
+    kiconthemes6 \
+    kxmlgui6 \
+    ksvg6 \
+    \
+    plasma5support6 \
     libplasma6 \
-    plasma-workspace6 \
-    qtwayland6-native \
-    libxkbfile \
+    plasma-activities6 \
+    plasma-activities-stats6 \
+    kirigami6 \
+    qqc2-desktop-style6 \
+    \
+    kitemmodels6 \
+    ksysguard6 \
+    kded6 \
+    \
+    kworkspace6 \
+    baloo6 \
+    libcanberra \
+    virtual/libx11 \
 "
 
+PACKAGECONFIG[mouse-kwin-wayland] = "-DBUILD_KCM_MOUSE_KWIN_WAYLAND=ON, -DBUILD_KCM_MOUSE_KWIN_WAYLAND=OFF, "
+PACKAGECONFIG[mouse-kwin-x11] = "-DBUILD_KCM_MOUSE_X11=ON, -DBUILD_KCM_MOUSE_X11=OFF, "
+PACKAGECONFIG[touch-kwin-wayland] = "-DBUILD_KCM_TOUCHPAD_KWIN_WAYLAND=ON, -DBUILD_KCM_TOUCHPAD_KWIN_WAYLAND=OFF, "
+PACKAGECONFIG[touch-kwin-x11] = "-DBUILD_KCM_TOUCHPAD_X11=ON, -DBUILD_KCM_TOUCHPAD_X11=OFF, "
+PACKAGECONFIG[kcm-tablet] = "-DBUILD_KCM_TABLET=ON, -DBUILD_KCM_TABLET=OFF, "
 
-EXTRA_OECMAKE += " \
-    -DBUILD_KCM_MOUSE_X11=OFF \
-    -DBUILD_KCM_TOUCHPAD_X11=OFF \
-    -DBUILD_KCM_TABLET=OFF \
+#FIXME handle MACHINE and DISATRO features here after the depoends has been taken care of.
+PACKAGECONFIG:append = " \
+   mouse-kwin-wayland touch-kwin-wayland \
+   mouse-kwin-x11 touch-kwin-x11 \
+   kcm-tablet \
 "
-
-
-INSANE_SKIP:${PN} = "dev-so"
 
 RDEPENDS:${PN} += " \
     gawk \
     kded6 \
     plasma-nano6 \
     kirigami6 \
-    kirigami6-addons6 \
     qqc2-desktop-style6 \
 "
