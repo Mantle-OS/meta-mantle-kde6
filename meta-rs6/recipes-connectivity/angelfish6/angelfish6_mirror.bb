@@ -33,3 +33,9 @@ DEPENDS:append = " \
 
 PACKAGECONFIG[adblock] = ", , angelfish6-adblocker"
 PACKAGECONFIG:append = " adblock"
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${datadir}/knotifications6 \
+    ${datadir}/config.kcfg \
+"
