@@ -59,7 +59,7 @@ index 7ba23c3..302027b 100644
 +
 +if (ANGELFISH_FOUND)
 +    target_link_libraries(angelfish PRIVATE AngelfishAdblock::angelfish_adblock)
-+elif (Corrosion_FOUND)
++elseif (Corrosion_FOUND)
      add_custom_target(adblock
          SOURCES
          rs/adblock/Cargo.toml
