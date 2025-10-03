@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -18,7 +16,14 @@ PACKAGECONFIG:append = " \
 
 DEPENDS:append = " \
     qtdeclarative6 \
+    \
     syndication6 \
-    kirigami6 kirigami6-addons6 \
+    kcolorscheme6 \
+    kirigami6 kirigami6-addons \
     libplasma6 \
+    qqc2-breeze-style6 \
+"
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
 "

@@ -24,5 +24,5 @@ RDEPENDS:${PN} += " \
     plasma-workspace6 \
     polkit-kde6-agent-1-kde6 \
     powerdevil6 \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'desktop-portal', 'xdg-desktop-portal-kde6', '', d)} \
+    xdg-desktop-portal-kde6 \
 "

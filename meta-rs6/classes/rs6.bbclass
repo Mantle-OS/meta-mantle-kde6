@@ -32,3 +32,6 @@ PACKAGECONFIG:append = " \
     ki18n \
     kdoctools \
 "
+
+EXTRA_OECMAKE:append:class-target = " -DKF6_HOST_TOOLING=${STAGING_LIBDIR_NATIVE}/cmake"
+EXTRA_OECMAKE:append:class-nativesdk = " -DKF6_HOST_TOOLING=${STAGING_LIBDIR_NATIVE}/cmake"

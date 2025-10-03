@@ -15,5 +15,5 @@ require plasma-workspace-common.inc
 
 RDEPENDS:${PN}:append = " \
     plasma-mobile6 \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'desktop-portal', 'discover6', '', d)} \
+    discover6 \
 "

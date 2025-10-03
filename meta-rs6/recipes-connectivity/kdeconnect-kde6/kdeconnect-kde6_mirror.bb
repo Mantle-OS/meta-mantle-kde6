@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2020 Volker Krause <vkrause@kde.org>
 # SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
@@ -31,10 +29,10 @@ DEPENDS:append = " \
     kiconthemes6 \
     knotifications6 \
     kio6 \
-    kirigami6 kirigami6-addons6 \
+    kirigami6 kirigami6-addons \
     kpeople6 \
     kwayland6 \
-    pulseaudio-qt6-kde6 \
+    pulseaudio-qt6 \
     qqc2-desktop-style6 \
     kstatusnotifieritem6 \
 "

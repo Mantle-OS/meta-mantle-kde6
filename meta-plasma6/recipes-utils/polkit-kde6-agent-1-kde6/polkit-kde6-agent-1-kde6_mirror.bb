@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2018-2020 Volker Krause <vkrause@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -16,7 +14,7 @@ DEPENDS:append = " \
     kwidgetsaddons6 \
     kcrash6 \
     kiconthemes6 \
-    polkit-qt-16 \
+    polkit-qt6-1 \
 "
 
 EXTRA_OECMAKE += " \
