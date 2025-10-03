@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2018-2020 Volker Krause <vkrause@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -11,20 +9,30 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=9e2385fe012386d34dcc5c9
 inherit plasma6
 
 DEPENDS:append = " \
-    kcmutils6 \
-    kconfig6 \
-    kdbusaddons6 \
-    kiconthemes6 \
-    kio6 \
-    kirigami6 \
+    qtdeclarative6 \
+    \
+    kcrash6 \
     kitemviews6 \
     kitemmodels6 \
-    kjobwidgets6 \
-    krunner6 \
+    kcmutils6 kcmutils6-native \
+    kio6 \
     kservice6 \
-    kwidgetsaddons6 \
+    kiconthemes6 \
+    kwidgetsaddons6 \   
     kwindowsystem6 \
     kxmlgui6 \
-    \
+    kdbusaddons6 \
+    kguiaddons6 \
+    kirigami6 \
+    kjobwidgets6 \
+    krunner6 \
+    kcolorscheme6 \
     plasma-activities6 \
+"
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${datadir}/systemsettings \
+    ${datadir}/zsh \
+    ${datadir}/kglobalaccel \
 "

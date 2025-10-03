@@ -1,0 +1,28 @@
+From f2810ca326c904f839a11fe619962fa5c8e53c64 Mon Sep 17 00:00:00 2001
+From: JosephMillsAtWork <josephjamesmills@gmail.com>
+Date: Thu, 2 Oct 2025 23:03:50 +0000
+Subject: [PATCH] add table so version as well
+
+Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+---
+ src/table/CMakeLists.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/table/CMakeLists.txt b/src/table/CMakeLists.txt
+index 74ff9b6..911ddf1 100644
+--- a/src/table/CMakeLists.txt
++++ b/src/table/CMakeLists.txt
+@@ -28,6 +28,10 @@ ecm_target_qml_sources(PlasmaSystemMonitorTable SOURCES
+ )
+ 
+ target_link_libraries(PlasmaSystemMonitorTable PRIVATE Qt::Quick KSysGuard::Sensors KSysGuard::ProcessCore KF6::CoreAddons KF6::ItemModels)
++set_target_properties(PlasmaSystemMonitorTable PROPERTIES
++    SOVERSION 6
++    VERSION 6.4.4
++)
+ 
+ install(TARGETS PlasmaSystemMonitorTable ${KDE_INSTALL_DEFAULT_ARGS})
+ 
+-- 
+2.51.0
+

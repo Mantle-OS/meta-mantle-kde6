@@ -1,0 +1,28 @@
+From 36fc9f64a64ad337005aaa0de96fc031b83d52b8 Mon Sep 17 00:00:00 2001
+From: JosephMillsAtWork <josephjamesmills@gmail.com>
+Date: Fri, 3 Oct 2025 01:54:58 +0000
+Subject: [PATCH] so version to the firewall core lib
+
+Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+---
+ kcm/core/CMakeLists.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/kcm/core/CMakeLists.txt b/kcm/core/CMakeLists.txt
+index c88905c..e15ff77 100644
+--- a/kcm/core/CMakeLists.txt
++++ b/kcm/core/CMakeLists.txt
+@@ -40,6 +40,10 @@ endif()
+ 
+ add_library(kcm_firewall_core ${core_files})
+ target_link_libraries(kcm_firewall_core ${core_link_libraries})
++set_target_properties(kcm_firewall_core PROPERTIES
++    SOVERSION 6
++    VERSION 6.4.4
++)
+ 
+ generate_export_header(kcm_firewall_core)
+ 
+-- 
+2.51.0
+

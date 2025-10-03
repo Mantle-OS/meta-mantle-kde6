@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2018-2020 Volker Krause <vkrause@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -10,20 +8,43 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=5c213a7de3f013310bd272cdb6eb7a24"
 
 inherit plasma6
 
-DEPENDS = " \
-    plasma-activities6 \
-    kidletime6 \
-    kconfig6 \
+DEPENDS:append = " \
+    qcoro6 \
+    kcrash6 \
     kdbusaddons6 \
-    solid6 \
+    kidletime6 \
+    kitemmodels6 \
     kglobalaccel6 \
     kio6 \
-    knotifyconfig6 \
-    libkscreen6 \
-    kwayland6 \
-    kitemmodels6 \
+    kirigami6 \
+    kcmutils6 kcmutils6-native \
+    knotifications6 \
+    krunner6 \
+    solid6 \
+    kwindowsystem6 \
+    kxmlgui6 \
+    \
+    libplasma6 \    
+    plasma-activities6 \
+    kscreen6 \
     plasma-workspace6 \
-    bluez-qt6 \
+    \
+    libxrandr \
+    libxext \
+    libxcb \
+    \
     ddcutil6 \
-    qtwayland6-native \
+    plasma-wayland-protocols-kf6 \
+    wayland wayland-native \
+    \
+    qtwayland6 qtwayland6-native \
+    libcap \
+"
+
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${datadir}/knotifications6 \
+    ${datadir}/polkit-1 \
+    ${datadir}/plasma \
 "

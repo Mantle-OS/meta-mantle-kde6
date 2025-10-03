@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -11,25 +9,24 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=93e64b4a83c7e441e48bbde
 
 inherit plasma6
 
-DEPENDS:append = " \
-    kconfig6 \
-    kcoreaddons6 \
-    kcmutils6 \
-    ki18n6 \
-    kauth6 \
-    qtbase6 \
-    qtdeclarative6 \
+SRC_URI:append = " \
+    file://0001-so-version-to-the-firewall-core-lib.patch \
 "
 
-RDEPENDS:${PN} += " \
+DEPENDS:append = " \
+    qtdeclarative6 \
+    \
+    kcmutils6 kcmutils6-native \
+    python3-native \
+"
+
+PACKAGECONFIG[firewalld] = "-DBUILD_FIREWALLD_BACKEND=ON, -DBUILD_FIREWALLD_BACKEND=OFF, firewalld, firewalld"
+PACKAGECONFIG[ufw] = "-DBUILD_UFW_BACKEND=ON, -DBUILD_UFW_BACKEND=OFF, ufw"
+PACKAGECONFIG:append = " \
     firewalld \
 "
 
-## FIXME this is crazy "kde this way or no way" lol
-EXTRA_OECMAKE += " -DBUILD_UFW_BACKEND=OFF"
-
-INSANE_SKIP:${PN} = "dev-so"
 FILES:${PN} += " \
-    ${libdir}/libkcm_firewall_core.so \
+    ${datadir}/metainfo \
+    ${datadir}/applications \
 "
-FILES_SOLIBSDEV = ""

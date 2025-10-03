@@ -12,10 +12,12 @@ LIC_FILES_CHKSUM = " \
     file://LICENSES/LicenseRef-KDE-Accepted-GPL.txt;md5=b4c280013bbbadfbe92219498dc5228c \
 "
 
+# !!! QT5 only !!!
+
 inherit plasma6
 
+SRC_URI = "git://invent.kde.org/plasma/plasma-bigscreen;nobranch=1;protocol=https"
 SRCREV = "a18482c36e055b9e32fa07e0b6cadd490c257c39"
-SRC_URI = "git://invent.kde.org/plasma/${BPN};nobranch=1;protocol=https"
 S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
@@ -28,6 +30,7 @@ DEPENDS:append = " \
     kio6 \
     kwayland6 \
     kwindowsystem6 \
+    \
     qtmultimedia6 \
 "
 

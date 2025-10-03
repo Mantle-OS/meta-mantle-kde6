@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -10,12 +8,24 @@ LICENSE = "LGPL-2.1-only & (GPL-2.0-only | GPL-3.0-only | LicenseRef-KDE-Accepte
 
 inherit plasma6
 
+#FIXME https://nuetzlich.net/gocryptfs/
 DEPENDS:append = " \
-    kconfig6 \
+    qtdeclarative6 \
+    \
+    kconfigwidgets6 \
+    kdbusaddons6 \
     kitemmodels6 \
-    kservice6 \
     kio6 \
-    networkmanager-qt6 \
+    kservice6 \
+    kwidgetsaddons6 \
+    \
     libplasma6 \
-    libksysguard6 \
+    plasma-activities6 \
+    networkmanager-qt6 \
+    libksysguard6 \    
+"
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${datadir}/plasma \
 "

@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -11,13 +9,19 @@ LICENSE = "GPL-2.0-or-later"
 inherit plasma6
 
 DEPENDS:append = " \
+    kconfigwidgets6 \
+    kcmutils6 kcmutils6-native \
+    libxxf86vm \
     plasma-wayland-protocols-kf6 \
     \
     qtwayland6 qtwayland6-native \
     wayland-native wayland \
-    wayland-protocols6 \
+    wayland-protocols \
     virtual/egl \
 "
 
-## FIXME
-INSANE_SKIP:${PN} = "dev-so"
+FILES:${PN} += " \
+    ${datadir}/kgamma \
+"
+
+INSANE_SKIP:${PN}-plugins = "dev-so"

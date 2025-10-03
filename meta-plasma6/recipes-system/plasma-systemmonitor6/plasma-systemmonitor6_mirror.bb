@@ -1,4 +1,3 @@
-
 # SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -10,6 +9,11 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=93e64b4a83c7e441e48bbde
 
 inherit plasma6
 
+SRC_URI:append = " \
+    file://0001-so-version-to-shutup-qa.patch \
+    file://0002-add-table-so-version-as-well.patch \
+"
+
 DEPENDS:append = " \
     qtdeclarative6 \
     \
@@ -20,14 +24,23 @@ DEPENDS:append = " \
     kdbusaddons6 \
     knewstuff6 \
     kirigami6 \
+    kirigami6-addons \
     kitemmodels6 \
     kwindowsystem6 \
     kpackage6 kpackage6-native \
     libksysguard6 \
     ksystemstats6 \
-    kirigami6 \
 "
 
-# Do not try to detect the ksystemstats runtime at configure, hardcode
-# a value to skip detection.
 #EXTRA_OECMAKE:append = " -Dksystemstats_EXE=/usr/bin/ksystemstats \"
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${datadir}/kconf_update \
+    ${datadir}/plasma-systemmonitor \
+    ${datadir}/plasma \
+    ${datadir}/knsrcfiles \
+    ${datadir}/ksysguard \
+    ${datadir}/kglobalaccel \
+"
+

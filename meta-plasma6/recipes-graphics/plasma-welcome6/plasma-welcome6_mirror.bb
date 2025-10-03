@@ -11,19 +11,24 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=93e64b4a83c7e441e48bbde
 inherit plasma6
 
 DEPENDS:append = " \
-    kcmutils6 \
+    qtdeclarative6 \
+    qtsvg6 \
+    \
+    kirigami6 kirigami6-addons \
     kconfigwidgets6 \
     kdbusaddons6 \
     kio6 \
-    kservice6 \
-    kirigami6 kirigami6-addons6 \
-    kjobwidgets6 \
     knewstuff6 \
-    ksvg6 \
+    kservice6 \
     kwindowsystem6 \
+    kcmutils6 kcmutils6-native \
+    ksvg6 \
+    kjobwidgets6 \
+    \
     libplasma6 \
-    \    
-    qtbase6 \
-    qtdeclarative6 \
+    kuserfeedback6 \
 "
 
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+"

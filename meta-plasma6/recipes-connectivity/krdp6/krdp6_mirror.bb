@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -14,16 +12,25 @@ LIC_FILES_CHKSUM = " \
 
 inherit plasma6 systemd
 
-DEPENDS = " \
-    freerdp3 \
+DEPENDS:append = " \
     qtbase6 \
-    qtwayland6 \
-    qtwayland6-native \
-    qtkeychain6 \
-    kpipewire6 \
+    qtwayland6 qtwayland6-native \
+    \
+    kdbusaddons6 \
+    kcmutils6 kcmutils6-native \
     kstatusnotifieritem6 \
+    kcrash6 \
+    \
+    freerdp3 \
+    \
+    kpipewire6 \
     libxkbcommon \
-    plasma-wayland-protocols-kf6 \
+    qtkeychain6 \
+"
+
+PACKAGECONFIG[plasma-session] = "-DBUILD_PLASMA_SESSION=ON, -DBUILD_PLASMA_SESSION=OFF, plasma-wayland-protocols-kf6"
+PACKAGECONFIG:append = " \
+    plasma-session \
 "
 
 RDEPENDS:${PN} += " \

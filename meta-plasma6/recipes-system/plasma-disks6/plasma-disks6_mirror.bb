@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -12,11 +10,19 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-only.txt;md5=93e64b4a83c7e441e48bbde
 inherit plasma6
 
 DEPENDS:append = " \
+    kdbusaddons6 \
+    knotifications6 \
     solid6 \
     kservice6 \
-    kauth \
-"
-
-RDEPENDS:${PN} += " \
+    kio6 \
+    kcmutils6 kcmutils6-native \
     smartmontools \
 "
+
+PACKAGECONFIG[simulation] = "-DWITH_SIMULATION=ON, -DWITH_SIMULATION=OFF, "
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${datadir}/knotifications6 \
+    ${datadir}/polkit-1 \
+" 

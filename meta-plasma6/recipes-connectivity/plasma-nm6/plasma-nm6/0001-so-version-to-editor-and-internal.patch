@@ -1,0 +1,44 @@
+From 34bbc88975839d2aa23dcb6c6b6d650c89186563 Mon Sep 17 00:00:00 2001
+From: JosephMillsAtWork <josephjamesmills@gmail.com>
+Date: Fri, 3 Oct 2025 01:01:53 +0000
+Subject: [PATCH] so version to editor and internal
+
+Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+---
+ libs/CMakeLists.txt        | 5 +++++
+ libs/editor/CMakeLists.txt | 4 ++++
+ 2 files changed, 9 insertions(+)
+
+diff --git a/libs/CMakeLists.txt b/libs/CMakeLists.txt
+index b764bdc..886332d 100644
+--- a/libs/CMakeLists.txt
++++ b/libs/CMakeLists.txt
+@@ -66,6 +66,11 @@ target_link_libraries(plasmanm_internal PUBLIC KF6::ModemManagerQt)
+ ecm_add_qml_module(plasmanm_internal URI org.kde.plasma.networkmanagement GENERATE_PLUGIN_SOURCE DEPENDENCIES "org.kde.networkmanager")
+ ecm_finalize_qml_module(plasmanm_internal)
+ 
++set_target_properties(plasmanm_internal PROPERTIES
++    SOVERSION 6
++    VERSION 6.4.4
++)
++
+ install(TARGETS plasmanm_internal ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+ 
+ add_subdirectory(editor)
+diff --git a/libs/editor/CMakeLists.txt b/libs/editor/CMakeLists.txt
+index 4cf7156..2ceb16d 100644
+--- a/libs/editor/CMakeLists.txt
++++ b/libs/editor/CMakeLists.txt
+@@ -161,5 +161,9 @@ PRIVATE
+ )
+ 
+ target_compile_definitions(plasmanm_editor PRIVATE BROADBANDPROVIDER_DATABASE=\"${BROADBANDPROVIDER_DATABASE}\")
++set_target_properties(plasmanm_editor PROPERTIES
++    SOVERSION 6
++    VERSION 6.4.4
++)
+ 
+ install(TARGETS plasmanm_editor ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+-- 
+2.51.0
+

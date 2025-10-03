@@ -1,0 +1,29 @@
+From 175bc9ab5a05aee867ef52f57be5d2746ea0c3b8 Mon Sep 17 00:00:00 2001
+From: JosephMillsAtWork <josephjamesmills@gmail.com>
+Date: Thu, 2 Oct 2025 22:57:36 +0000
+Subject: [PATCH] so version to shutup qa
+
+Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+---
+ src/page/CMakeLists.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/src/page/CMakeLists.txt b/src/page/CMakeLists.txt
+index 49f9d99..accb3fa 100644
+--- a/src/page/CMakeLists.txt
++++ b/src/page/CMakeLists.txt
+@@ -49,7 +49,10 @@ ecm_target_qml_sources(PlasmaSystemMonitorPage SOURCES
+ kconfig_target_kcfg_file(PlasmaSystemMonitorPage FILE systemmonitor.kcfg CLASS_NAME Configuration MUTATORS GENERATE_PROPERTIES GENERATE_MOC SINGLETON QML_REGISTRATION)
+ 
+ target_link_libraries(PlasmaSystemMonitorPage PRIVATE Qt::DBus Qt::Quick KF6::ConfigCore KF6::I18n KF6::NewStuffCore KSysGuard::Sensors KSysGuard::SensorFaces)
+-
++set_target_properties(PlasmaSystemMonitorPage PROPERTIES
++    SOVERSION 6
++    VERSION 6.4.4
++)
+ install(TARGETS PlasmaSystemMonitorPage ${KDE_INSTALL_DEFAULT_ARGS})
+ 
+ ecm_finalize_qml_module(PlasmaSystemMonitorPage)
+-- 
+2.51.0
+
