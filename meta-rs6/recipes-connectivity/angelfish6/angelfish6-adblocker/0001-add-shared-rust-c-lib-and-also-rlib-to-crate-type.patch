@@ -1,0 +1,26 @@
+From d719b1730665fdf4d46f04c2949310dbc3394466 Mon Sep 17 00:00:00 2001
+From: JosephMillsAtWork <josephjamesmills@gmail.com>
+Date: Fri, 3 Oct 2025 21:15:12 +0000
+Subject: [PATCH] add shared rust c lib and also rlib to crate type
+
+Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+---
+ src/rs/adblock/Cargo.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/rs/adblock/Cargo.toml b/src/rs/adblock/Cargo.toml
+index 89658a6..5fe267a 100644
+--- a/src/rs/adblock/Cargo.toml
++++ b/src/rs/adblock/Cargo.toml
+@@ -9,7 +9,7 @@ authors = ["Jonah Brüchert <jbb.prv@gmx.de>"]
+ edition = "2018"
+ 
+ [lib]
+-crate-type = ["staticlib"]
++crate-type = ["cdylib", "rlib", "staticlib"]
+ # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+ 
+ [build-dependencies]
+-- 
+2.51.0
+

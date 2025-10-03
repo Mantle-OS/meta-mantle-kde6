@@ -1,0 +1,68 @@
+From b3017b7e543370b48870e360a025bab88c750df1 Mon Sep 17 00:00:00 2001
+From: JosephMillsAtWork <josephjamesmills@gmail.com>
+Date: Fri, 3 Oct 2025 22:22:36 +0000
+Subject: [PATCH] add fallback to Corrosion
+
+Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+---
+ CMakeLists.txt     | 27 +++++++++++++++++++--------
+ src/CMakeLists.txt |  5 ++++-
+ 2 files changed, 23 insertions(+), 9 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index ac04236..6b6a861 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -70,14 +70,25 @@ find_package(FutureSQL6 REQUIRED)
+ find_package(QCoro6 ${QCORO_MIN_VERSION} REQUIRED COMPONENTS Core Quick Qml)
+ 
+ # For adblocker
+-find_package(Corrosion)
+-set_package_properties(Corrosion PROPERTIES
+-    TYPE RECOMMENDED
+-    PURPOSE "Required to build the builtin adblocker"
+-    DESCRIPTION "CMake scripts to seamlessly build and link to targets using cargo"
+-    URL https://github.com/AndrewGaspar/corrosion
+-)
+-
++## this could be a function in ecm called ecm_import_rs() or something like that were it checks the pkgconf or find_package and last resoprt use Corrosion
++find_package(PkgConfig)
++pkg_check_modules(ANGELFISH QUIET IMPORTED_TARGET angelfish-adblocker)
++if(ANGELFISH_FOUND)
++    add_library(AngelfishAdblock::angelfish_adblock INTERFACE IMPORTED)
++    set_target_properties(AngelfishAdblock::angelfish_adblock PROPERTIES
++        INTERFACE_LINK_LIBRARIES "PkgConfig::ANGELFISH"
++        INTERFACE_INCLUDE_DIRECTORIES "${ANGELFISH_INCLUDE_DIRS}"
++        INTERFACE_COMPILE_OPTIONS "${ANGELFISH_CFLAGS_OTHER}"
++    )
++else()
++    find_package(Corrosion)
++    set_package_properties(Corrosion PROPERTIES
++        TYPE RECOMMENDED
++        PURPOSE "Required to build the builtin adblocker"
++        DESCRIPTION "CMake scripts to seamlessly build and link to targets using cargo"
++        URL https://github.com/AndrewGaspar/corrosion
++    )
++endif()
+ ################# Definitions to pass to the compiler #################
+ 
+ add_definitions(-DQT_NO_FOREACH -DQT_NO_URL_CAST_FROM_STRING)
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 7ba23c3..302027b 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -50,7 +50,10 @@ ecm_target_qml_sources(angelfish
+         regex-weburl/RegexWebUrl.js
+ )
+ 
+-if (Corrosion_FOUND)
++
++if (ANGELFISH_FOUND)
++    target_link_libraries(angelfish PRIVATE AngelfishAdblock::angelfish_adblock)
++elif (Corrosion_FOUND)
+     add_custom_target(adblock
+         SOURCES
+         rs/adblock/Cargo.toml
+-- 
+2.51.0
+
