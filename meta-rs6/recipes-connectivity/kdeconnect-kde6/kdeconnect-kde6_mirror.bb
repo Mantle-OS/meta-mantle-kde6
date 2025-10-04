@@ -20,28 +20,54 @@ DEPENDS:append = " \
     qtdeclarative6 \
     qtmultimedia6 \
     qtwayland6 qtwayland6-native \
-    qtconnectivity6 \
     \
-    qca-kf6 \
+    kirigami6 kirigami6-addons \
+    kpackage6 \
     libfakekey \
-    kconfigwidgets6 \
+    \
+    wayland wayland-native \
+    wayland-protocols \
+    libxkbcommon \
+    openssl \
+    \
     kdbusaddons6 \
     kiconthemes6 \
     knotifications6 \
     kio6 \
-    kirigami6 kirigami6-addons \
+    kcolorscheme6 \
+    kservice6 \
+    solid6 \
     kpeople6 \
-    kwayland6 \
-    pulseaudio-qt6 \
-    qqc2-desktop-style6 \
+    kwindowsystem6 \
+    kguiaddons6 \
+    kcrash6 \
+    kitemmodels6 \
     kstatusnotifieritem6 \
+    \
+    qqc2-desktop-style6 \
+    modemmanager-qt6 \
 "
 
-EXTRA_OECMAKE += "-DEXPERIMENTALAPP_ENABLED=ON"
-EXTRA_OECMAKE += "-DSMSAPP_ENABLED=OFF"
-# workaround for missing variable, which is only used for Windows builds
-EXTRA_OECMAKE += "-DCMAKE_SYSTEM_VERSION=0.0.0"
+PACKAGECONFIG[x11] = "-DWITH_X11=ON, -DWITH_X11=OFF, virtual/libx11 libfakekey libxtst"
+PACKAGECONFIG[pulseaudio] = "-DWITH_PULSEAUDIO=ON, -DWITH_PULSEAUDIO=OFF, pulseaudio-qt6"
+PACKAGECONFIG[bluetooth] = "-DBLUETOOTH_ENABLED=ON, -DBLUETOOTH_ENABLED=OFF, qtconnectivity6"
+PACKAGECONFIG[zeroconf] = "-DMDNS_ENABLED=ON, -DMDNS_ENABLED=OFF, avahi avahi-libnss-mdns"
+PACKAGECONFIG[loopback] = "-DLOOPBACK_ENABLED=ON, -DLOOPBACK_ENABLED=OFF, "
 
-RDEPENDS:${PN} += " \
-    kpeople6 \
+PACKAHECONFIG:append = " \
+    ${@bb.utils.filter('DISTRO_FEATURES', 'x11', d)} \
+    ${@bb.utils.filter('DISTRO_FEATURES', 'pulseaudio', d)} \
+    ${@bb.utils.filter('DISTRO_FEATURES', 'zeroconf', d)} \
+"
+
+FILES:${PN} += " \
+    ${datadir}/contractor \
+    ${datadir}/metainfo \
+    ${datadir}/kdeconnect \
+    ${datadir}/zsh \
+    ${datadir}/knotifications6 \
+    ${datadir}/Thunar \
+    ${datadir}/plasma \
+    ${datadir}/nautilus-python \
+    ${datadir}/deepin \
 "

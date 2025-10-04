@@ -1,0 +1,100 @@
+From 0c094cea183ef123177ec93faf3eab8402d28523 Mon Sep 17 00:00:00 2001
+From: JosephMillsAtWork <josephjamesmills@gmail.com>
+Date: Fri, 3 Oct 2025 23:54:32 +0000
+Subject: [PATCH] add zlib to the mix as it fails
+
+Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+---
+ CMakeLists.txt                       | 3 +++
+ events/x11/CMakeLists.txt            | 1 +
+ events/xdp/CMakeLists.txt            | 1 +
+ framebuffers/pipewire/CMakeLists.txt | 1 +
+ framebuffers/xcb/CMakeLists.txt      | 1 +
+ krfb/CMakeLists.txt                  | 2 ++
+ 6 files changed, 9 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f59626a..ffa2d9e 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -27,6 +27,9 @@ include(CheckIncludeFile)
+ 
+ check_include_file("linux/input.h" HAVE_LINUX_INPUT_H)
+ 
++find_package(PkgConfig)
++pkg_check_modules(LibZ REQUIRED zlib)
++
+ find_package(Qt6 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core DBus Widgets)
+ if (Qt6Gui_VERSION VERSION_GREATER_EQUAL "6.10.0")
+     find_package(Qt6GuiPrivate ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
+diff --git a/events/x11/CMakeLists.txt b/events/x11/CMakeLists.txt
+index 0a8df0f..b152362 100644
+--- a/events/x11/CMakeLists.txt
++++ b/events/x11/CMakeLists.txt
+@@ -13,6 +13,7 @@ target_link_libraries (krfb_events_x11
+                        ${X11_XTest_LIB}
+                        KF6::CoreAddons
+                        krfbprivate
++                       ${LibZ_LIBRARIES}
+ )
+ set_target_properties(krfb_events_x11 PROPERTIES OUTPUT_NAME x11)
+ 
+diff --git a/events/xdp/CMakeLists.txt b/events/xdp/CMakeLists.txt
+index 38d99cc..e27d032 100644
+--- a/events/xdp/CMakeLists.txt
++++ b/events/xdp/CMakeLists.txt
+@@ -20,6 +20,7 @@ target_link_libraries (krfb_events_xdp
+                        KF6::I18n
+                        Qt::DBus
+                        krfbprivate
++                       ${LibZ_LIBRARIES}
+ )
+ set_target_properties(krfb_events_xdp PROPERTIES OUTPUT_NAME xdp)
+ 
+diff --git a/framebuffers/pipewire/CMakeLists.txt b/framebuffers/pipewire/CMakeLists.txt
+index 8fae02e..f9b4d12 100644
+--- a/framebuffers/pipewire/CMakeLists.txt
++++ b/framebuffers/pipewire/CMakeLists.txt
+@@ -68,6 +68,7 @@ target_link_libraries(krfb_framebuffer_pw
+                       krfbprivate
+                       K::KPipeWire
+                       K::KPipeWireDmaBuf
++                      ${LibZ_LIBRARIES}
+ )
+ 
+ set_target_properties(krfb_framebuffer_pw PROPERTIES OUTPUT_NAME pw)
+diff --git a/framebuffers/xcb/CMakeLists.txt b/framebuffers/xcb/CMakeLists.txt
+index e0a1d26..ed166f6 100644
+--- a/framebuffers/xcb/CMakeLists.txt
++++ b/framebuffers/xcb/CMakeLists.txt
+@@ -30,6 +30,7 @@ target_link_libraries (krfb_framebuffer_xcb
+                        XCB::IMAGE
+                        KF6::CoreAddons
+                        krfbprivate
++                       ${LibZ_LIBRARIES}
+ )
+ 
+ set_target_properties(krfb_framebuffer_xcb PROPERTIES OUTPUT_NAME xcb)
+diff --git a/krfb/CMakeLists.txt b/krfb/CMakeLists.txt
+index 980a84e..87bbd52 100644
+--- a/krfb/CMakeLists.txt
++++ b/krfb/CMakeLists.txt
+@@ -28,6 +28,7 @@ target_link_libraries (krfbprivate
+                        Qt::GuiPrivate
+                        ${X11_X11_LIB}
+                        LibVNCServer::vncserver
++                       ${LibZ_LIBRARIES}
+ )
+ 
+ set_target_properties (krfbprivate PROPERTIES
+@@ -108,6 +109,7 @@ target_link_libraries (krfb
+                        KF6::StatusNotifierItem
+                        KF6::Crash
+                        LibVNCServer::vncserver
++                       ${LibZ_LIBRARIES}
+ )
+ 
+ if (X11_XTest_FOUND)
+-- 
+2.51.0
+
