@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2024 Marc Ferland <marc.ferland@sonatest.com>
 #
 # SPDX-License-Identifier: MIT
@@ -18,24 +16,43 @@ PACKAGECONFIG:append = " \
 "
 
 DEPENDS:append = " \
-    kcmutils6 \
-    kbookmarks6 \
-    kcodecs6 \
-    kcompletion6 \
-    kcrash6 \
-    kdbusaddons6 \
-    kguiaddons6 \
-    kiconthemes6 \
-    kio6 \
+    qtmultimedia6 \
+    \
+    kcmutils6 kcmutils6-native \
     knewstuff6 \
-    knotifications6 \
+    kdbusaddons6 \
+    kbookmarks6 \
+    kio6 \
     kparts6 \
-    ktextwidgets6 \
-    kuserfeedback6 \
-    kwindowsystem6 \
-    phonon \
     solid6 \
+    kiconthemes6 \
+    kcompletion6 \
+    ktextwidgets6 \
+    knotifications6 \
+    kcrash6 \
+    kwindowsystem6 \
+    kcodecs6 \
+    kguiaddons6 \
+    kcolorscheme6 \
+    \
+    kuserfeedback6 \
+    kdoctools6 kdoctools6-native \
+    packagekit-qt6 \
+    kfilemetadata6 \
+    baloo6 \
+    flatpak \
 "
 
 SYSTEMD_SERVICE:${PN} = "plasma-dolphin.service"
 SYSTEMD_AUTO_ENABLE = "disable"
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${datadir}/kconf_update \
+    ${datadir}/config.kcfg \
+    ${datadir}/dolphin \
+    ${datadir}/zsh \
+    ${datadir}/knsrcfiles \
+    ${datadir}/kglobalaccel \
+    ${libdir}/kconf_update_bin \
+"

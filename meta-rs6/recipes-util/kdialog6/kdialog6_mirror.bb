@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2019-2020 Volker Krause <vkrause@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -15,11 +13,20 @@ PACKAGECONFIG:append = " \
     kauth \
 "
 
-DEPENDS += " \
+DEPENDS:append = " \
     ktextwidgets6 \
-    kio6 \
     knotifications6 \
-    kguiaddons6 \
+    kdbusaddons6 \
     kiconthemes6 \
-    kwindowsystem6 \
+    kwindowsystem6 \    
+    kio6 \
+"
+
+PACKAGECONFIG[x11] = "-DWITHOUT_X11=OFF, -DWITHOUT_X11=ON, virtual/libx11"
+PACKAGECONFIG:append = " \
+    ${@bb.utils.filter('DISTRO_FEATURES', 'x11', d)} \
+"
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
 "
