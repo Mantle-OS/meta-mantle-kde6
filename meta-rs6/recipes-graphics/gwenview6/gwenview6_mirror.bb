@@ -1,9 +1,6 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
-
 SUMMARY = "Gwenview - Image Viewer"
 DESCRIPTION = "Gwenview is a fast and easy to use image viewer by KDE, ideal for browsing and displaying a collection of images."
 HOMEPAGE = "https://apps.kde.org/de/gwenview"
@@ -18,28 +15,51 @@ PACKAGECONFIG:append = " \
     kauth \
     ki18n \
 "
-
+# cfitsio KDcrawQt6
 DEPENDS:append = " \
-    exiv2 \
-    lcms \
-    jpeg \
-    phonon \
+    qtsvg6 \
+    qtmultimedia6 \
+    qtwayland6 qtwayland6-native \
     \
-    baloo6 \
+    wayland-protocols \
+    wayland wayland-native \
+    \
     kio6 \
     kitemmodels6 \
     kparts6 \
     kwindowsystem6 \
     kiconthemes6 \
-    kimageannotator6 \
     knotifications6 \
+    kguiaddons6 \
     kwidgetsaddons6 \
-    plasma-activities6 \
+    kcrash6 \
+    kdoctools6 kdoctools6-native \
     purpose6 \
-    \    
-    qtwayland6 qtwayland6-native \
+    plasma-activities6 \
+    \
+    libjpeg-turbo \
+    libpng \ 
+    libkexiv2-kf6 \
+    tiff \
+    lcms \
+    baloo6 \
 "
 
 
-EXTRA_OECMAKE += "-DJPEGLIB_RUN_RESULT=true"
-EXTRA_OECMAKE += "-DJPEGLIB_RUN_RESULT__TRYRUN_OUTPUT=0"
+PACKAGECONFIG[x11] = "-DWITHOUT_X11=OFF, -DWITHOUT_X11=ON, virtual/libx11"
+PACKAGECONFIG[kimage-annotator] = "-DGWENVIEW_IMAGEANNOTATOR=ON, -DGWENVIEW_IMAGEANNOTATOR=OFF, kcolorpicker6 kimageannotator6"
+PACKAGECONFIG:append = " \
+    ${@bb.utils.filter('DISTRO_FEATURES', 'x11', d)} \
+    kimage-annotator \    
+"
+
+EXTRA_OECMAKE:append = " \
+    -DGWENVIEW_SEMANTICINFO_BACKEND=Baloo \
+"
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${datadir}/solid \
+    ${datadir}/gwenview \
+"
+ 

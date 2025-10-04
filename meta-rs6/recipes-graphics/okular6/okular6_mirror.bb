@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2019-2020 Volker Krause <vkrause@kde.org>
 # SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
@@ -14,40 +12,60 @@ LIC_FILES_CHKSUM = " \
 
 inherit rs6
 
+# spectre6 DjVuLibre QMobipocket6 Discount epub
+DEPENDS:append = " \
+    qtdeclarative6 \
+    qtsvg6 \
+    qtspeech6 \
+    \
+    karchive6 \
+    kbookmarks6 \
+    kcompletion6 \
+    kconfigwidgets6 \
+    kio6 \
+    threadweaver6 \
+    kwindowsystem6 \
+    kxmlgui6 \
+    kwallet6 \
+    kdoctools6 kdoctools6-native \
+    kparts6 \
+    kcolorscheme6 \
+    kcrash6 \
+    kiconthemes6 \
+    kitemviews6 \
+    ktextwidgets6 \
+    kwidgetsaddons6 \
+    purpose6 \
+    kirigami6 kirigami6-addons \
+    plasma-activities6 \
+    phonon-kf6 \
+    kpty6 \
+    \
+    zlib \
+    poppler \
+    freetype \
+    tiff \
+    ebook-tools libe-book \
+    libkexiv2-kf6 \
+"
+
+# kpty6 qca-kf6 
+
+PACKAGECONFIG[dbus] = "-DUSE_DBUS=ON,m -DUSE_DBUS=OFF, "
 PACKAGECONFIG:append = " \
     kcoreaddons \
     kconfig \
     kauth \
-"
-
-DEPENDS:append = " \
-    libzip \
-    poppler \
-    \
-    libkexiv2-kf6 \
-    kirigami6 \
-    kparts6 \
-    threadweaver6 \
-    kwallet6 \
-    plasma-activities6 \
-    kpty6 \
-    phonon-kf6 \
-    purpose6 \
-    qca-kf6 \
+    dbus \
 "
 
 EXTRA_OECMAKE += " \
     -DOKULAR_UI=both \
-    -DFORCE_NOT_REQUIRED_DEPENDENCIES='KExiv2Qt6;LibSpectre;DjVuLibre;EPub;Discount' \
+    -DFORCE_NOT_REQUIRED_DEPENDENCIES='KExiv2Qt6;LibSpectre;DjVuLibre;Discount' \
 "
 
-# dirty hack to force the mobile version and hide the desktop one
-do_install:append() {
-    sed -i 's/Exec=okular %U$/Exec=okularkirigami %U/g' ${D}${datadir}/applications/org.kde.okular.desktop
-    sed -i 's/Exec=okular %U$/Exec=okularkirigami %U/g' ${D}${datadir}/applications/okularApplication_*.desktop
-}
-
-RDEPENDS:${PN} += " \
-    ${PN}-shared \
-    kirigami6-addons6 \
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${datadir}/config.kcfg \
+    ${datadir}/okular \
 "

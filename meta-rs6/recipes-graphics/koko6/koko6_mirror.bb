@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2019-2020 Volker Krause <vkrause@kde.org>
 # SPDX-FileCopyrightText: 2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
@@ -11,9 +9,31 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.1-only.txt;md5=fabba2a3bfeb22a6483d44
 
 inherit rs6
 
-SRC_URI:append = " git://invent.kde.org/packaging/geonames-data.git;prototol=https;name=geodata;nobranch=1;destsuffix=geonames-data"
+SRC_URI:append = " \
+    git://invent.kde.org/packaging/geonames-data.git;prototol=https;name=geodata;nobranch=1;destsuffix=geonames-data \
+"
 SRCREV_geodata = "608af80ddf04265496eccd0c63b2945042cdccdc"
 
+DEPENDS:append = " \
+    qtdeclarative6 \
+    qtpositioning6 \
+    qtsvg6 \
+    \
+    kdeclarative6 \
+    kconfigwidgets6 \
+    kio6 \
+    kguiaddons6 \
+    knotifications6 \
+    kfilemetadata6 \
+    kdbusaddons6 \
+    \
+    libkexiv2-kf6 \
+    kquickimageeditor6 \
+    \
+    libxcb \
+    kirigami6 kirigami6-addons \
+    purpose6 \
+"
 
 PACKAGECONFIG:append = " \
     kconfig \
@@ -21,39 +41,14 @@ PACKAGECONFIG:append = " \
     kauth \
 "
 
-DEPENDS:append = " \
-    qtlocation6 \
-    \
-    kdeclarative6 \
-    kiconthemes6 \
-    kio6 \
-    kirigami6 kirigami6-addons6 \
-    kfilemetadata6 \
-    knotifications6 \
-    kquickimageeditor6 \
-    exiv2-kf6 \
-    purpose6 \
-"
-
-RDEPENDS:${PN} += " \
-    qtdeclarative6-qmlplugins \
-    purpose6 \
-    kirigami6 \
-    kirigami6-addons6 \
-    kquickimageeditor6 \
-"
-
-KOKO_CITIES1000 = "cities1000.zip"
-KOKO_ADMIN1CODES = "admin1CodesASCII.txt"
-KOKO_ADMIN2CODES = "admin2Codes.txt"
-
-
-# To build Koko, it is required to import a few files from outside
-# this repository. These files are licensed under the CC-BY-4.0 and
-# are maintained by the GeoNames project. These files need to be
-# copied to the src directory. CMake will take care of the rest.
 do_configure:prepend() {
-    cp ${WORKDIR}/geonames-data/export/${KOKO_CITIES1000} ${S}/src
-    cp ${WORKDIR}/geonames-data/export/${KOKO_ADMIN1CODES} ${S}/src
-    cp ${WORKDIR}/geonames-data/export/${KOKO_ADMIN2CODES} ${S}/src
+    cp ${WORKDIR}/geonames-data/export/cities1000.zip ${S}/src
+    cp ${WORKDIR}/geonames-data/export/admin1CodesASCII.txt ${S}/src
+    cp ${WORKDIR}/geonames-data/export/admin2Codes.txt ${S}/src
 }
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${datadir}/koko \
+    ${datadir}/knotifications6 \
+"
