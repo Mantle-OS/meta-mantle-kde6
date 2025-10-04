@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -17,24 +15,27 @@ PACKAGECONFIG:append = " \
     ki18n \
 "
 
-DEPENDS = " \
-    qtbase6 \
+DEPENDS:append = " \
     qtdeclarative6 \
     qtmultimedia6 \
+    qtsvg6 \
     \
-    kdeclarative6 \
-    libplasma6 \
-    kiconthemes6 \
-    kirigami6 kirigami6-addons6 \
+    kirigami6 kirigami6-addons \
     knotifications6 \
+    kdbusaddons6 \
+    kcrash6 \
     kstatusnotifieritem6 \
+    ksvg6 \
 "
 
-RDEPENDS:${PN} += " \
-    qtdeclarative6-qmlplugins \
+PACKAGECONFIG[plasmiod] = "-DBUILD_PLASMOID=ON, -DBUILD_PLASMOID=OFF, kio6 libplasma6 kjobwidgets6"
+PACKAGECONFIG:append = " \
+    plasmiod \
 "
 
 FILES:${PN} += " \
-    ${datadir}/plasma/plasmoids/ \
-    ${datadir}/krunner/ \
+    ${datadir}/krunner \
+    ${datadir}/metainfo \
+    ${datadir}/knotifications6 \
+    ${datadir}/plasma \
 "

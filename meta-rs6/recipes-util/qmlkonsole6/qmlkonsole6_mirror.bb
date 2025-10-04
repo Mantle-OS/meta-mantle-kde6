@@ -17,6 +17,7 @@ PACKAGECONFIG:append = " \
 
 DEPENDS:append = " \
     qtdeclarative6 \
+    \
     kirigami6 kirigami6-addons6 \
     kwindowsystem6 \
     kpty6 \

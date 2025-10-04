@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -17,14 +15,14 @@ PACKAGECONFIG:append = " \
 "
 
 DEPENDS:append = " \
-    qqc2-desktop-style6 \
     qtdeclarative6 \
-    kitemmodels6 \
-    kcontacts6 \
-    kirigami6 kirigami6-addons6 \
+    \
+    qqc2-desktop-style6 \
+    kcrash6 \
     kpublictransport6 \
+    kirigami6 kirigami6-addons \
 "
 
-RDEPENDS:${PN} += " \
-    kirigami6-addons6 \
+FILES:${PN} += " \
+    ${datadir}/metainfo \
 "

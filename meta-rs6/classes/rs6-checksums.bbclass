@@ -1,5 +1,6 @@
 SRCREV = "${SRCREV_${KDE6_RS_MODULE}}"
 
+
 SRC_URI[alligator6.sha256sum] = "bb39c244f7e26d06d342515a8e69888fbe7a5ea3b7c224ff1f0a0c2718a32d8c"
 SRC_URI[angelfish6.sha256sum] = "0926325a19f2cc72e4a54fdacec5eb7cb15044e6129d28d1a959a706ad1c2d7c"
 SRC_URI[blinken6.sha256sum] = "659bc69e811c7247e801c0696066bfb8cc9f70e223f401a58b08bb6bd83d35a4"
@@ -15,6 +16,7 @@ SRC_URI[kdeconnect-kde6.sha256sum] = "edc6d8d5bb3aab53208a229528ef36a5bc959bfaec
 SRC_URI[kdeedu-data6.sha256sum] = "5ef96eeeed941a5cebd9756c6cc1dde888a63c677a1c6250b6a2286070b92066"
 SRC_URI[kdialog6.sha256sum] = "7772cdfe2acccfda420c627a8b1f4cf35acc1906f5155fc2166ee482e10755a3"
 SRC_URI[khangman6.sha256sum] = "6e0395602370083082525717485fa1030ae7b4e31ecb97ad2035aa3c4788a890"
+SRC_URI[kirigami-gallery6.sha256sum] = "ba89fb934ded45afbd2ed7b4a5b7aff2d2c80eca931168417d6e04951a83c1aa"
 SRC_URI[kitinerary6.sha256sum] = "635530c31d67fc35f5f5bcdf43f06d896e47b423d02df6546ef3c5fea1d212c6"
 SRC_URI[kjournald6.sha256sum] = "5287b36efdc7b124c81c1c6a0523357d660b5d633b7edc139480123ac74616c6"
 SRC_URI[kmime6.sha256sum] = "846e6ecd519d99a282f5079c9c153fbbc3d9e6f8698e5a9b31f8dccfe988d1f3"
