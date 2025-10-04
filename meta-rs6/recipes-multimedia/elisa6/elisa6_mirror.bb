@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -19,16 +17,29 @@ PACKAGECONFIG:append = " \
 "
 
 DEPENDS:append = " \
-    baloo6 \
-    kirigami6 kirigami6-addons6 \
-    kdeclarative6 \
-    kfilemetadata6 \
-    kxmlgui6 \
-    kconfigwidgets6 \
-    kcrash6 \
-    kdbusaddons6 \
-    qqc2-desktop-style6 \
-    \
     qtdeclarative6 \
     qtmultimedia6 \
+    qtsvg6 \
+    \
+    kiconthemes6 \
+    kfilemetadata6 \
+    kxmlgui6 \
+    kcolorscheme6 \
+    kcodecs6 \
+    kcrash6 \
+    kdbusaddons6 \
+    kirigami6 kirigami6-addons \
+    kio6 \
+    qqc2-desktop-style6 \
+    \
+    gupnp \        
+    vlc \
+"
+#    baloo6 
+#    kdeclarative6 
+#    kconfigwidgets6 
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${libdir}/elisa \
 "

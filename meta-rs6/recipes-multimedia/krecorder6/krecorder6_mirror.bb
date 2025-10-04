@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -20,6 +18,9 @@ DEPENDS = " \
     qtsvg6 \
     qtmultimedia6 \
     \
-    kirigami6 kirigami6-addons6 \
-    kwindowsystem6 \
+    kirigami6 kirigami6-addons \
+"
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
 "
