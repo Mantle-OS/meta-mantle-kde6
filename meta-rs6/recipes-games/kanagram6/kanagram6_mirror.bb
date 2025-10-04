@@ -17,14 +17,28 @@ PACKAGECONFIG:append = " \
 "
 
 DEPENDS:append = " \
-    kcrash \
+    qtdeclarative6 \
+    qtspeech6 \
+    \
+    kcrash6 \
+    sonnet6 \
+    kconfigwidgets6 \
+    kdoctools6 kdoctools6-native \
     kio6 \
     knewstuff6 \
-    knotifications \
-    knotifyconfig6 \
+    kxmlgui6 \
     libkeduvocdocument6 \
+    \
+    kdoctools6 kdoctools6-native \
 "
 
 RDEPENDS:${PN} += " \
     kdeedu-data6 \
+"
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${datadir}/config.kcfg \
+    ${datadir}/knsrcfiles \
+    ${datadir}/kanagram \
 "

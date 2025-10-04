@@ -1,6 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-
 # SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -18,15 +15,22 @@ PACKAGECONFIG:append = " \
     kauth \
 "
 
-DEPENDS += " \
-    qtdeclarative6 \\
+DEPENDS:append = " \
+    qtdeclarative6 \
+    qtmultimedia6 \
+    qtsvg6  \
     \
     kcrash6 \
-    kirigami6 kirigami6-addons6 \
     knewstuff6 \
+    kirigami6 kirigami6-addons \
+    kdbusaddons6 \
+    kdoctools6 kdoctools6-native \
     libkeduvocdocument6 \
 "
 
 FILES:${PN} += " \
-    ${datadir}/knsrcfiles/kwordquiz.knsrc \
+    ${datadir}/kwordquiz \
+    ${datadir}/metainfo \
+    ${datadir}/config.kcfg \
+    ${datadir}/knsrcfiles \
 "

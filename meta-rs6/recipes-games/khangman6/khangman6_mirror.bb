@@ -1,8 +1,6 @@
 # SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 SUMMARY = "KHangMan"
 DESCRIPTION = "KHangMan is a game based on the well-known hangman game."
 HOMEPAGE = "https://edu.kde.org/khangman/"
@@ -19,21 +17,21 @@ PACKAGECONFIG:append = " \
 "
 
 DEPENDS:append = " \
-    kcompletion \
+    qtdeclarative6 \
+    qtsvg6 \
+    \
     kcrash6 \
-    kio6 \
+    kcompletion6 \
     knewstuff6 \
-    knotifications \
-    knotifyconfig6 \
-    kparts6 \
-    kxmlgui6 \
+    knotifications6 \
+    kio6 \
+    kdoctools6 kdoctools6-native \
     libkeduvocdocument6 \
-"
-
-RDEPENDS:${PN} += " \
-    kdeedu-data6 \
 "
 
 FILES:${PN} += " \
     ${datadir}/knsrcfiles/ \
+    ${datadir}/metainfo \
+    ${datadir}/config.kcfg \
+    ${datadir}/khangman \
 "

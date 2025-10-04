@@ -1,9 +1,6 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
+# SPDX-License-Identifier: CC0-1.0 SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
-
 SUMMARY = "libkdegames"
 DESCRIPTION = "Common code and data for many KDE games"
 HOMEPAGE = "https://invent.kde.org/games/libkdegames"
@@ -17,19 +14,23 @@ PACKAGECONFIG:append = " \
     kconfig \
 "
 
-DEPENDS += " \
+DEPENDS:append = " \
     qtdeclarative6 \
+    qtsvg6 \
+    \
     karchive6 \
+    kcolorscheme6 \
+    kcompletion6 \
     kconfigwidgets6 \
+    kdnssd6 \
     kguiaddons6 \
-    kcolorscheme \
     kiconthemes6 \
     knewstuff6 \
-    kdnssd6 \
     kxmlgui6 \
+    libsndfile1 \
     openal-soft \
 "
 
 FILES:${PN} += " \
-    ${datadir}/carddecks/* \
+    ${datadir}/carddecks \
 "

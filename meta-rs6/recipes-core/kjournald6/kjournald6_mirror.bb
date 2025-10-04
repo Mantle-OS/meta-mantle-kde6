@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -20,14 +18,16 @@ DEPENDS:append = " \
     qtdeclarative6 \
     systemd \
     kcrash6 \
-    kirigami6 kirigami6-addons6 \
+    kirigami6 kirigami6-addons \
 "
+
+PACKAGECONFIG[experimental-headers] = "-DINSTALL_EXPERIMENTAL_HEADERS=ON, -DINSTALL_EXPERIMENTAL_HEADERS=OFF, "
 
 PACKAGECONFIG:append = " \
     kcoreaddons \
     kconfig \
 "
 
-RDEPENDS:${PN} += " \
-    qtdeclarative6-qmlplugins \
+FILES:${PN} += " \
+    ${datadir}/metainfo \
 "

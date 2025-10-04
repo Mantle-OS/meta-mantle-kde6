@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -18,10 +16,18 @@ PACKAGECONFIG:append = " \
 "
 
 DEPENDS:append = " \
+    \
     kconfigwidgets6 \
     kcrash6 \
     ktextwidgets6 \
     kwidgetsaddons6 \
     kxmlgui6 \
+    kiconthemes6 \
+    kdoctools6 kdoctools6-native \
     libkdegames6 \
+"
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${datadir}/kmines \
 "
