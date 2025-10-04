@@ -8,21 +8,25 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-3.0-or-later.txt;md5=1c76c4cc354acaac30e
 
 inherit rs6
 
-PACKAGECONFIG:append = " \
-    kconfig \
-"
-
 DEPENDS:append = " \
     qtdeclarative6 \
     qtsvg6 \
     \
-    kcalendarcore6 \
-    kdbusaddons6 \
     kirigami6 kirigami6-addons \
-    knotifications6 \
+    kcalendarcore6 \
     kosmindoormap6 \
+    kcrash6 \
+    \ 
+    kdbusaddons6 \
+    knotifications6 \
 "
 
 PACKAGECONFIG:append = " \
     kconfig \
+    ki18n \
+"
+
+FILES:${PN} += " \
+    ${datadir}/metainfo \
+    ${datadir}/knotifications6 \
 "
