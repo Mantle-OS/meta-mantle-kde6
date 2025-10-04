@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -10,16 +8,17 @@ LICENSE = "LGPL-2.0-or-later"
 LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.0-or-later.txt;md5=6d2d9952d88b50a51a5c73dc431d06c7"
 
 inherit rs6
+
 PACKAGECONFIG:append = " \
     kconfig \
 "
 
-DEPENDS += " \
+DEPENDS:append = " \
     qtdeclarative6 \
     qtpositioning6 \
     \
     qtkeychain6 \
-    kirigami6 kirigami6-addons6 \
+    kirigami6 kirigami6-addons \
     kcontacts6 \
     kcalendarcore6 \
     kholidays6 \
@@ -32,13 +31,5 @@ DEPENDS += " \
 "
 
 
-INSANE_SKIP:${PN} = "dev-so"
-FILES_SOLIBSDEV = ""
-
-RDEPENDS:${PN} += " \
-    prison6 \
-    solid6 \
-    \
-    qtlocation6-qmlplugins \
-    qtmultimedia6-qmlplugins \
-"
+#INSANE_SKIP:${PN} = "dev-so"
+#FILES_SOLIBSDEV = ""

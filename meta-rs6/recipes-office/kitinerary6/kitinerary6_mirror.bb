@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -11,18 +9,28 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.0-or-later.txt;md5=6d2d9952d88b50a51a
 
 inherit rs6
 
-PACKAGECONFIG:append = " \
-    kcongig \
-    ki18n \
-"
-
+# OsmTools
 DEPENDS:append = " \
+    qtdeclarative6 \
+    \
     kcontacts6 \
     kcalendarcore6 \
+    \
     kpkpass6 \
     kmime6 \
-    \
-    qtdeclarative6 \
+    shared-mime-info shared-mime-info-native \    
     poppler \
     zxing-cpp-kf6 \
+    zlib \
+    libxml2 \
+    libphonenumber-cpp \
+    openssl \
+    kcalendarcore6 \
+"
+
+PACKAGECONFIG[unity-cmake] = "-DUSE_UNITY_CMAKE_SUPPORT=OFF, -DUSE_UNITY_CMAKE_SUPPORT=OFF, "
+
+PACKAGECONFIG:append = " \
+    kconfig \
+    ki18n \
 "

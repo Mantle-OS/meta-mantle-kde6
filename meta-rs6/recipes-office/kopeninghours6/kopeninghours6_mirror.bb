@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -11,14 +9,28 @@ LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.0-or-later.txt;md5=6d2d9952d88b50a51a
 
 inherit rs6
 
+SRC_URI:append = " \
+    file://0001-update-py-install-path.patch \
+"
+
 DEPENDS:append = " \
+    qtdeclarative6 \
+    \
     kholidays6 \
     \
-    flex \
+    python3-native \
+    flex-native \
     bison-native \
     boost \
 "
 
+PACKAGECONFIG[validator-only] = "-DVALIDATOR_ONLY=ON, -DVALIDATOR_ONLY=OFF, "
+
+PACKAGECONFIG:append = " \
+    ki18n \
+    kconfig \
+"
+
 FILES:${PN} += " \
-    ${libdir}/${PYTHON_DIR}/site-packages/PyKOpeningHours/* \
+    ${PYTHON_SITEPACKAGES_DIR}/PyKOpeningHours \
 "

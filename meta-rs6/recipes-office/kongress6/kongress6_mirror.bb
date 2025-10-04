@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: 2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
 #
 # SPDX-License-Identifier: MIT
@@ -20,7 +18,11 @@ DEPENDS:append = " \
     \
     kcalendarcore6 \
     kdbusaddons6 \
-    kirigami6 kirigami6-addons6 \
+    kirigami6 kirigami6-addons \
     knotifications6 \
     kosmindoormap6 \
+"
+
+PACKAGECONFIG:append = " \
+    kconfig \
 "

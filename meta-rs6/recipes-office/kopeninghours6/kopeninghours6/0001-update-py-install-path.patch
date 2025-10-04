@@ -1,0 +1,46 @@
+From 8e43c4b4b0abf73f04e52fc0c31419177b8f13e5 Mon Sep 17 00:00:00 2001
+From: JosephMillsAtWork <josephjamesmills@gmail.com>
+Date: Sat, 4 Oct 2025 21:26:03 +0000
+Subject: [PATCH] update py install path
+
+Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+---
+ CMakeLists.txt                 | 4 ++--
+ PyKOpeningHours/CMakeLists.txt | 4 ++--
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index fd478da..3bee5d1 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -74,8 +74,8 @@ set_package_properties(FLEX PROPERTIES PURPOSE "Lexer generator for parsing open
+ find_package(BISON REQUIRED)
+ set_package_properties(BISON PROPERTIES PURPOSE "Grammar generator for parsing opening hours expressions")
+ 
+-find_package(Python COMPONENTS Development)
+-if (Python_FOUND)
++find_package(Python3 COMPONENTS Interpreter Development)
++if (Python3_FOUND)
+     # boost-python requires exact version number
+     find_package(Boost COMPONENTS python${Python_VERSION_MAJOR}${Python_VERSION_MINOR} MODULE)
+ endif()
+diff --git a/PyKOpeningHours/CMakeLists.txt b/PyKOpeningHours/CMakeLists.txt
+index 5ea4bb6..672b971 100644
+--- a/PyKOpeningHours/CMakeLists.txt
++++ b/PyKOpeningHours/CMakeLists.txt
+@@ -21,10 +21,10 @@ kde_target_enable_exceptions(PyKOpeningHours PRIVATE)
+ target_compile_definitions(PyKOpeningHours PRIVATE KOPENINGHOURS_VALIDATOR_ONLY)
+ 
+ # Set up the libraries and header search paths for this target
+-target_link_libraries(PyKOpeningHours PUBLIC ${Boost_LIBRARIES} Python::Python KOpeningHours)
++target_link_libraries(PyKOpeningHours PUBLIC ${Boost_LIBRARIES} Python3::Python KOpeningHours)
+ target_include_directories(PyKOpeningHours PRIVATE ${Boost_INCLUDE_DIR})
+ 
+-set(_install_dir lib/python${Python_VERSION_MAJOR}.${Python_VERSION_MINOR}/site-packages)
++set(_install_dir ${CMAKE_INSTALL_LIBDIR}/python${Python3_VERSION_MAJOR}.${Python3_VERSION_MINOR}/site-packages)
+ 
+ install(TARGETS PyKOpeningHours DESTINATION ${_install_dir}/PyKOpeningHours)
+ install(FILES PyKOpeningHours.pyi __init__.py DESTINATION ${_install_dir}/PyKOpeningHours)
+-- 
+2.51.0
+
