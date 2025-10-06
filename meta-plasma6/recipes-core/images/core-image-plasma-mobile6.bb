@@ -8,9 +8,18 @@ IMAGE_FEATURES += "splash hwcodecs"
 
 LICENSE = "MIT"
 
+require recipes-core/images/mantle-image-core.bb
+
 inherit features_check
 
 REQUIRED_DISTRO_FEATURES = "wayland"
+
+IMAGE_FEATURES:append = " \
+    splash \
+    hwcodecs \
+    x11 weston \
+    ssh-server-dropbear \
+"
 
 IMAGE_INSTALL:append = " \
     ${CORE_IMAGE_BASE_INSTALL} \

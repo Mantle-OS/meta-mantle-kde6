@@ -9,14 +9,20 @@ LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-or-later.txt;md5=9e2385fe012386d34dc
 inherit plasma6
 
 DEPENDS:append = " \
+    qtdeclarative6 \
+    \
     kwindowsystem6 \
+    knotifications6 \
     kdbusaddons6 \
-    kwidgetsaddons6 \
     kcrash6 \
-    kiconthemes6 \
+    \
     polkit-qt6-1 \
 "
 
 EXTRA_OECMAKE += " \
     -DOE_KF6_PATH_HOST_ROOT=${STAGING_DIR_HOST} \
+"
+
+FILES:${PN} += " \
+    ${datadir}/knotifications6 \
 "

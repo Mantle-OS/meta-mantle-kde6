@@ -11,6 +11,7 @@ PR = "r0"
 def plasma_real_name(d, name=None):
     override_map = {
         'kde6-cli-tools-kde6' : 'kde-cli-tools',
+        'polkit-kde6-agent-1-kde6' : 'polkit-kde-agent-1',
     }
     bpn = name or d.getVar("BPN") or ""
     if bpn in override_map:
