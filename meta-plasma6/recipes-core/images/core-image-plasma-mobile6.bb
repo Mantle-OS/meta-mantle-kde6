@@ -17,7 +17,6 @@ REQUIRED_DISTRO_FEATURES = "wayland"
 IMAGE_FEATURES:append = " \
     splash \
     hwcodecs \
-    x11 weston \
     ssh-server-dropbear \
 "
 
