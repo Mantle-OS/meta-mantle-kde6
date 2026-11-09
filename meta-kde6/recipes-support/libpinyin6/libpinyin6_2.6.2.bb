@@ -8,7 +8,7 @@ LICENSE = "GPL-3.0-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 SUMMARY = "Library to deal with pinyin."
 
-inherit kde6-cmake
+inherit cmake
 
 SRC_URI = " \
     git://github.com/libpinyin/libpinyin.git;nobranch=1;protocol=https \
@@ -29,7 +29,7 @@ SRC_URI:class-native = " \
 SRCREV = "3cc27bd3759a6791c6fbdb0ad3a2f6e2dd07260e"
 S = "${WORKDIR}/git"
 
-
+PACKAGECONFIG[download-model-data] = "-DDOWNLOAD_MODEL_DATA_ARCHIVE=ON, -DDOWNLOAD_MODEL_DATA_ARCHIVE=OFF , "
 
 DEPENDS:append = " \
     db \
@@ -39,7 +39,7 @@ DEPENDS:append = " \
 DEPENDS:append:class-target = " \
     ${PN}-native \
 "
-DEPENDS:append:class-nativesdk = " \ 
+DEPENDS:append:class-nativesdk = " \
     ${PN}-native \
 "
 DEPENDS:append:class-native = " \
