@@ -6,7 +6,7 @@ DESCRIPTION = "These recipes are not in release support kf6 nor plasma so they l
 SECTION = "x11"
 LICENSE = "MIT"
 
-PV = ""
+PV = "1.0"
 
 PACKAGE_ARCH = "${TUNE_PKGARCH}"
 

@@ -22,7 +22,7 @@ S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     plasma-activities6 \
-    plasma-activities6-stats6 \
+    plasma-activities-stats6 \
     plasma-workspace6 \
     kirigami6 \
     kdeclarative6 \

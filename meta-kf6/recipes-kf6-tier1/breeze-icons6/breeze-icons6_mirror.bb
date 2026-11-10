@@ -9,7 +9,7 @@ SECTION = "libs"
 LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=2d5025d4aa3495befef8f17206a5b0a1"
 
-inherit kf6 gtk-icon-cache allarch
+inherit kf6 gtk-icon-cache
 SRC_URI:append = " \
     file://0001-add-cross-compiled-generate-symbolic-dark-cmake-opti.patch \
 "

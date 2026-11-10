@@ -21,7 +21,6 @@ IMAGE_FEATURES:append = " \
 "
 
 IMAGE_INSTALL:append = " \
-    ${CORE_IMAGE_BASE_INSTALL} \
     wayland dbus \
     sddm-qt6 \
     packagegroup-plasma-mobile6 \

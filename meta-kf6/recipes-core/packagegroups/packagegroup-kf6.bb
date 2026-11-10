@@ -44,13 +44,13 @@ RRECOMMENDS:${PN}-support = " \
 "
 
 SUMMARY:${PN}-tier0 = "Kde6 Framework Tier 0"
-DESCRIPTION:${}-tier0 = "Extra CMake modules"
+DESCRIPTION:${PN}-tier0 = "Extra CMake modules"
 RRECOMMENDS:${PN}-tier0 = "\
     ecm-kf6 \
 "
 
 SUMMARY:${PN}-tier1 = "Kde6 Framework Tier 1"
-DESCRIPTION:${}-tier1 = "Tier 1 frameworks depend only on Qt (and possibly a small number of other third-party libraries), so can easily be used by any Qt-based project."
+DESCRIPTION:${PN}-tier1 = "Tier 1 frameworks depend only on Qt (and possibly a small number of other third-party libraries), so can easily be used by any Qt-based project."
 RRECOMMENDS:${PN}-tier1 = " \
     attica6 \
     bluez-qt6 \
@@ -86,7 +86,7 @@ RRECOMMENDS:${PN}-tier1 = " \
 "
 
 SUMMARY:${PN}-tier2 = "Kde6 Framework Tier 2"
-DESCRIPTION:${}-tier2 =  "Tier 2 frameworks additionally depend on tier 1 frameworks, but still have easily manageable dependencies."
+DESCRIPTION:${PN}-tier2 =  "Tier 2 frameworks additionally depend on tier 1 frameworks, but still have easily manageable dependencies."
 RRECOMMENDS:${PN}-tier2 = "\
     kauth6 \
     kcolorscheme6 \
@@ -106,7 +106,7 @@ RRECOMMENDS:${PN}-tier2 = "\
 "
 
 SUMMARY:${PN}-tier3 = "Kde6 Framework Tier 3"
-DESCRIPTION:${}-tier3 =  "Tier 3 frameworks are generally more powerful, comprehensive packages, and consequently have more complex dependencies."
+DESCRIPTION:${PN}-tier3 =  "Tier 3 frameworks are generally more powerful, comprehensive packages, and consequently have more complex dependencies."
 RRECOMMENDS:${PN}-tier3 = "\
     baloo6 \
     kbookmarks6 \
@@ -134,7 +134,7 @@ RRECOMMENDS:${PN}-tier3 = "\
 "
 
 SUMMARY:${PN}-tier4 = "Kde6 Framework Tier 4"
-DESCRIPTION:${}-tier4 = "Tier 4 frameworks can be mostly ignored by application programmers; this tier consists of plugins acting behind the scenes to provide additional functionality or platform integration to existing frameworks (including Qt)."
+DESCRIPTION:${PN}-tier4 = "Tier 4 frameworks can be mostly ignored by application programmers; this tier consists of plugins acting behind the scenes to provide additional functionality or platform integration to existing frameworks (including Qt)."
 RRECOMMENDS:${PN}-tier4 = "\
     frameworkintegration6 \
 "

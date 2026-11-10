@@ -10,7 +10,7 @@ HOMEPAGE = "https://api.kde.org/frameworks/kiconthemes/html/index.html"
 SECTION = "libs"
 LICENSE = "LGPL-2.1-only"
 
-inherit kf6 allarch gtk-icon-cache
+inherit kf6 gtk-icon-cache
 
 DEPENDS:append = " \
     breeze-icons6 \

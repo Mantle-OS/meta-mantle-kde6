@@ -20,7 +20,7 @@ S = "${WORKDIR}/git"
 DEPENDS:append = " \
     libpam \
 "
-
+EXTRA_OECMAKE:append = " -DCMAKE_CXX_STANDARD=17 -DCMAKE_CXX_STANDARD_REQUIRED=ON"
 SYSTEMD_SERVICE:${PN} = "${BPN}.service"
 
 
