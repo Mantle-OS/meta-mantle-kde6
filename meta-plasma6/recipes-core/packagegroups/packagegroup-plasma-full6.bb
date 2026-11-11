@@ -13,7 +13,7 @@ RDEPENDS:${PN} = " \
     breeze6 \
     discover6 \
     plasma-activities6 \
-    plasma-activities6-stats6 \
+    plasma-activities-stats6 \
     kactivitymanagerd6 \
     kde6-cli-tools-kde6 \
     kdecoration6 \

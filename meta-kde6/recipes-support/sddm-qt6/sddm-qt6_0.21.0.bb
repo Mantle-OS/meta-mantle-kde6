@@ -1,4 +1,3 @@
-
 # SPDX-FileCopyrightText: 2019 Alistair Francis <alistair.francis@wdc.com>
 # SPDX-FileCopyrightText: 2019-2020 Volker Krause <vkrause@kde.org>
 # SPDX-FileCopyrightText: 2023-2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
@@ -12,10 +11,10 @@ LIC_FILES_CHKSUM = " \
     file://LICENSE.CC-BY-3.0;md5=36b7342d5619a3a0d3b581e89803ec25 \
 "
 
-inherit kde6-cmake 
-inherit pkgconfig
-inherit systemd
-inherit useradd
+inherit kde6-cmake pkgconfig systemd useradd
+USERADD_PACKAGES = "${PN}"
+USERADD_PARAM:${PN} = "--system --home ${localstatedir}/lib/sddm --shell /bin/false --user-group --groups video sddm"
+
 inherit features_check
 
 ANY_OF_DISTRO_FEATURES = "wayland x11"
@@ -56,10 +55,9 @@ PACKAGECONFIG:append = " \
     qt6 \
 "
 
-
 EXTRA_OECMAKE += " \
     -DLOGIN_DEFS_PATH=${STAGING_DIR_HOST}${sysconfdir}/login.defs \
-    -DSYSTEMD_SYSTEM_UNIT_DIR=${systemd_unitdir}/system \
+    -DSYSTEMD_SYSTEM_UNIT_DIR=${systemd_system_unitdir} \
 "
 
 do_configure:append() {
@@ -70,7 +68,7 @@ do_configure:append() {
 do_install:append() {
     install -d ${D}/${sysconfdir}/sddm.conf.d
 
-    # autologin configurations
+    # formfactors
     install -m 644 ${WORKDIR}/sddm.conf.plasma-desktop ${D}/${sysconfdir}/sddm.conf.d/00-plasma-desktop.conf
     install -m 644 ${WORKDIR}/sddm.conf.plasma-mobile ${D}/${sysconfdir}/sddm.conf.d/01-plasma-mobile.conf
     install -m 644 ${WORKDIR}/sddm.conf.plasma-bigscreen ${D}/${sysconfdir}/sddm.conf.d/02-plasma-bigscreen.conf
@@ -89,11 +87,38 @@ PACKAGES =+ " \
     ${PN}-config-plasma-mobile6 \
     ${PN}-config-plasma-bigscreen6 \
     ${PN}-config-plasma-desktop6 \
+    ${PN}-maya-theme \
+    ${PN}-maldives-theme \
+    ${PN}-elarun-theme \
 "
 
-#SYSTEMD_SERVICE:${PN} = "ssdm.service"
-USERADD_PACKAGES = "${PN}"
-USERADD_PARAM:${PN} = "--system --home ${localstatedir}/lib/sddm --shell /bin/false --user-group --groups video sddm"
+FILES:${PN}-maya-theme = " ${datadir}/sddm/themes/maya"
+RDEPENDS:${PN}-maya-theme:append = " ${PN}"
+
+FILES:${PN}-maldives-theme = " ${datadir}/sddm/themes/maldives"
+RDEPENDS:${PN}-maldives-theme:append = " ${PN}"
+
+FILES:${PN}-elarun-theme = " ${datadir}/sddm/themes/elarun"
+RDEPENDS:${PN}-elarun-theme = " ${PN}"
+
+FILES:${PN}-config-plasma-desktop6 = " ${sysconfdir}/sddm.conf.d/00-plasma-desktop.conf"
+RDEPENDS:${PN}-config-plasma-desktop6 = "${PN}"
+
+FILES:${PN}-config-plasma-mobile6 = " ${sysconfdir}/sddm.conf.d/01-plasma-mobile.conf"
+RDEPENDS:${PN}-config-plasma-mobile6 = "${PN}"
+
+FILES:${PN}-config-plasma-bigscreen6 = " ${sysconfdir}/sddm.conf.d/02-plasma-bigscreen.conf"
+RDEPENDS:${PN}-config-plasma-bigscreen6 = "${PN}"
+
+FILES:${PN} += " \
+    ${systemd_system_unitdir}/sddm.service \
+    ${nonarch_base_libdir}/sysusers.d/sddm.conf \
+    ${nonarch_base_libdir}/tmpfiles.d/sddm.conf \
+    ${datadir}/sddm/flags \
+    ${datadir}/sddm/faces \
+    ${datadir}/sddm/scripts \
+    ${datadir}/sddm/translations-qt6 \
+"
 
 RDEPENDS:${PN} += "\
     bash \
@@ -108,34 +133,8 @@ RRECOMMENDS:${PN} += " \
     qtvirtualkeyboard6-qmlplugins \
 "
 
-PACKAGE_BEFORE_PN:append  = " \
-  ${PN}-maya-theme \
-  ${PN}-maldives-theme \
-  ${PN}-elarun-theme \
-"
-
-FILES:${PN}-maya-theme = " \
-    ${datadir}/sddm/themes/maya \
-"
-RDEPENDS:${PN}-maya-theme:append = " ${PN}"
+SYSTEMD_SERVICE:${PN} = "sddm.service"
+SYSTEMD_AUTO_ENABLE:${PN} = "enable"
 
 
-FILES:${PN}-maldives-theme = " \
-    ${datadir}/sddm/themes/maldives \
-"
-RDEPENDS:${PN}-maldives-theme:append = " ${PN}"
 
-
-FILES:${PN}-elarun-theme = " \
-    ${datadir}/sddm/themes/elarun \
-"
-RDEPENDS:${PN}-elarun-theme = " ${PN}"
-
-FILES:${PN} += " \
-    ${nonarch_base_libdir}/sysusers.d/sddm.conf  \
-    ${nonarch_base_libdir}/tmpfiles.d/sddm.conf \
-    ${datadir}/sddm/flags \
-    ${datadir}/sddm/faces \
-    ${datadir}/sddm/scripts \
-    ${datadir}/sddm/translations-qt6 \
-"

@@ -1,6 +1,5 @@
 [Theme]
 Current=breeze
 
-[Autologin]
-User=kde
-Session=plasma-bigscreen-wayland
+[General]
+DefaultSession=plasma-bigscreen-wayland.desktop

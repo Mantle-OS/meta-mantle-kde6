@@ -88,20 +88,20 @@ DEPENDS:append = " \
     packagekit-qt6 \
     polkit-qt6-1 \
     icu \
-    libkexiv2-kf6 \    
+    libkexiv2-kf6 \
 "
 
 PACKAGECONFIG[packagekit-offline] = "-DPACKAGEKIT_OFFLINE_UPDATES=ON, -DPACKAGEKIT_OFFLINE_UPDATES=OFF, "
 PACKAGECONFIG[plasma-x11] = "-DPLASMA_X11_DEFAULT_SESSION=ON, -DPLASMA_X11_DEFAULT_SESSION=OFF, "
 PACKAGECONFIG[sddm-wayland-session] = "-DINSTALL_SDDM_WAYLAND_SESSION=ON, -DINSTALL_SDDM_WAYLAND_SESSION=OFF, "
 PACKAGECONFIG[x11] = "-DWITH_X11=ON, -DWITH_X11=OFF, \
-    virtual/x11 \
+    virtual/libx11 \
     libice \
     libsm \
     libxau \
     libxcursor \
     libxfixes \
-    libxft\    
+    libxft \
     libxrender \
     libxtst \
     libxcb \
@@ -112,7 +112,7 @@ PACKAGECONFIG[x11] = "-DWITH_X11=ON, -DWITH_X11=OFF, \
 "
 PACKAGECONFIG[xembed-sni-proxy] = "-DBUILD_xembed-sni-proxy=ON, -DBUILD_xembed-sni-proxy=OFF,"
 
-PACKAGECONFIG:apend = " \
+PACKAGECONFIG:append = " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'x11 plasma-x11', '',  d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'sddm-wayland-session', '',  d)} \
 " 
@@ -120,12 +120,18 @@ PACKAGECONFIG:apend = " \
 
 do_install:append(){
     sed -i 's:${RECIPE_SYSROOT_NATIVE}::g' ${D}${systemd_user_unitdir}/plasma-kcminit-phase1.service
+    sed -i 's:${RECIPE_SYSROOT_NATIVE}::g' ${D}${systemd_user_unitdir}/plasma-restoresession.service
+
     sed -i 's:${RECIPE_SYSROOT_NATIVE}::g' ${D}${datadir}/kconf_update/migrate-calendar-to-plugin-id.py
 }
 
 INSANE_SKIP:${PN}-plugins = "dev-so"
 
 FILES:${PN} += " \
+    ${datadir}/kio \
+    ${datadir}/kxmlgui6 \
+    ${datadir}/konqsidebartng \
+    ${datadir}/kfontinst \
     ${datadir}/krunner \
     ${datadir}/metainfo \
     ${datadir}/solid \

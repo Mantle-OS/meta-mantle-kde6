@@ -1,6 +1,5 @@
 [Theme]
 Current=breeze
 
-[Autologin]
-User=kde
-Session=plasma-mobile
+[General]
+DefaultSession=plasma-mobile.desktop
