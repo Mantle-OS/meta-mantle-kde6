@@ -22,4 +22,4 @@ IMAGE_INSTALL += " \
     packagegroup-plasma-bigscreen-workspace6 \
 "
 
-SYSTEMD_DEFAULT_TARGET="graphical.target"
+SYSTEMD_DEFAULT_TARGET = "graphical.target"

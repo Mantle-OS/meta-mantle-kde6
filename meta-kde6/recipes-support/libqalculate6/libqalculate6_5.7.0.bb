@@ -15,7 +15,6 @@ SRC_URI = " \
     git://github.com/Qalculate/libqalculate.git;branch=master;protocol=https \
 "
 
-S = "${WORKDIR}/git"
 SRCREV = "97db5e178dbbeae3caf546bac8a1ca27746ff8c1"
 
 DEPENDS:append = " \

@@ -14,7 +14,6 @@ inherit kde6-ecm
 
 SRC_URI = "git://invent.kde.org/libraries/pulseaudio-qt;nobranch=1;protocol=https"
 SRCREV = "cdde86de70e1ea540ead2577e4320d452dad94b9"
-S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     pulseaudio \

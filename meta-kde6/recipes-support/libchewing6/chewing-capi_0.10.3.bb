@@ -11,7 +11,7 @@ SRC_URI:append = " \
 
 CARGO_BUILD_FLAGS:append = " --locked -p chewing_capi -p chewing-cli"
 CARGO_MANIFEST_PATH = "${S}/Cargo.toml"
-CARGO_INSTALL_LIBRARIES="1"
+CARGO_INSTALL_LIBRARIES = "1"
 
 export CARGO_PROFILE_RELEASE_PANIC = "unwind"
 RUSTFLAGS:append = " -C panic=unwind"

@@ -17,7 +17,6 @@ SRC_URI = " \
 "
 
 SRCREV = "93a9a24bae6173f23c620df314b55c596c7622dd"
-S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     ncurses \

@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "Plasma-SDK"
 HOMEPAGE = ""
-LICENSE = "BSD-2-Clause & GPL-2.0-only"
+LICENSE = "BSD-2-Clause AND GPL-2.0-only"
 
 inherit plasma6
 

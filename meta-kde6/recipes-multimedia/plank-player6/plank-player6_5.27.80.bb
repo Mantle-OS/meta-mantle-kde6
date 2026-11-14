@@ -10,7 +10,6 @@ inherit plasma6
 
 SRC_URI = "git://invent.kde.org/plasma-bigscreen/plank-player;nobranch=1;protocol=https"
 SRCREV = "d113e535f2e2682bfaeb09262e36fb6ef5360d82"
-S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     kirigami6 \

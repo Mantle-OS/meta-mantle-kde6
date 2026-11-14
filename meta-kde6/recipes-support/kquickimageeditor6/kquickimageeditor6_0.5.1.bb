@@ -14,7 +14,6 @@ inherit kde6-ecm
 
 SRC_URI = "git://invent.kde.org/libraries/kquickimageeditor;branch=master;protocol=https"
 SRCREV = "673816f603550a9e7e62c5dadf077926d5de6857"
-S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     qtdeclarative6 \

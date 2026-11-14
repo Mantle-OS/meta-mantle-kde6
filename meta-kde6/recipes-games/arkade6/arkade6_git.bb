@@ -10,7 +10,6 @@ inherit kde6-ecm
 
 SRC_URI = "git://invent.kde.org/games/arkade;nobranch=1;protocol=https"
 SRCREV = "8b127277206d3c7b1d25cb19ec0dbe3581063318"
-S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     kdeclarative6 \

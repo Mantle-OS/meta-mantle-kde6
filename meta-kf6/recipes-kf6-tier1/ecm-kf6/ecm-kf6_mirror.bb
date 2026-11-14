@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "Extra CMake modules"
 HOMEPAGE = "https://api.kde.org/frameworks/extra-cmake-modules/html/index.html"
-LICENSE = "BSD-2-Clause & BSD-3-Clause & MIT"
+LICENSE = "BSD-2-Clause AND BSD-3-Clause AND MIT"
 
 inherit qt6-cmake kde6-licenses kf6-checksums
 

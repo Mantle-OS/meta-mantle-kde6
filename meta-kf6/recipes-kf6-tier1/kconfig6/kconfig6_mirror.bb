@@ -6,7 +6,7 @@
 SUMMARY = "KDE Configuration system"
 HOMEPAGE = "https://api.kde.org/frameworks/kconfig/html/index.html"
 SECTION = "libs"
-LICENSE = "MIT & BSD-2-Clause & BSD-3-Clause & LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
+LICENSE = "BSD-2-Clause AND BSD-3-Clause AND LGPL-2.0-or-later AND MIT AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
 
 inherit kde6-ecm kf6-checksums
 

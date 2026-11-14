@@ -7,7 +7,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "File compression"
 HOMEPAGE = "https://api.kde.org/frameworks/karchive/html/index.html"
-LICENSE = "BSD-2-Clause & LGPL-2.0-or-later"
+LICENSE = "BSD-2-Clause AND LGPL-2.0-or-later"
 
 inherit kf6
 REUSE_LICENSECHECK_WHITELIST = "LGPL-2.0 LGPL-3.0 LicenseRef-KDE-Accepted-LGPL"

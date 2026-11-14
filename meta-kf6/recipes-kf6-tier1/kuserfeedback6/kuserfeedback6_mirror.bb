@@ -6,7 +6,7 @@
 SUMMARY = "User feedback framework"
 HOMEPAGE = "https://api.kde.org/frameworks/kuserfeedback/html/index.html"
 SECTION = "libs"
-LICENSE = "MIT & BSD-3-Clause"
+LICENSE = "BSD-3-Clause AND MIT"
 LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=61be4d272e55cc2609d58596cf084908"
 
 inherit kf6

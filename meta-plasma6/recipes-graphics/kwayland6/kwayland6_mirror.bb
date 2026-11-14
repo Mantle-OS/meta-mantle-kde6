@@ -5,7 +5,7 @@
 SUMMARY = "Qt-style API to interact with the wayland-client and wayland-server API"
 SECTION = "libs"
 HOMEPAGE = "https://api.kde.org/frameworks/kwayland/html/index.html"
-LICENSE = "MIT & MIT-CMU & BSD-3-Clause & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
+LICENSE = "BSD-3-Clause AND MIT AND MIT-CMU AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
 
 inherit plasma6 
 inherit features_check

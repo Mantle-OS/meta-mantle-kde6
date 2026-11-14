@@ -11,7 +11,7 @@
 SUMMARY = "Kde6 Monitoring user activity"
 SECTION = "libs"
 HOMEPAGE = "https://api.kde.org/frameworks/kidletime/html/index.html"
-LICENSE = "LGPL-2.1-or-later & MIT"
+LICENSE = "LGPL-2.1-or-later AND MIT"
 
 inherit kf6
 REUSE_LICENSECHECK_WHITELIST = "GPL-2.0-or-later"

@@ -29,6 +29,6 @@ IMAGE_INSTALL:append = " \
     ttf-noto-emoji-regular \
 "
 
-SYSTEMD_DEFAULT_TARGET="graphical.target"
+SYSTEMD_DEFAULT_TARGET = "graphical.target"
 inherit core-image
 #    sddm-config-plasma-mobile6 

@@ -8,7 +8,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "Models for Qt Model/View system"
 HOMEPAGE = "https://api.kde.org/frameworks/kitemmodels/html/index.html"
-LICENSE = "LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only)"
+LICENSE = "LGPL-2.0-or-later AND (LGPL-2.1-only OR LGPL-3.0-only)"
 
 inherit kf6
 

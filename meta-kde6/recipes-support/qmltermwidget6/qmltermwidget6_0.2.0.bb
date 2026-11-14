@@ -19,8 +19,6 @@ SRC_URI = " \
 # This hash is slightly ahead of the 0.2.0 release
 SRCREV = "63228027e1f97c24abb907550b22ee91836929c5"
 
-S = "${WORKDIR}/git"
-
 DEPENDS:append = " \
     qtbase6 qtbase6-native \
     qtdeclarative6 \

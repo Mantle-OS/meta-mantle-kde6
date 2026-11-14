@@ -9,7 +9,7 @@
 SUMMARY = "KDE Advanced internationalization framework"
 HOMEPAGE = "https://api.kde.org/frameworks/ki18n/html/index.html"
 SECTION = "libs"
-LICENSE = "LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL) & BSD-3-Clause"
+LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
 
 inherit kde6-ecm kf6-checksums
 inherit gettext

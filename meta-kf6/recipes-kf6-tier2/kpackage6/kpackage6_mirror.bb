@@ -7,7 +7,7 @@
 SUMMARY = "Library to load and install packages of non binary files as they were a plugin"
 HOMEPAGE = "https://api.kde.org/frameworks/kpackage/html/index.html"
 SECTION = "libs"
-LICENSE = "LGPL-2.0-or-later & GPL-2.0-or-later"
+LICENSE = "GPL-2.0-or-later AND LGPL-2.0-or-later"
 
 inherit kf6
 

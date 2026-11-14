@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "adblocker for angelfish(rust)"
 SECTION = "libs"
-LICENSE = "(LGPL-2.0-only | LGPL-2.0-or-later | LGPL-2.1-only | LGPL-3.0-or-later | LicenseRef-KDE-Accepted-LGPL) & (GPL-2.0-only | GPL-2.0-or-later | GPL-3.0-only | LicenseRef-KDE-Accepted-GPL)"
+LICENSE = "(GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL) AND (LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-3.0-or-later OR LicenseRef-KDE-Accepted-LGPL)"
 
 include angelfish-adblock-rs.inc
 inherit kde6-licenses
@@ -16,7 +16,7 @@ SRC_URI[angelfish-rs.sha256sum] = "0926325a19f2cc72e4a54fdacec5eb7cb15044e6129d2
 S = "${WORKDIR}/angelfish-${KDE6_RS_VERSION}"
 
 CARGO_MANIFEST_PATH = "${S}/Cargo.toml"
-CARGO_INSTALL_LIBRARIES="1"
+CARGO_INSTALL_LIBRARIES = "1"
 
 export CARGO_PROFILE_RELEASE_PANIC = "unwind"
 RUSTFLAGS:append = " -C panic=unwind"

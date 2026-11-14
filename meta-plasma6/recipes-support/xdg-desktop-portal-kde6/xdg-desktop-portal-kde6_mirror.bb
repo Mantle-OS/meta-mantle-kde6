@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: MIT
 DESCRIPTION = "XDG Desktop Portal KDE"
 HOMEPAGE = ""
-LICENSE = "LGPL-2.1-only & GPL-2.0-or-later"
+LICENSE = "GPL-2.0-or-later AND LGPL-2.1-only"
 
 inherit plasma6
 

@@ -6,7 +6,7 @@
 SUMMARY = "Implementation of Status Notifier Items"
 HOMEPAGE = "https://api.kde.org/frameworks/kstatusnotifieritem/html/index.html"
 SECTION = "libs"
-LICENSE = "CC0-1.0 & LGPL-2.0-or-later"
+LICENSE = "CC0-1.0 AND LGPL-2.0-or-later"
 
 inherit kf6
 DEPENDS:append = " kwindowsystem6"

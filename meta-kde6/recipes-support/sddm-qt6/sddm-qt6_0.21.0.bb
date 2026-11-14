@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: MIT
 DESCRIPTION = "QML based Display Manager"
 HOMEPAGE = "https://github.com/sddm/sddm"
-LICENSE = "GPL-2.0-only & CC-BY-3.0"
+LICENSE = "CC-BY-3.0 AND GPL-2.0-only"
 LIC_FILES_CHKSUM = " \
     file://LICENSE;md5=4641e94ec96f98fabc56ff9cc48be14b \
     file://LICENSE.CC-BY-3.0;md5=36b7342d5619a3a0d3b581e89803ec25 \
@@ -31,7 +31,6 @@ SRC_URI = " \
 "
 
 SRCREV = "4ec29a8bba033d475f197693fac6cb0c383a1da2"
-S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     libpam \

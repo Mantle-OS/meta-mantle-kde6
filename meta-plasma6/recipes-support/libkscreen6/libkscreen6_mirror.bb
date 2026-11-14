@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: MIT
 DESCRIPTION = "KScreen library"
 HOMEPAGE = ""
-LICENSE = "LGPL-2.1-or-later | (GPL-2.0-only | GPL-3.0-only | LicenseRef-KDE-Accepted-GPL)"
+LICENSE = "GPL-2.0-only OR GPL-3.0-only OR LGPL-2.1-or-later OR LicenseRef-KDE-Accepted-GPL"
 
 inherit plasma6
 inherit features_check 

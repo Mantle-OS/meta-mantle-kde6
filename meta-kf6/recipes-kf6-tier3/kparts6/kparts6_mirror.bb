@@ -8,7 +8,7 @@
 SUMMARY = "Document centric plugin system"
 HOMEPAGE = "https://api.kde.org/frameworks/kparts/html/index.html"
 SECTION = "libs"
-LICENSE = "LGPL-2.0-or-later & LGPL-2.1-or-later"
+LICENSE = "LGPL-2.0-or-later AND LGPL-2.1-or-later"
 
 inherit kf6
 

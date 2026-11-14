@@ -17,7 +17,6 @@ SRC_URI = " \
     file://0001-update-install-paths-as-needed-for-qt6.patch \
 "
 SRCREV = "3a85439726d1ac4d082308feba45f23859ba71e0"
-S = "${WORKDIR}/git"
 
 DEPENDS = " \
     qtbase6 \

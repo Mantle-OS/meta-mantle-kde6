@@ -15,7 +15,6 @@ inherit pkgconfig
 
 SRC_URI = "git://github.com/ksnip/kColorPicker.git;nobranch=1;protocol=https"
 SRCREV = "522e38b61e0786b97b2114c273a4551c869335be"
-S = "${WORKDIR}/git"
 
 
 EXTRA_OECMAKE += " \

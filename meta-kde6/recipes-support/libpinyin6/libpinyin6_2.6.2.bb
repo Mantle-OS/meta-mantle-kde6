@@ -27,8 +27,6 @@ SRC_URI:class-native = " \
 "
 
 SRCREV = "3cc27bd3759a6791c6fbdb0ad3a2f6e2dd07260e"
-S = "${WORKDIR}/git"
-
 
 
 DEPENDS:append = " \

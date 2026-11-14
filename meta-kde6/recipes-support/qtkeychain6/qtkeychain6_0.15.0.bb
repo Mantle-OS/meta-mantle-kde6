@@ -12,7 +12,6 @@ SRC_URI = " \
     git://github.com/frankosterfeld/qtkeychain.git;nobranch=1;protocol=https \
 "
 SRCREV = "ad7344c45a86a4f66cbafc4b081b5f7b876cb0b7"
-S = "${WORKDIR}/git"
 
 PACKAGECONFIG[test-app] = "-DBUILD_TEST_APPLICATION=ON, -DBUILD_TEST_APPLICATION=OFF, "
 PACKAGECONFIG[qt6] = "-DBUILD_WITH_QT6=ON, -DBUILD_WITH_QT6=OFF, "

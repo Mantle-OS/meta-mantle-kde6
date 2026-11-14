@@ -4,7 +4,7 @@
 DESCRIPTION = "Plasma Vault"
 SUMMARY = "Plasma applet and services for creating encrypted vaults"
 HOMEPAGE = "https://invent.kde.org/plasma/plasma-vault"
-LICENSE = "LGPL-2.1-only & (GPL-2.0-only | GPL-3.0-only | LicenseRef-KDE-Accepted-GPL)"
+LICENSE = "LGPL-2.1-only AND (GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL)"
 
 inherit plasma6
 

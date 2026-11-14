@@ -6,7 +6,7 @@
 SUMMARY = "Advanced embeddable text editor"
 HOMEPAGE = "https://api.kde.org/frameworks/ktexteditor/html/index.html"
 SECTION = "libs"
-LICENSE = "MIT & BSD-2-Clause & LGPL-2.0-only"
+LICENSE = "BSD-2-Clause AND LGPL-2.0-only AND MIT"
 
 inherit kf6
 

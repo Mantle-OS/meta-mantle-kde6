@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: MIT
 DESCRIPTION = "Plasma PA"
 HOMEPAGE = ""
-LICENSE = "BSD-3-Clause & GPL-2.0-only"
+LICENSE = "BSD-3-Clause AND GPL-2.0-only"
 
 inherit plasma6
 

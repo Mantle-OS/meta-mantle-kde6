@@ -7,7 +7,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "Qt wrapper for BlueZ 5 DBus API"
 HOMEPAGE = "https://api.kde.org/frameworks/bluez-qt/html/index.html"
-LICENSE = "LGPL-2.1-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
+LICENSE = "LGPL-2.1-or-later AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
 
 inherit kf6 features_check
 REQUIRED_DISTRO_FEATURES = "bluetooth"

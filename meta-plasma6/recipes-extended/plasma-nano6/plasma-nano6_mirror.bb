@@ -5,7 +5,7 @@
 DESCRIPTION = "Plasma Nano"
 SUMMARY = "A minimal plasma shell package intended for embedded devices"
 HOMEPAGE = "https://invent.kde.org/plasma/plasma-nano"
-LICENSE = "MIT & LGPL-2.0-or-later & GPL-2.0-or-later"
+LICENSE = "GPL-2.0-or-later AND LGPL-2.0-or-later AND MIT"
 
 inherit plasma6
 

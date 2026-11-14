@@ -8,7 +8,7 @@ SUMMARY = "Wrapper around Exiv2 library to manipulate picture metadata as EXIF a
 DESCRIPTION = "Wrapper around Exiv2 library to manipulate picture metadata as EXIF and XMP"
 SECTION = "libs"
 HOMEPAGE = "https://invent.kde.org/graphics/libkexiv2"
-LICENSE = "BSD-3-Clause & GPL-2.0-or-later"
+LICENSE = "BSD-3-Clause AND GPL-2.0-or-later"
 
 inherit rs6
 

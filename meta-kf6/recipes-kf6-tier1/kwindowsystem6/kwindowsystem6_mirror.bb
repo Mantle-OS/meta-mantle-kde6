@@ -9,7 +9,7 @@
 SUMMARY = "Access to the windowing system"
 SECTION = "libs"
 HOMEPAGE = "https://api.kde.org/frameworks/kwindowsystem/html/index.html"
-LICENSE = "MIT & BSD-3-Clause & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
+LICENSE = "BSD-3-Clause AND MIT AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
 
 inherit kf6
 

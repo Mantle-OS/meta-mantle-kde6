@@ -15,7 +15,6 @@ SRC_URI = " \
     file://0001-qt6.patch \
 "
 SRCREV = "ffa841ec9766e4428f2f960b966bcc5b4e7e4982"
-S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     libpam \

@@ -16,8 +16,6 @@ SRC_URI = " \
 "
 SRCREV = "d6068bcebeb8fd9f0d35a99b00d202be86a14dbe"
 
-S = "${WORKDIR}/git"
-
 EXTRA_OECMAKE += " \
     -DZXING_DEPENDENCIES=LOCAL \
     -DZINT_UNINSTALL=ON \

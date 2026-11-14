@@ -7,7 +7,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "Provides integration of QML and KDE Frameworks"
 HOMEPAGE = "https://api.kde.org/frameworks/kdeclarative/html/index.html"
-LICENSE = "LGPL-2.0-or-later & LGPL-2.1-or-later & MIT"
+LICENSE = "LGPL-2.0-or-later AND LGPL-2.1-or-later AND MIT"
 
 inherit kf6
 

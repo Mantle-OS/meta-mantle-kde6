@@ -9,7 +9,7 @@
 SUMMARY = "Pty abstraction"
 HOMEPAGE = "https://api.kde.org/frameworks/kpty/html/index.html"
 SECTION = "libs"
-LICENSE = "LGPL-2.0-or-later & BSD-3-Clause"
+LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later"
 
 inherit kf6
 

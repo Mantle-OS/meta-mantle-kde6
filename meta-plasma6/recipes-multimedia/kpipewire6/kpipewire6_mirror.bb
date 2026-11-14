@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT
 DESCRIPTION = "KPipeWire"
 HOMEPAGE = "https://invent.kde.org/plasma/kpipewire"
-LICENSE = "LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL"
+LICENSE = "LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL"
 
 inherit plasma6
 inherit features_check

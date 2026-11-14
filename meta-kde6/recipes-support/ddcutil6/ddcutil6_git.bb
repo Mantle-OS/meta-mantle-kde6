@@ -17,7 +17,6 @@ SRC_URI = " \
     file://0001-Fix-out-of-tree-build.patch \
 "
 SRCREV = "0b26bbec67b09b5ab594a06de8bbbdea621e8628"
-S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     i2c-tools \

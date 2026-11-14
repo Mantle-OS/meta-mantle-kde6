@@ -11,7 +11,6 @@ inherit plasma6
 # Version v25.07.0
 SRC_URI = "git://invent.kde.org/plasma-mobile/plasma-phone-settings.git;nobranch=1;protocol=https"
 SRCREV = "e63400ddffa936a77132b746a6792618f788ea76"
-S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     kitemmodels6 \

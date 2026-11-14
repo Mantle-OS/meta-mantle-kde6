@@ -16,7 +16,6 @@ SRC_URI = " \
     file://0001-cmake-Fix-C-compatibility-of-libunwind-probes.patch \
 "
 SRCREV = "b54e92e88b0895f910a5b107f499d1155a086b80"
-S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     zlib \

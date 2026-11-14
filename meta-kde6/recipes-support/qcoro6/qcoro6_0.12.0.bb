@@ -13,7 +13,6 @@ inherit kde6-cmake kde6-packaging
 
 SRC_URI = "git://github.com/danvratil/qcoro.git;nobranch=1;protocol=https"
 SRCREV = "ef1231ae490465b4f592ca326eee6d56a3d802ae"
-S = "${WORKDIR}/git"
 
 PACKAGECONFIG[examples] = "-DQCORO_BUILD_EXAMPLES=ON, -DQCORO_BUILD_EXAMPLES=OFF, "
 PACKAGECONFIG[testing] = "-DQCORO_BUILD_TESTING=ON, -DQCORO_BUILD_TESTING=OFF, "

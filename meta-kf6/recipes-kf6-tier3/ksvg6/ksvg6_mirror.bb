@@ -6,7 +6,7 @@
 SUMMARY = "Plugin based UI runtime used to write primary user interfaces"
 HOMEPAGE = "https://api.kde.org/frameworks/ksvg/html/index.html"
 SECTION = "libs"
-LICENSE = "BSD-2-Clause & LGPL-2.0-or-later"
+LICENSE = "BSD-2-Clause AND LGPL-2.0-or-later"
 
 inherit kf6
 

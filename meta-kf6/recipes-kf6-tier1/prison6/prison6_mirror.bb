@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "Barcode abstraction layer providing uniform access to generation of barcodes"
 HOMEPAGE = "https://api.kde.org/frameworks/prison/html/index.html"
-LICENSE = "MIT & BSD-3-Clause"
+LICENSE = "BSD-3-Clause AND MIT"
 
 inherit kf6
 REUSE_LICENSECHECK_WHITELIST = "CC0-1.0"

@@ -18,7 +18,6 @@ SRC_URI = " \
     file://0001-cmake-add-Qt6-support.patch \
 "
 SRCREV = "9673c8e8bd64e091df6a07346919e476285fb04f"
-S = "${WORKDIR}/git"
 
 DEPENDS += " \
     maliit-framework-qt6 \

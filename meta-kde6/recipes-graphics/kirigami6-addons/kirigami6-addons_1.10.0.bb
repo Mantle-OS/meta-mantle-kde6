@@ -4,9 +4,9 @@
 SUMMARY = "Kirgami6 addons"
 HOMEPAGE = ""
 SECTION = "libs"
-LICENSE = "LGPL-2.1-or-later & BSD-2-Clause"
+LICENSE = "BSD-2-Clause AND LGPL-2.1-or-later"
 
-PV="1.10.0"
+PV = "1.10.0"
 PR = "r0"  
 
 inherit kde6-ecm 

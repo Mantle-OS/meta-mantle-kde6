@@ -14,7 +14,6 @@ REQUIRED_DISTRO_FEATURES = "x11"
 
 SRC_URI = "git://github.com/ksnip/kImageAnnotator.git;nobranch=1;protocol=https"
 SRCREV = "75a1f38700842aee3047728424df623a14644acb"
-S = "${WORKDIR}/git"
 
 DEPENDS = " \
     kcolorpicker6 \

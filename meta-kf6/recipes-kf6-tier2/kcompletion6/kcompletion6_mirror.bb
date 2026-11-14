@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "Text completion helpers and widgets"
 HOMEPAGE = "https://api.kde.org/frameworks/kcompletion/html/index.html"
-LICENSE = "BSD-3-Clause & LGPL-2.0-or-later & LGPL-2.1-or-later"
+LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later AND LGPL-2.1-or-later"
 
 inherit kf6
 

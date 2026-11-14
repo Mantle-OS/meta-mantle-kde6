@@ -9,7 +9,7 @@
 SUMMARY = "Abstraction to system DNSSD features"
 HOMEPAGE = "https://api.kde.org/frameworks/kdnssd/html/index.html"
 SECTION = "libs"
-LICENSE = "LGPL-2.0-or-later & BSD-3-Clause"
+LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later"
 
 inherit kf6 features_check
 REQUIRED_DISTRO_FEATURES += " zeroconf"

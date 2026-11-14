@@ -13,4 +13,3 @@ inherit autotools
 
 SRCREV = "500d7af6106713610a0f8b2d96aefa81912b96bc"
 SRC_URI = "git://github.com/dmtx/libdmtx;nobranch=1;protocol=https"
-S = "${WORKDIR}/git"

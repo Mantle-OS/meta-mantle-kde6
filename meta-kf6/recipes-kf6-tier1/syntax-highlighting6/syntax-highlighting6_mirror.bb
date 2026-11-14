@@ -7,7 +7,7 @@
 SUMMARY = "Syntax Highlighting"
 HOMEPAGE = "https://api.kde.org/frameworks/syntax-highlighting/html/index.html"
 SECTION = "libs"
-LICENSE = "MIT & LGPL-2.0-or-later"
+LICENSE = "LGPL-2.0-or-later AND MIT"
 REUSE_LICENSECHECK_WHITELIST = "LGPL-2.1-or-later GPL-2.0-only"
 
 inherit kf6 perlnative

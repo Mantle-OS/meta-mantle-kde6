@@ -9,7 +9,7 @@
 SUMMARY = "A file metadata and text extraction library"
 HOMEPAGE = "https://api.kde.org/frameworks/kfilemetadata/html/index.html"
 SECTION = "text"
-LICENSE = "BSD-3-Clause & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
+LICENSE = "BSD-3-Clause AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
 
 inherit kf6 features_check
 

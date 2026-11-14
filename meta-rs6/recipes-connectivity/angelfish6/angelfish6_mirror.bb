@@ -4,7 +4,7 @@
 SUMMARY = "Angelfish is a modern mobile webbrowser."
 HOMEPAGE = "https://apps.kde.org/angelfish/"
 SECTION = "network"
-LICENSE = "(LGPL-2.0-only | LGPL-2.0-or-later | LGPL-2.1-only | LGPL-3.0-or-later | LicenseRef-KDE-Accepted-LGPL) & (GPL-2.0-only | GPL-2.0-or-later | GPL-3.0-only | LicenseRef-KDE-Accepted-GPL)"
+LICENSE = "(GPL-2.0-only OR GPL-2.0-or-later OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL) AND (LGPL-2.0-only OR LGPL-2.0-or-later OR LGPL-2.1-only OR LGPL-3.0-or-later OR LicenseRef-KDE-Accepted-LGPL)"
 
 inherit rs6
 

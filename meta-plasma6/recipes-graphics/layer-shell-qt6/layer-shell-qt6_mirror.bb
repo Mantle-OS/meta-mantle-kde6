@@ -4,7 +4,7 @@
 SUMMARY = "Layer Shell Qt"
 DESCRIPTION = "Qt component to allow applications to make use of the Wayland wl-layer-shell protocol"
 HOMEPAGE = "https://invent.kde.org/plasma/layer-shell-qt"
-LICENSE = "BSD-3-Clause & MIT & LGPL-3.0-or-later"
+LICENSE = "BSD-3-Clause AND LGPL-3.0-or-later AND MIT"
 
 inherit plasma6
 inherit features_check

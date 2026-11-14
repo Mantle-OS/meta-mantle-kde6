@@ -14,7 +14,6 @@ inherit kf6-packageconfig
 
 SRC_URI = "git://invent.kde.org/education/gcompris;nobranch=1;protocol=https"
 SRCREV = "0ac513480426c8ce7fce983505111e7a61b02b9e"
-S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     openssl \

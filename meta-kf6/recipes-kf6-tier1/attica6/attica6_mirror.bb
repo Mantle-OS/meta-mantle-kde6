@@ -8,5 +8,5 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "Kde6 Open Collaboration Services API"
 HOMEPAGE = "https://api.kde.org/frameworks/attica/html/index.html"
-LICENSE = "LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
+LICENSE = "LGPL-2.0-or-later AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
 inherit kf6

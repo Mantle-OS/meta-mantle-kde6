@@ -8,7 +8,7 @@
 SUMMARY = "Advanced text editing widgets"
 HOMEPAGE = "https://api.kde.org/frameworks/ktextwidgets/html/index.html"
 SECTION = "libs"
-LICENSE = "LGPL-2.1-or-later & (LGPL-2.0-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL)"
+LICENSE = "LGPL-2.1-or-later AND (LGPL-2.0-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
 
 inherit kf6
 

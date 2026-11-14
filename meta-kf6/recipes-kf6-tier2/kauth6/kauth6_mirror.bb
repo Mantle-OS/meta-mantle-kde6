@@ -7,7 +7,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "Abstraction to system policy and authentication features"
 HOMEPAGE = "https://api.kde.org/frameworks/kauth/html/index.html"
-LICENSE = "LGPL-2.0-or-later & LGPL-2.1-or-later & BSD-3-Clause"
+LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later AND LGPL-2.1-or-later"
 
 inherit kf6
 

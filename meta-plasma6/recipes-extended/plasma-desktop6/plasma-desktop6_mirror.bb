@@ -4,7 +4,7 @@
 
 DESCRIPTION = "Plasma for the Desktop"
 HOMEPAGE = "https://invent.kde.org/plasma/plasma-desktop"
-LICENSE = "(LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL) & (GPL-2.0-only | GPL-3.0-only | LicenseRef-KDE-Accepted-GPL)"
+LICENSE = "(GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL) AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
 
 inherit plasma6
 

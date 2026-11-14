@@ -22,7 +22,6 @@ SRC_URI = "git://github.com/maliit/framework.git;branch=qt6-support;protocol=htt
            "
 
 SRCREV = "031a368a87e8aa8db62794a9be6139c27baafc26"
-S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     qtbase6 \

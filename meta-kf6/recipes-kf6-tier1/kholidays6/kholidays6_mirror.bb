@@ -7,7 +7,7 @@
 SUMMARY = "KDE Holiday calculation library"
 HOMEPAGE = "https://api.kde.org/frameworks/kholidays/html/index.html"
 SECTION = "libs"
-LICENSE = "LGPL-2.0-or-later & BSD-2-Clause"
+LICENSE = "BSD-2-Clause AND LGPL-2.0-or-later"
 
 inherit kf6
 

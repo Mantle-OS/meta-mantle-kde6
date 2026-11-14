@@ -6,7 +6,7 @@
 
 SUMMARY = "KWallet PAM Integration"
 HOMEPAGE = "https://invent.kde.org/plasma/kwallet-pam"
-LICENSE = "BSD-3-Clause & LGPL-2.1-or-later"
+LICENSE = "BSD-3-Clause AND LGPL-2.1-or-later"
 LIC_FILES_CHKSUM = " \
     file://LICENSES/LGPL-2.1-or-later.txt;md5=147a320ed8b16b036829a0c71d424153 \
     file://LICENSES/BSD-3-Clause.txt;md5=954f4d71a37096249f837652a7f586c0 \

@@ -9,7 +9,7 @@
 SUMMARY = "Parallelized query system"
 HOMEPAGE = "https://api.kde.org/frameworks/krunner/html/index.html"
 SECTION = "libs"
-LICENSE = "LGPL-2.0-or-later & LGPL-2.1-only"
+LICENSE = "LGPL-2.0-or-later AND LGPL-2.1-only"
 
 inherit kf6
 

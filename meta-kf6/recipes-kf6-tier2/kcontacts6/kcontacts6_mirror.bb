@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "Support for vCard contacts"
 HOMEPAGE = "https://api.kde.org/frameworks/kcontacts/html/index.html"
-LICENSE = "MIT & BSD-3-Clause & LGPL-2.0-or-later & Unicode-DFS-2016"
+LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later AND MIT AND Unicode-DFS-2016"
 
 inherit kf6
 

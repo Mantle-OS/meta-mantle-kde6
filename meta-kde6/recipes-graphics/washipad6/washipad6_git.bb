@@ -13,7 +13,7 @@ inherit kde6-ecm
 
 SRC_URI = "git://invent.kde.org/graphics/washipad;nobranch=1;protocol=https"
 SRCREV = "ab68812b70703fdc357eb05d2cce43669d74f7cb"
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/git"
 
 DEPENDS = " \
     kirigami6 \

@@ -15,7 +15,7 @@ SRC_URI = " \
 "
 
 SRCREV = "543e633d35865a3cdfa4ae7bd20ba4a0f6bb7a0d"
-S = "${WORKDIR}/git/tools/cpp"
+S = "${UNPACKDIR}/${BP}/tools/cpp"
 
 DEPENDS:append = " \
     abseil-cpp-native \

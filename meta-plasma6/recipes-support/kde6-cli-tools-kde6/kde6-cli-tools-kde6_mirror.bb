@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: MIT
 DESCRIPTION = "KDE Cli Tools"
 HOMEPAGE = ""
-LICENSE = "GPL-2.0-or-later & LGPL-2.0-or-later & (LGPL-2.1-only | LGPL-3.0-only | LicenseRef-KDE-Accepted-LGPL) & (GPL-2.0-only | GPL-3.0-only | LicenseRef-KDE-Accepted-GPL) & LGPL-2.0-only & Artistic-2.0"
+LICENSE = "Artistic-2.0 AND GPL-2.0-or-later AND LGPL-2.0-only AND LGPL-2.0-or-later AND (GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL) AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
 
 inherit plasma6
 

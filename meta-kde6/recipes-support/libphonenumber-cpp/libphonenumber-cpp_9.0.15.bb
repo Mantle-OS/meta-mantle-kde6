@@ -15,7 +15,8 @@ SRC_URI = " \
     file://0001-add-way-to-use-native-gen-tool.patch \
 "
 SRCREV = "543e633d35865a3cdfa4ae7bd20ba4a0f6bb7a0d"
-S = "${WORKDIR}/git/cpp"
+
+S = "${UNPACKDIR}/${BP}/cpp"
 
 DEPENDS:append = " \
     abseil-cpp \

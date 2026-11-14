@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: MIT
 DESCRIPTION = "Aura Browser"
 HOMEPAGE = "https://invent.kde.org/plasma-bigscreen/aura-browser/"
-LICENSE = "GPL-2.0-or-later & GPL-3.0-or-later"
+LICENSE = "GPL-2.0-or-later AND GPL-3.0-or-later"
 LIC_FILES_CHKSUM = " \
     file://LICENSES/GPL-2.0-or-later.txt;md5=fed54355545ffd980b814dab4a3b312c \
     file://LICENSES/GPL-3.0-or-later.txt;md5=1ebbd3e34237af26da5dc08a4e440464 \
@@ -18,7 +18,6 @@ REQUIRED_DISTRO_FEATURES = "webengine"
 
 SRC_URI = "git://invent.kde.org/plasma-bigscreen/aura-browser;nobranch=1;protocol=https"
 SRCREV = "69bf5a2234ce490edc7018adcb82949c987fcf43"
-S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     kirigami6 \

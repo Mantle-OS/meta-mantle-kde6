@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: MIT
 DESCRIPTION = "KGlobalAccelD"
 HOMEPAGE = ""
-LICENSE = "LGPL-2.1-only | LGPL-3.0-only"
+LICENSE = "LGPL-2.1-only OR LGPL-3.0-only"
 LIC_FILES_CHKSUM = "file://LICENSES/LGPL-2.1-only.txt;md5=41890f71f740302b785c27661123bff5"
 
 inherit plasma6

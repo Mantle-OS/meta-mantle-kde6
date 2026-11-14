@@ -15,8 +15,6 @@ inherit gobject-introspection
 SRC_URI = "git://invent.kde.org/libraries/polkit-qt-1.git;nobranch=1;protocol=https"
 SRCREV = "aa1c6c414ec021fd32e30492c00bb13347e228db"
 
-S = "${WORKDIR}/git"
-
 DEPENDS:append = " \
     polkit \
     glib-2.0 \

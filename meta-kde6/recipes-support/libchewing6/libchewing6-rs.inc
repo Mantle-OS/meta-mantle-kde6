@@ -7,7 +7,6 @@ SRC_URI = " \
     git://github.com/chewing/libchewing.git;branch=release/0.10.x;protocol=https \
 "
 SRCREV = "93a9a24bae6173f23c620df314b55c596c7622dd"
-S = "${WORKDIR}/git"
 
 inherit cargo cargo-update-recipe-crates pkgconfig
 

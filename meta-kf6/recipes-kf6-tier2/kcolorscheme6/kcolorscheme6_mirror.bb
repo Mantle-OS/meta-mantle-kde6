@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: MIT
 SUMMARY = "Classes to interact with KColorScheme"
 HOMEPAGE = "https://api.kde.org/frameworks/kcolorscheme/html/index.html"
-LICENSE = "BSD-2-Clause & LGPL-2.0-or-later & LGPL-2.1-only & LGPL-3.0-only"
+LICENSE = "BSD-2-Clause AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-3.0-only"
 
 inherit kf6
 

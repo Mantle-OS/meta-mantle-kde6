@@ -5,7 +5,7 @@
 #
 # SPDX-License-Identifier: MIT
 SUMMARY = "Kde text tools"
-LICENSE = "MIT & BSD-3-Clause & LGPL-2.0-or-later & LGPL-2.0-only"
+LICENSE = "BSD-3-Clause AND LGPL-2.0-only AND LGPL-2.0-or-later AND MIT"
 inherit kf6
 
 DEPENDS:append = " gperf-native"

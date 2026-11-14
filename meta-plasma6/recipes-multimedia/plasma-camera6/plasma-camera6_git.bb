@@ -11,7 +11,6 @@ inherit plasma6
 
 SRC_URI = "git://invent.kde.org/plasma-mobile/plasma-camera;nobranch=1;protocol=https"
 SRCREV = "73de8e63ed969595cc70ce88686e3458aa997da0"
-S = "${WORKDIR}/git"
 
 DEPENDS:append = " \
     qtsvg6 \
