@@ -1,14 +1,11 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-
 LICENSE = "GPL-3.0-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 SUMMARY = "Library to deal with pinyin."
 
 inherit kde6-cmake
+
+## THIS WAS NEVER TESTED OR INTERGRATED UPGARED TO
+# 954ecc3522686fb30a78d12080da1145df3f24da THIS NEEDS A DEEP LOOK INTO The whole pinyin handling.
 
 SRC_URI = " \
     git://github.com/libpinyin/libpinyin.git;nobranch=1;protocol=https \
@@ -37,9 +34,8 @@ DEPENDS:append = " \
 DEPENDS:append:class-target = " \
     ${PN}-native \
 "
-DEPENDS:append:class-nativesdk = " \ 
-    ${PN}-native \
-"
+
+DEPENDS:append:class-nativesdk = " ${PN}-native"
 DEPENDS:append:class-native = " \
     db-native \
     glib-2.0-native \

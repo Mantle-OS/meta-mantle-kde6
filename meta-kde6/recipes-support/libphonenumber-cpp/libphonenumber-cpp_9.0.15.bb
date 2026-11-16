@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2018 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2022 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-# 
-# SPDX-License-Identifier: MIT
 DESCRIPTION = "libphonenumber"
 HOMEPAGE = "https://github.com/googlei18n/libphonenumber"
 SECTION = "libs"

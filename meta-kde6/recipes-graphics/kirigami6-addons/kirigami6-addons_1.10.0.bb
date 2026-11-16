@@ -1,6 +1,3 @@
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 SUMMARY = "Kirgami6 addons"
 HOMEPAGE = ""
 SECTION = "libs"
@@ -11,9 +8,9 @@ PR = "r0"
 
 inherit kde6-ecm 
 
-SRC_URI = "https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.10.0.tar.xz"
-SRC_URI[sha256sum] = "c98f92bf7c452e12f6dc403404215413db3959fe904ad830ead0db6bb09b3d11"
-S = "${WORKDIR}/kirigami-addons-1.10.0"
+SRC_URI = "https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.16.0.tar.xz"
+SRC_URI[sha256sum] = "124b01267acf603c3afd9fb9599a33fee7a28d65756890163e9593a3932084dd"
+S = "${UNPACKDIR}/kirigami-addons-1.16.0"
 
 DEPENDS:append = " \
     qtdeclarative6 \

@@ -4,7 +4,7 @@ HOMEPAGE = "https://github.com/rockowitz/ddcutil"
 SECTION = "libs"
 LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=b234ee4d69f5fce4486a80fdaf4a4263"
-PV = "2.2.1"
+PV = "3.0.2"
 
 inherit autotools
 inherit pkgconfig
@@ -16,7 +16,7 @@ SRC_URI = " \
     git://github.com/rockowitz/ddcutil.git;protocol=https;branch=master \
     file://0001-Fix-out-of-tree-build.patch \
 "
-SRCREV = "0b26bbec67b09b5ab594a06de8bbbdea621e8628"
+SRCREV = "5085ae9bb1a8e5bd8db717d80dd80a279a0f05fb"
 
 DEPENDS:append = " \
     i2c-tools \

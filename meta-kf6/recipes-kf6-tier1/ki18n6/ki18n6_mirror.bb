@@ -1,11 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2014 Johan Thelin <johan.thelin@pelagicore.com>
-# SPDX-FileCopyrightText: 2016 Sébastien Taylor <sebastien@au-zone.com>
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020-2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 SUMMARY = "KDE Advanced internationalization framework"
 HOMEPAGE = "https://api.kde.org/frameworks/ki18n/html/index.html"
 SECTION = "libs"
@@ -21,7 +13,7 @@ SRC_URI = " \
     ${KDE6_MIRROR}/stable/frameworks/${KDE6_KF6_VERSION_DIR}/ki18n-${KDE6_KF6_VERSION}.tar.xz;name=${BPN} \
     file://0001-error-when-no-py-native-fix.patch \
 "
-S = "${WORKDIR}/ki18n-${KDE6_KF6_VERSION}"
+S = "${UNPACKDIR}/ki18n-${KDE6_KF6_VERSION}"
 
 DEPENDS:append = " \
     virtual/libintl \

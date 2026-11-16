@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: 2021-2022 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-# SPDX-License-Identifier: MIT
 DESCRIPTION = "QtKeychain"
 HOMEPAGE = "https://github.com/frankosterfeld/qtkeychain"
 SECTION = "lib"
@@ -11,21 +9,28 @@ inherit kde6-ecm
 SRC_URI = " \
     git://github.com/frankosterfeld/qtkeychain.git;nobranch=1;protocol=https \
 "
-SRCREV = "ad7344c45a86a4f66cbafc4b081b5f7b876cb0b7"
+SRCREV = "e86bc3cbb50b172be61ed857803a372412b6ad85"
 
 PACKAGECONFIG[test-app] = "-DBUILD_TEST_APPLICATION=ON, -DBUILD_TEST_APPLICATION=OFF, "
-PACKAGECONFIG[qt6] = "-DBUILD_WITH_QT6=ON, -DBUILD_WITH_QT6=OFF, "
+
+# option(BUILD_QTQUICK_DEMO "Build QtQuick demo application" OFF)
+PACKAGECONFIG[qquick-demo] = "-DBUILD_QTQUICK_DEMO=ON, -DBUILD_QTQUICK_DEMO=OFF, qtdeclarative6"
+
+PACKAGECONFIG[qt6] = "-DBUILD_WITH_QT6=ON -DBUILD_WITH_QT5=OFF, -DBUILD_WITH_QT6=OFF, "
 PACKAGECONFIG[translations] = "-DBUILD_TRANSLATIONS=ON, -DBUILD_TRANSLATIONS=OFF,  "
 PACKAGECONFIG[shared] = "-DBUILD_SHARED_LIBS=ON, -DBUILD_SHARED_LIBS=OFF  "
 PACKAGECONFIG[libsecret] = "-DLIBSECRET_SUPPORT=ON, -DLIBSECRET_SUPPORT=OFF, libsecret"
 
 PACKAGECONFIG:append = " \
     qt6 \
+    qquick-demo \
     shared \
     translations \
     libsecret \
 "
 
-FILES:${PN} += " \
+PACKAGES =+ " ${PN}-data"
+SUMMARY:${PN}-data = "data package for qt6keychain"
+FILES:${PN}-data += " \
     ${datadir}/qt6keychain \
 "

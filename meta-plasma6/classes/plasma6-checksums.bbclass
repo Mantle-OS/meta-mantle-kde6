@@ -1,5 +1,7 @@
 SRCREV = "${SRCREV_${PLASMA6_MODULE}}"
 
+# kup
+
 SRC_URI[bluedevil6.sha256sum] = "7e5d386a7c42a1b4ef00e79469c8f47300944c9c42023647f2efd3a12ecc3175"
 SRC_URI[breeze6.sha256sum] = "307cfcb5505bd376d959b364f5231cac4a280af938a938ce3a4e3b7a9f71f70d"
 SRC_URI[discover6.sha256sum] = "baea19fadb3dee8e9516a402aa3bc16f1dd5f4b7dbe46a6ecd0617c508842e96"

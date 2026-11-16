@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 SUMMARY = "KPeople VCard Backend"
 DESCRIPTION = "Expose VCard contacts to KPeople"
 HOMEPAGE = "https://invent.kde.org/pim/kpeoplevcard"
@@ -18,7 +13,7 @@ PR = "r0"
 inherit kde6-ecm
 
 SRC_URI = "git://invent.kde.org/pim/kpeoplevcard;nobranch=1;protocol=https"
-SRCREV = "13db8a52125ec8abd830b3ffcd02691880e15c38"
+SRCREV = "d4acaa3038f6b030d0d6390e628c39e9f8d87903"
 
 DEPENDS:append = " \
     kpeople6 \

@@ -1,14 +1,11 @@
-# SPDX-FileCopyrightText: 2022 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 DESCRIPTION = "Plasma Remotecontrollers"
 HOMEPAGE = "https://invent.kde.org/plasma-bigscreen/plasma-remotecontrollers"
 LICENSE = "GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL"
 
 inherit plasma6
 
-SRC_URI = "git://invent.kde.org/plasma-bigscreen/plasma-remotecontrollers;nobranch=1;protocol=https"
-SRCREV = "16d347453db2d03f158994b5c1dd2de0eea15772"
+SRC_URI = "git://invent.kde.org/plasma-bigscreen/plasma-remotecontrollers;nobranch=1;protocol=https;"
+SRCREV = "1e9014d7222dd20df146493ae58a582e0e188ab6"
 
 PACKAGECONFIG:append = " \
     kcoreaddons \

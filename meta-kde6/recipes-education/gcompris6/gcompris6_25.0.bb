@@ -21,9 +21,9 @@ DEPENDS:append = " \
     p7zip-native \
     python3-native \
     \
-    qtcharts6 \    
+    qtcharts6 \
     qtmultimedia6 \
-    qtsensors6 \    
+    qtsensors6 \
     qtdeclarative6 \
     qtsvg6 \
     \
@@ -43,7 +43,6 @@ PACKAGECONFIG[compile-docs] = "-DCOMPILE_DOC=ON, -DCOMPILE_DOC=OFF,"
 PACKAGECONFIG[rcc] = "-DWITH_RCC=ON, -DWITH_RCC=OFF, "
 PACKAGECONFIG[skip-translations] = "-DSKIP_TRANSLATIONS=ON, -DSKIP_TRANSLATIONS=OFF, "
 PACKAGECONFIG[kiosk] = "-DWITH_KIOSK_MODE=ON, -DWITH_KIOSK_MODE=OFF, "
-
 
 EXTRA_OECMAKE:append = " -DBUILD_STANDALONE=OFF "
 

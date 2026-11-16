@@ -13,7 +13,7 @@ inherit kde6-cmake features_check
 REQUIRED_DISTRO_FEATURES = "x11"
 
 SRC_URI = "git://github.com/ksnip/kImageAnnotator.git;nobranch=1;protocol=https"
-SRCREV = "75a1f38700842aee3047728424df623a14644acb"
+SRCREV = "c481a8936946da6c81cd9042eca3d7aeed8d6982"
 
 DEPENDS = " \
     kcolorpicker6 \

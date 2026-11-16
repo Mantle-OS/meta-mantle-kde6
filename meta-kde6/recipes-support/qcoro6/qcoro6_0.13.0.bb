@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2021-2022 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 DESCRIPTION = "QCoro"
 HOMEPAGE = "https://github.com/danvratil/qcoro"
 LICENSE = "MIT"
@@ -12,7 +7,7 @@ PR = "r0"
 inherit kde6-cmake kde6-packaging
 
 SRC_URI = "git://github.com/danvratil/qcoro.git;nobranch=1;protocol=https"
-SRCREV = "ef1231ae490465b4f592ca326eee6d56a3d802ae"
+SRCREV = "98f23d8d8d67e9e24217d268927faec97c713fb0"
 
 PACKAGECONFIG[examples] = "-DQCORO_BUILD_EXAMPLES=ON, -DQCORO_BUILD_EXAMPLES=OFF, "
 PACKAGECONFIG[testing] = "-DQCORO_BUILD_TESTING=ON, -DQCORO_BUILD_TESTING=OFF, "

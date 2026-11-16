@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 DESCRIPTION = "PulseAudio Qt Bindings - libpulse bindings for Qt"
 HOMEPAGE = "https://invent.kde.org/libraries/pulseaudio-qt"
 LICENSE = "LGPL-2.1-only"
@@ -13,7 +7,7 @@ PR = "r0"
 inherit kde6-ecm
 
 SRC_URI = "git://invent.kde.org/libraries/pulseaudio-qt;nobranch=1;protocol=https"
-SRCREV = "cdde86de70e1ea540ead2577e4320d452dad94b9"
+SRCREV = "7ec54e778fcaefadb4c62da142e536d1d7346803"
 
 DEPENDS:append = " \
     pulseaudio \

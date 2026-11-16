@@ -1,7 +1,3 @@
-# SPDX-FileCopyrightText: 2019-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 DESCRIPTION = "KoKo Gallery Application"
 HOMEPAGE = "https://invent.kde.org/graphics/koko/-"
 LICENSE = "LGPL-2.1-only"
@@ -42,9 +38,9 @@ PACKAGECONFIG:append = " \
 "
 
 do_configure:prepend() {
-    cp ${WORKDIR}/geonames-data/export/cities1000.zip ${S}/src
-    cp ${WORKDIR}/geonames-data/export/admin1CodesASCII.txt ${S}/src
-    cp ${WORKDIR}/geonames-data/export/admin2Codes.txt ${S}/src
+    cp ${UNPACKDIR}/geonames-data/export/cities1000.zip ${S}/src
+    cp ${UNPACKDIR}/geonames-data/export/admin1CodesASCII.txt ${S}/src
+    cp ${UNPACKDIR}/geonames-data/export/admin2Codes.txt ${S}/src
 }
 
 FILES:${PN} += " \

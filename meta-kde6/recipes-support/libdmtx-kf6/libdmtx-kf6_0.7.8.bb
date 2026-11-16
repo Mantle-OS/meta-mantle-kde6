@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: 2017 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2019 Alistair Francis <alistair.francis@wdc.com>
-# SPDX-FileCopyrightText: 2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 SUMMARY = "Library for reading and writing data matrix barcodes"
 HOMEPAGE = "https://github.com/dmtx"
 SECTION = "libs"

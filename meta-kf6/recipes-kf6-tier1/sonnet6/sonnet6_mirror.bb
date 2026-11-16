@@ -1,16 +1,9 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020-2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 SUMMARY = "Hardware integration and detection"
 HOMEPAGE = "https://api.kde.org/frameworks/solid/html/index.html"
 LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later AND LGPL-2.1-or-later"
 
 inherit kf6
 
-# for parsetrigrams6
 DEPENDS:append:class-target = " \
     ${PN}-native \
     aspell \

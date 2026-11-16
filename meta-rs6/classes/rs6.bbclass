@@ -22,7 +22,7 @@ def kde6_rs_real_name(d, name=None):
 
 
 SRC_URI = "${KDE6_RS_MIRROR}/${@kde6_rs_real_name(d)}-${KDE6_RS_VERSION}.tar.xz;name=${BPN}"
-S = "${WORKDIR}/${@kde6_rs_real_name(d)}-${KDE6_RS_VERSION}"
+S = "${UNPACKDIR}/${@kde6_rs_real_name(d)}-${KDE6_RS_VERSION}"
 
 DEPENDS:append = " \
     kpackage6-native \

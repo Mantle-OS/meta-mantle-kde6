@@ -7,9 +7,10 @@ LICENSE = "GPL-2.0-or-later"
 LIC_FILES_CHKSUM = "file://LICENSES/GPL-2.0-or-later.txt;md5=9e2385fe012386d34dcc5c9863070881"
 
 inherit plasma6
+PV = "26.11.0"
 
 SRC_URI = "git://invent.kde.org/plasma-bigscreen/plank-player;nobranch=1;protocol=https"
-SRCREV = "d113e535f2e2682bfaeb09262e36fb6ef5360d82"
+SRCREV = "a29b694a7e03f1b1463446e80c52b68029af142c"
 
 DEPENDS:append = " \
     kirigami6 \

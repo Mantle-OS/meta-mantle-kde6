@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-
 SUMMARY = "ZXing-C++"
 HOMEPAGE = "https://github.com/zxing-cpp/zxing-cpp"
 LICENSE = "Apache-2.0"
@@ -14,7 +8,7 @@ inherit kde6-cmake
 SRC_URI = " \
     gitsm://github.com/zxing-cpp/zxing-cpp.git;nobranch=1;protocol=https \
 "
-SRCREV = "d6068bcebeb8fd9f0d35a99b00d202be86a14dbe"
+SRCREV = "287c85df6f961c8efbfb5ffd736cd9457b8b890e"
 
 EXTRA_OECMAKE += " \
     -DZXING_DEPENDENCIES=LOCAL \

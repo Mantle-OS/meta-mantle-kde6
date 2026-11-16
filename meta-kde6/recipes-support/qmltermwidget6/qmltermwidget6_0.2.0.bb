@@ -1,15 +1,13 @@
-# SPDX-FileCopyrightText: 2023 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-
 DESCRIPTION = "QMLTermWidget"
 HOMEPAGE = "https://github.com/Swordfish90/qmltermwidget"
 LICENSE = "GPL-2.0-only"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=4641e94ec96f98fabc56ff9cc48be14b"
+
 PR = "r0"
 
 inherit qt6-paths qt6-qmake pkgconfig
 inherit kde6-packaging
+
 SRC_URI = " \
     git://github.com/Swordfish90/qmltermwidget.git;nobranch=1;protocol=https \
     file://0001-Qt6-migration.patch \

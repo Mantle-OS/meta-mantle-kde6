@@ -4,6 +4,8 @@ Date: Tue, 16 Sep 2025 03:02:43 +0000
 Subject: [PATCH] error-when-no-py-native-fix
 
 Signed-off-by: JosephMillsAtWork <josephjamesmills@gmail.com>
+
+Upstream-Status: Pending
 ---
  cmake/KF6I18nMacros.cmake.in | 5 ++++-
  1 file changed, 4 insertions(+), 1 deletion(-)

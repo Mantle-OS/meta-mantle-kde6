@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2019-2020 Volker Krause <vkrause@kde.org>
-#
-# SPDX-License-Identifier: MIT
 DESCRIPTION = "Qt Cryptographic Architecture (QCA)"
 HOMEPAGE = "https://invent.kde.org/libraries/qca/"
 SECTION = "libs"
@@ -11,10 +6,11 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=fbc093901857fcd118f065f900982c24"
 
 inherit kde6-ecm kde6-packaging
 
+PV = "2.3.12"
 SRC_URI = "${KDE6_MIRROR}/stable/qca/${PV}/qca-${PV}.tar.xz"
-SRC_URI[sha256sum] = "1c5b722da93d559365719226bb121c726ec3c0dc4c67dea34f1e50e4e0d14a02"
+SRC_URI[sha256sum] = "d4a2b3aa0272d73ea0c4cd2140960177fa34ddc2030e59a48ecfb80c757572c3"
 
-S = "${WORKDIR}/qca-${PV}"
+S = "${UNPACKDIR}/qca-${PV}"
 
 DEPENDS:append = " \
     libgcrypt \

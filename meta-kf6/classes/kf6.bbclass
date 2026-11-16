@@ -31,7 +31,7 @@ def kf6_real_name(d, name=None):
 
 SRC_URI = "${KDE6_KF6_MIRROR}/${@kf6_real_name(d)}-${KDE6_KF6_VERSION}.tar.xz;name=${BPN}"
 
-S = "${WORKDIR}/${@kf6_real_name(d)}-${KDE6_KF6_VERSION}"
+S = "${UNPACKDIR}/${@kf6_real_name(d)}-${KDE6_KF6_VERSION}"
 
 # remove self
 PACKAGECONFIG:remove = "${@kf6_real_name(d)}"

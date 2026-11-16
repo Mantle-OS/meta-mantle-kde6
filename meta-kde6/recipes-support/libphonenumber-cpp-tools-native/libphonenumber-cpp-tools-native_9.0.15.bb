@@ -1,11 +1,8 @@
-# SPDX-FileCopyrightText: 2025 Joseph Mills <josepjamesmills@gmail.com>
-# 
-# SPDX-License-Identifier: MIT
 DESCRIPTION = "libphonenumber-tools"
 HOMEPAGE = "https://github.com/googlei18n/libphonenumber"
 SECTION = "libs"
 LICENSE = "Apache-2.0"
-LIC_FILES_CHKSUM = "file://${WORKDIR}/git/cpp/LICENSE;md5=363822a4d0f7a74c43ecdc2a4c11ae64"
+LIC_FILES_CHKSUM = "file://${UNPACKDIR}/git/cpp/LICENSE;md5=363822a4d0f7a74c43ecdc2a4c11ae64"
 
 inherit kde6-cmake native
 

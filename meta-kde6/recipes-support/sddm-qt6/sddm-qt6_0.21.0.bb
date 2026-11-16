@@ -1,9 +1,3 @@
-
-# SPDX-FileCopyrightText: 2019 Alistair Francis <alistair.francis@wdc.com>
-# SPDX-FileCopyrightText: 2019-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2023-2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 DESCRIPTION = "QML based Display Manager"
 HOMEPAGE = "https://github.com/sddm/sddm"
 LICENSE = "CC-BY-3.0 AND GPL-2.0-only"
@@ -30,7 +24,7 @@ SRC_URI = " \
     file://sddm-greeter.pam \
 "
 
-SRCREV = "4ec29a8bba033d475f197693fac6cb0c383a1da2"
+SRCREV = "633c1bf5c08d6c8e5b8435a70edb281b9f7b1550"
 
 DEPENDS:append = " \
     libpam \
@@ -70,14 +64,14 @@ do_install:append() {
     install -d ${D}/${sysconfdir}/sddm.conf.d
 
     # autologin configurations
-    install -m 644 ${WORKDIR}/sddm.conf.plasma-desktop ${D}/${sysconfdir}/sddm.conf.d/00-plasma-desktop.conf
-    install -m 644 ${WORKDIR}/sddm.conf.plasma-mobile ${D}/${sysconfdir}/sddm.conf.d/01-plasma-mobile.conf
-    install -m 644 ${WORKDIR}/sddm.conf.plasma-bigscreen ${D}/${sysconfdir}/sddm.conf.d/02-plasma-bigscreen.conf
+    install -m 644 ${UNPACKDIR}/sddm.conf.plasma-desktop ${D}/${sysconfdir}/sddm.conf.d/00-plasma-desktop.conf
+    install -m 644 ${UNPACKDIR}/sddm.conf.plasma-mobile ${D}/${sysconfdir}/sddm.conf.d/01-plasma-mobile.conf
+    install -m 644 ${UNPACKDIR}/sddm.conf.plasma-bigscreen ${D}/${sysconfdir}/sddm.conf.d/02-plasma-bigscreen.conf
 
     install -d ${D}${sysconfdir}/pam.d
-    install -m 644 ${WORKDIR}/sddm.pam ${D}${sysconfdir}/pam.d/sddm
-    install -m 644 ${WORKDIR}/sddm-autologin.pam ${D}${sysconfdir}/pam.d/sddm-autologin
-    install -m 644 ${WORKDIR}/sddm-greeter.pam ${D}${sysconfdir}/pam.d/sddm-greeter
+    install -m 644 ${UNPACKDIR}/sddm.pam ${D}${sysconfdir}/pam.d/sddm
+    install -m 644 ${UNPACKDIR}/sddm-autologin.pam ${D}${sysconfdir}/pam.d/sddm-autologin
+    install -m 644 ${UNPACKDIR}/sddm-greeter.pam ${D}${sysconfdir}/pam.d/sddm-greeter
 
     install -d ${D}${localstatedir}/lib/sddm
     chown -R sddm:sddm ${D}${localstatedir}/lib/sddm

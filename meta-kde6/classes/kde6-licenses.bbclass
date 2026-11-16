@@ -1,10 +1,3 @@
-# Class for providing default checksum values based on licenses
-# installed according to REUSE specification
-#
-# SPDX-FileCopyrightText: 2020-2021 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-
 do_populate_lic:prepend() {
     srcdir = d.getVar('S')
 

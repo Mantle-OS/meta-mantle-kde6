@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2022 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 DESCRIPTION = "Plasma Bigscreen"
 HOMEPAGE = "https://invent.kde.org/plasma/plasma-bigscreen"
 LICENSE = "(GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL) AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
@@ -12,12 +7,10 @@ LIC_FILES_CHKSUM = " \
     file://LICENSES/LicenseRef-KDE-Accepted-GPL.txt;md5=b4c280013bbbadfbe92219498dc5228c \
 "
 
-# !!! QT5 only !!!
-
 inherit plasma6
 
-SRC_URI = "git://invent.kde.org/plasma/plasma-bigscreen;nobranch=1;protocol=https"
-SRCREV = "a18482c36e055b9e32fa07e0b6cadd490c257c39"
+SRC_URI = "git://invent.kde.org/plasma/plasma-bigscreen;protocol=https;branch=Plasma/6.8;"
+SRCREV = "4e3db7de7835c7037fb1bfb2dbec9818d3d6ba1f"
 
 DEPENDS:append = " \
     plasma-activities6 \

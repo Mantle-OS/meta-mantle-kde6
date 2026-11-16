@@ -1,6 +1,3 @@
-# SPDX-FileCopyrightText: 2022 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 SUMMARY = "Qalculate! library and CLI"
 HOMEPAGE = "https://qalculate.github.io/"
 SECTION = "libs"
@@ -15,7 +12,7 @@ SRC_URI = " \
     git://github.com/Qalculate/libqalculate.git;branch=master;protocol=https \
 "
 
-SRCREV = "97db5e178dbbeae3caf546bac8a1ca27746ff8c1"
+SRCREV = "b245c4194a1a8dc14ba7ecf1e811e6d0b60592aa"
 
 DEPENDS:append = " \
     gmp \

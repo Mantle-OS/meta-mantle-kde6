@@ -1,8 +1,3 @@
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020-2023 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-#
 SUMMARY = "KDE Configuration system"
 HOMEPAGE = "https://api.kde.org/frameworks/kconfig/html/index.html"
 SECTION = "libs"
@@ -11,7 +6,7 @@ LICENSE = "BSD-2-Clause AND BSD-3-Clause AND LGPL-2.0-or-later AND MIT AND (LGPL
 inherit kde6-ecm kf6-checksums
 
 SRC_URI = "${KDE6_MIRROR}/stable/frameworks/${KDE6_KF6_VERSION_DIR}/kconfig-${KDE6_KF6_VERSION}.tar.xz;name=${BPN}"
-S = "${WORKDIR}/kconfig-${KDE6_KF6_VERSION}"
+S = "${UNPACKDIR}/kconfig-${KDE6_KF6_VERSION}"
 
 DEPENDS:append:class-target = " ${PN}-native"
 DEPENDS:append:class-nativesdk = " ${PN}-native"
