@@ -1,2 +1,47 @@
 *.kdev4
 *.kate-swp
+
+# KDE update tool input files
+update-tool/in/*
+!update-tool/in/.gitkeep
+
+# KDE update tool generated outputs
+update-tool/out/*
+!update-tool/out/.gitkeep
+
+# KDE release cache
+update-tool/cache/*
+!update-tool/cache/.gitkeep
+
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+# Python environments and packaging
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Coverage and test artifacts
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Temporary files
+*.tmp
+*.bak
+*~
