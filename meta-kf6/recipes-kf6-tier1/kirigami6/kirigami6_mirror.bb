@@ -1,10 +1,12 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "QtQuick plugins to build user interfaces based on the KDE human interface guidelines"
+SUMMARY = "Convergent Qt Quick application framework for KDE and Qt applications"
+DESCRIPTION = "Kirigami provides a framework for building adaptive and \
+responsive user interfaces using Qt Quick and QML. It offers reusable \
+components for navigation, page layouts, drawers, toolbars, and interactive \
+controls that adapt to different screen sizes and input methods. \
+The framework enables developers to create applications that work across \
+desktop, mobile, tablet, and embedded devices while maintaining a \
+consistent user experience."
+
 HOMEPAGE = "https://api.kde.org/frameworks/kirigami/html/index.html"
 SECTION = "libs"
 LICENSE = "LGPL-2.0-or-later"

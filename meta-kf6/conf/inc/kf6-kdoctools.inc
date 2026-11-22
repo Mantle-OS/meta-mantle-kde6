@@ -3,7 +3,8 @@ do_compile:prepend() {
 }
 
 DEPENDS:append = " \
-    kdoctools6 kdoctools6-native \
+    kdoctools6 \
+    kdoctools6-native \
     libxslt-native \
     karchive-native \
 "

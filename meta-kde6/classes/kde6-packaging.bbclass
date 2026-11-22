@@ -4,7 +4,7 @@ PACKAGES =+ " \
     ${PN}-qmlplugins \
     ${PN}-bin \
     ${PN}-plugins \
-    ${PN}-example \
+    ${PN}-examples \
     ${PN}-licenses \
 "
 
@@ -12,7 +12,7 @@ ALLOW_EMPTY:${PN} = "1"
 ALLOW_EMPTY:${PN}-qmlplugins = "1"
 ALLOW_EMPTY:${PN}-bin =        "1"
 ALLOW_EMPTY:${PN}-plugins =    "1"
-ALLOW_EMPTY:${PN}-example =    "1"
+ALLOW_EMPTY:${PN}-examples =    "1"
 ALLOW_EMPTY:${PN}-licenses =   "1"
 
 RRECOMMENDS:${PN} = " \

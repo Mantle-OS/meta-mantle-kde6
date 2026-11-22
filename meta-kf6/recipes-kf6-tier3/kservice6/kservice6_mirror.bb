@@ -1,20 +1,19 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2018 Alistair Francis <alistair.francis@wdc.com>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "Advanced plugin and service introspection"
+SUMMARY = "Plugin and service discovery framework for KDE and Qt applications"
+DESCRIPTION = "KService provides a framework for discovering, querying, \
+and managing application services and plugins in KDE and Qt applications. \
+It supports desktop entry files, service metadata, MIME type associations, \
+and application discovery through standardized service definitions. \
+The framework enables applications to locate compatible services, \
+resolve preferred applications, and integrate extensible components \
+into the KDE desktop environment."
+
 HOMEPAGE = "https://api.kde.org/frameworks/kservice/html/index.html"
 SECTION = "libs"
 LICENSE = "LGPL-2.1-only"
 
 inherit kf6
 
-DEPENDS:append = " \
-    kdbusaddons6 \
-"
+DEPENDS:append = " kdbusaddons6"
 
 PACKAGECONFIG:append = " \
     kcoreaddons \

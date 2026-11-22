@@ -1,17 +1,17 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "The KDE calendar access library"
+SUMMARY = "Calendar data management framework for KDE and Qt applications"
+DESCRIPTION = "KCalendarCore provides a framework for creating, managing, \
+and processing calendar data in KDE and Qt applications. It supports \
+events, tasks, journals, recurrence rules, time zones, and calendar \
+serialization using the iCalendar standard. Built on libical, the \
+framework provides reusable APIs for scheduling, calendar synchronization, \
+and personal information management applications."
+
 HOMEPAGE = "https://api.kde.org/frameworks/kcalendarcore/html/index.html"
 SECTION = "libs"
-LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later"
 
-inherit kf6
+LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later"
 REUSE_LICENSECHECK_WHITELIST = "LGPL-3.0-or-later"
 
-DEPENDS:append = " \
-    libical \
-"
+inherit kf6
+
+DEPENDS:append = " libical"

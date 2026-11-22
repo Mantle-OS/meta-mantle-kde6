@@ -1,11 +1,14 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2019-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "Support for vCard contacts"
+SUMMARY = "vCard contact management framework for KDE and Qt applications"
+DESCRIPTION = "KContacts provides a framework for creating, managing, \
+and exchanging contact information in KDE and Qt applications. It \
+supports parsing and generating vCard data, including names, addresses, \
+phone numbers, email addresses, and other contact properties. The \
+framework provides structured APIs for contact management, serialization, \
+and integration with address books and personal information management \
+applications, along with QML support."
+
 HOMEPAGE = "https://api.kde.org/frameworks/kcontacts/html/index.html"
+SECTION = "libs"
 LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later AND MIT AND Unicode-DFS-2016"
 
 inherit kf6
@@ -19,4 +22,5 @@ PACKAGECONFIG:append = " \
     kcoreaddons \
     ki18n \
 "
+
 PACKAGECONFIG:append:class-target = " qml"

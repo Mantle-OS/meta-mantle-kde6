@@ -1,16 +1,17 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2018 Alistair Francis <alistair.francis@wdc.com>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "Support for icon themes"
+SUMMARY = "Icon theme integration framework for KDE and Qt applications"
+DESCRIPTION = "KIconThemes provides a framework for managing and using icon \
+themes in KDE and Qt applications. It supports icon theme discovery, \
+icon loading, theme selection, and integration with the FreeDesktop \
+icon theme specification. The framework includes icon selection dialogs, \
+themed icon rendering, and Qt Quick integration, enabling applications \
+to maintain consistent icon appearance across desktop environments."
+
 HOMEPAGE = "https://api.kde.org/frameworks/kiconthemes/html/index.html"
 SECTION = "libs"
+
 LICENSE = "LGPL-2.1-only"
 
-inherit kf6 allarch gtk-icon-cache
+inherit kf6 gtk-icon-cache
 
 DEPENDS:append = " \
     breeze-icons6 \

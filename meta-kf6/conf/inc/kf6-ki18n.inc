@@ -1,3 +1,2 @@
-inherit python3native
-inherit gettext
+inherit python3native gettext
 DEPENDS:append = " ki18n6 gettext-native"

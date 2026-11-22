@@ -1,0 +1,26 @@
+SUMMARY = "{{ package.summary }}"
+DESCRIPTION = "{{ package.description }}"
+HOMEPAGE = "https://api.kde.org/frameworks/{{ package.name }}/html/index.html"
+SECTION = "{{ package.sections }}"
+
+LICENSE = "{{ package.license_str }}"
+
+inherit plasma6
+
+{% if package.has_deps %}
+DEPENDS:append = " \
+{%- for dep in package.deps %}
+    {{dep}} \
+{% endfor -%}
+"
+{% endif %}
+
+{% if package.has_pkgconf %}
+PACKAGECONFIG:append = " \
+{%- for pkg in package.pkgconf %}
+    {{pkg}} \
+{% endfor -%}
+"
+{% endif %}
+
+BBCLASSEXTEND = "native nativesdk"

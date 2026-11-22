@@ -1,18 +1,25 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "Breeze icon theme"
+SUMMARY = "Breeze icon theme for KDE Plasma and Qt applications"
+DESCRIPTION = "Breeze Icons provides the default icon theme for KDE Plasma, \
+offering a comprehensive collection of scalable vector and raster icons \
+for applications, devices, actions, status indicators, and file types. \
+It includes symbolic icons and light and dark theme variants designed \
+to maintain visual consistency across KDE applications and desktop \
+environments. The theme supports the FreeDesktop icon naming specification \
+and integration with Qt and GTK applications."
+
 HOMEPAGE = "https://api.kde.org/frameworks/breeze-icons/html/index.html"
-SECTION = "libs"
+SECTION = "x11/themes"
+
 LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=2d5025d4aa3495befef8f17206a5b0a1"
 
-inherit kf6 gtk-icon-cache allarch
+inherit kf6 gtk-icon-cache
+
 SRC_URI:append = " \
     file://0001-add-cross-compiled-generate-symbolic-dark-cmake-opti.patch \
 "
+
+## FIXME add packageconfig for dark light etc
 
 RDEPENDS:${PN} += " bash"
 

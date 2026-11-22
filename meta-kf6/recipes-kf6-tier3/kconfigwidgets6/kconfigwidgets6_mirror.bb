@@ -1,11 +1,15 @@
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2018 Alistair Francis <alistair.francis@wdc.com>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "Widgets for configuration dialogs"
+SUMMARY = "Configuration interface widgets for KDE and Qt applications"
+DESCRIPTION = "KConfigWidgets provides reusable Qt Widgets components for \
+creating and managing application configuration interfaces. It includes \
+widgets for color and font selection, configuration dialogs, and \
+standardized user interface actions. The framework integrates with \
+KConfig to support persistent settings, automatic synchronization \
+between configuration data and widgets, and consistent configuration \
+interfaces across KDE applications."
+
 HOMEPAGE = "https://api.kde.org/frameworks/kconfigwidgets/html/index.html"
 SECTION = "libs"
+
 LICENSE = "LGPL-2.1-only"
 
 inherit kf6
@@ -29,4 +33,5 @@ PACKAGECONFIG:append = " \
 RDEPENDS:${PN}-dev += " \
     perl \
 "
+
 BBCLASSEXTEND = "native nativesdk"

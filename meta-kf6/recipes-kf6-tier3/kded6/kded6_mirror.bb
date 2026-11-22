@@ -1,10 +1,14 @@
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2018 Alistair Francis <alistair.francis@wdc.com>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-# SPDX-FileCopyrightText: 2025 Joseph Mills <josephjamesmills@gmail.com>
-# SPDX-License-Identifier: MIT
-SUMMARY = "Extensible daemon for providing system level services"
+SUMMARY = "Extensible background service daemon for KDE applications"
+DESCRIPTION = "KDED provides a modular background service daemon for KDE \
+applications and desktop environments. It manages dynamically loaded \
+service modules that provide session-level functionality, including \
+configuration monitoring, hardware integration, and system event handling. \
+The framework supports automatic module loading, D-Bus communication, \
+and centralized management of background services used throughout KDE Plasma."
+
 HOMEPAGE = "https://api.kde.org/frameworks/kded/html/index.html"
+SECTION = "libs"
+
 LICENSE = "LGPL-2.0-only"
 
 inherit kf6
@@ -22,6 +26,7 @@ PACKAGECONFIG:append = " \
     kdoctools \
 "
 
+## FIXME VIA PATCH  IF STILL NEEDED
 do_configure:prepend() {
     sed -i \
         "s#KCONF_UPDATE_EXE=\".*\"#KCONF_UPDATE_EXE=\"${libexecdir}/kf6/kconf_update\"#g" \

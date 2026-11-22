@@ -1,26 +1,29 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2018-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
+SUMMARY = "DocBook documentation processing tools for KDE and Qt applications"
+DESCRIPTION = "KDocTools provides tools and libraries for generating, \
+processing, and displaying application documentation written in DocBook \
+XML. It includes utilities such as meinproc6 for transforming DocBook \
+documents into HTML and other formats, along with XML validation and \
+localization support. The framework integrates with KDE's documentation \
+infrastructure to provide consistent, multilingual application manuals \
+and help content."
 
-SUMMARY = "Documentation generation from docbook"
 HOMEPAGE = "https://api.kde.org/frameworks/kdoctools/html/index.html"
+SECTION = "devel"
+
 LICENSE = "LGPL-2.1-only"
 
-inherit kf6
-inherit gettext
-inherit perlnative
+inherit kf6 gettext perlnative
 
+## TODO TRACE X11 IF NEED BE
 DEPENDS:append = " \
+    liburi-perl-native \
     karchive6 \
     ki18n6 \
     libxslt \
-    libxml2 libxml2-native \
+    libxml2 \
+    libxml2-native \
     docbook-xml-dtd4 \
     docbook-xsl-stylesheets \
-    liburi-perl-native \
     docbook-xsl-stylesheets-native \
 "
 
@@ -51,6 +54,7 @@ sysroot_stage_all:append:class-target () {
     install -m 0755 ${STAGING_BINDIR_NATIVE}/meinproc6 ${SYSROOT_DESTDIR}${bindir}
 }
 
+## TODO PATCH THIS
 do_compile:append() {
     sed -i 's:${RECIPE_SYSROOT}::g' ${B}/src/customization/xsl/all-l10n.xml
 }

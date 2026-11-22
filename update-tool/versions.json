@@ -1,0 +1,6 @@
+{
+    "frameworks": "6.32.0",
+    "release_services": "26.08.3",
+    "plasma": "6.8.3",
+    "plasma_wayland_protocols": "1.23.0"
+}

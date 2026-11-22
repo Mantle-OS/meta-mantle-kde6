@@ -1,5 +1,13 @@
-SUMMARY = "Hardware integration and detection"
-HOMEPAGE = "https://api.kde.org/frameworks/solid/html/index.html"
+SUMMARY = "Spell checking framework for KDE and Qt applications"
+DESCRIPTION = "Sonnet provides a spell checking framework for KDE and Qt \
+applications, supporting multiple spelling backends including Aspell, \
+Hunspell, and Hspell. It offers automatic language detection, dictionary \
+management, and interactive spell checking through Qt widgets and QML \
+components. The framework enables applications to integrate multilingual \
+spell checking and text correction capabilities."
+HOMEPAGE = "https://api.kde.org/frameworks/sonnet/html/index.html"
+SECTION = "libs"
+
 LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later AND LGPL-2.1-or-later"
 
 inherit kf6

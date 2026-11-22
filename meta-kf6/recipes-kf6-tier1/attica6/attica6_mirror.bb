@@ -1,12 +1,14 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2014 Johan Thelin <johan.thelin@pelagicore.com>
-# SPDX-FileCopyrightText: 2016 Sébastien Taylor <sebastien@au-zone.com>
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "Kde6 Open Collaboration Services API"
+SUMMARY = "Open Collaboration Services client library for KDE and Qt applications"
+DESCRIPTION = "Attica provides a Qt-based client library for interacting \
+with services implementing the Open Collaboration Services (OCS) API. \
+It enables KDE and Qt applications to discover, download, upload, \
+and manage community-generated content such as themes, wallpapers, \
+plugins, and other resources. The framework supports user authentication, \
+content ratings, comments, and integration with online content providers."
+
 HOMEPAGE = "https://api.kde.org/frameworks/attica/html/index.html"
+SECTION = "libs"
+
 LICENSE = "LGPL-2.0-or-later AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
+
 inherit kf6

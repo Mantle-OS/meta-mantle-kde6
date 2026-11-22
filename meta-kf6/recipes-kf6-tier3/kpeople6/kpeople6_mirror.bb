@@ -1,13 +1,14 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2018 Alistair Francis <alistair.francis@wdc.com>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "Provides access to all contacts and the people who hold them"
+SUMMARY = "Contact aggregation and management framework for KDE and Qt applications"
+DESCRIPTION = "KPeople provides a framework for aggregating and accessing \
+contact information from multiple data sources in KDE and Qt applications. \
+It offers a unified interface for identifying people, linking contact \
+records, and retrieving associated information across different services. \
+The framework supports extensible contact data backends, Qt Widgets, \
+and QML integration, enabling applications to display and interact \
+with consolidated contact information."
 HOMEPAGE = "https://api.kde.org/frameworks/kpeople/html/index.html"
 SECTION = "libs"
+
 LICENSE = "LGPL-2.1-or-later"
 
 inherit kf6

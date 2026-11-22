@@ -1,17 +1,18 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "QtQuickControls 2 style that integrates with the desktop"
+SUMMARY = "Desktop-integrated Qt Quick Controls style for KDE applications"
+DESCRIPTION = "QQC2 Desktop Style provides a Qt Quick Controls style that \
+integrates QML applications with the native desktop appearance. It uses \
+Qt Widgets styling to provide consistent controls, colors, typography, \
+and visual behavior across KDE and Qt applications. The framework \
+supports desktop theme integration and allows Qt Quick applications \
+to maintain a consistent appearance alongside traditional Qt Widgets \
+applications."
+
 HOMEPAGE = "https://api.kde.org/frameworks/qqc2-desktop-style/html/index.html"
 SECTION = "libs"
+
 LICENSE = "LGPL-3.0-only"
 
-inherit kf6 features_check
-
-REQUIRED_DISTRO_FEATURES = "x11"
+inherit kf6
 
 DEPENDS:append = " \
     qtdeclarative6 \
@@ -22,6 +23,8 @@ DEPENDS:append = " \
 "
 
 PACKAGECONFIG[dbus] = "-DUSE_DBUS=ON, -DUSE_DBUS=OFF, "
+
+## FIXME VERIFY NEW NO x11
 PACKAGECONFIG[x11] = " , , virtual/libx11"
 
 PACKAGECONFIG:append = " \
@@ -32,5 +35,5 @@ PACKAGECONFIG:append = " \
 "
 
 PACKAGECONFIG:append:class-target = " \
-    ${@bb.utils.filter('DISTRO_FEATURES', 'X11', d)} \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'kde_x11', 'x11', '', d)} \
 "

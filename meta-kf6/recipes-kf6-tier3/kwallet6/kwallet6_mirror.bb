@@ -1,22 +1,24 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2018 Alistair Francis <alistair.francis@wdc.com>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "Secure and unified container for user passwords"
+SUMMARY = "Secure credential storage framework for KDE and Qt applications"
+DESCRIPTION = "KWallet provides a secure framework for storing and managing \
+passwords, authentication credentials, and other sensitive application \
+data. It supports encrypted wallets, credential access through D-Bus, \
+and integration with KDE applications and desktop services. The framework \
+includes wallet management utilities, Secret Service API integration, \
+and configurable authentication and encryption backends."
 HOMEPAGE = "https://api.kde.org/frameworks/kwallet/html/index.html"
 SECTION = "libs"
+
 LICENSE = "LGPL-2.1-or-later"
 
-inherit kf6
+inherit kf6 features_check
+ANY_OF_DISTRO_FEATURES = "kde_x11 wayland"
 
 DEPENDS:append = " \
     libsecret \
     libgcrypt \
     gpgme \
-    qca-kf6 qca-kf6-native \
+    qca-kf6 \
+    qca-kf6-native \
     \
     kcolorscheme6 \
     kcrash6 \
@@ -45,7 +47,7 @@ PACKAGECONFIG:append = " \
 "
 
 PACKAGECONFIG:append:class-target = " \
-    ${@bb.utils.filter('DISTRO_FEATURES', 'x11', d)} \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'kde_x11', 'x11', '', d)} \
 "
 
 EXTRA_OECMAKE:append = " \

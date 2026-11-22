@@ -1,10 +1,18 @@
-SUMMARY = "KDE Advanced internationalization framework"
+SUMMARY = "Internationalization and localization framework for KDE and Qt applications"
+DESCRIPTION = "KI18n provides an advanced internationalization framework \
+for KDE and Qt applications, extending GNU gettext with support for \
+context-aware translations, plural forms, and localized messages. \
+It includes translation scripting, language-specific formatting, \
+and QML integration to support multilingual user interfaces. \
+The framework enables applications to deliver accurate and flexible \
+localization across different languages and regions."
+
 HOMEPAGE = "https://api.kde.org/frameworks/ki18n/html/index.html"
 SECTION = "libs"
+
 LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
 
-inherit kde6-ecm kf6-checksums
-inherit gettext
+inherit kde6-ecm kf6-checksums gettext
 
 DEPENDS:append:class-target = " ${PN}-native"
 DEPENDS:append:class-nativesdk = " ${PN}-native"

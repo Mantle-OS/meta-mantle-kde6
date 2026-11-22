@@ -1,19 +1,16 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-SUMMARY = "All meta-kf6 packages"
+SUMMARY = "All kf6 packages"
 DESCRIPTION = "This packagegroup is pimarily meant for release testing."
 SECTION = "x11"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
-PV = "${KDE6_KF6_VERSION}"
 
-# TODO Add gaurds for wayland vs x11.
+PV = "${KDE6_KF6_VERSION}"
 
 PACKAGE_ARCH = "${TUNE_PKGARCH}"
 
 inherit packagegroup features_check
 
-REQUIRED_DISTRO_FEATURES = "wayland x11"
+REQUIRED_DISTRO_FEATURES = "wayland"
 
 PACKAGES = " \
     ${PN} \

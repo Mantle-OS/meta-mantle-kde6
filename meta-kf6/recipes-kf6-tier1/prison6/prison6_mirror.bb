@@ -1,11 +1,12 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "Barcode abstraction layer providing uniform access to generation of barcodes"
+SUMMARY = "Barcode generation and scanning framework for KDE and Qt applications"
+DESCRIPTION = "Prison provides a unified framework for generating and scanning \
+barcodes in KDE and Qt applications. It supports multiple barcode formats, \
+including QR codes, Data Matrix, and other one-dimensional and two-dimensional \
+symbologies through libraries such as QRencode, libdmtx, and ZXing-C++. \
+The framework provides Qt Widgets and QML integration, along with multimedia \
+support for scanning barcodes using camera devices."
 HOMEPAGE = "https://api.kde.org/frameworks/prison/html/index.html"
+SECTION = "libs"
 LICENSE = "BSD-3-Clause AND MIT"
 
 inherit kf6

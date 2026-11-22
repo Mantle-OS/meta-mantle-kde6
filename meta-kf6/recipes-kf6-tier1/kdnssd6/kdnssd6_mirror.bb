@@ -1,17 +1,18 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2014 Johan Thelin <johan.thelin@pelagicore.com>
-# SPDX-FileCopyrightText: 2016 Sébastien Taylor <sebastien@au-zone.com>
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "Abstraction to system DNSSD features"
+SUMMARY = "DNS-based service discovery framework for KDE and Qt applications"
+DESCRIPTION = "KDNSSD provides an abstraction layer for DNS-based Service \
+Discovery (DNS-SD), enabling KDE and Qt applications to discover and \
+advertise services on local networks. It supports automatic detection \
+of network services such as printers, file shares, and other devices \
+using Zeroconf technologies, including Avahi. The framework simplifies \
+service discovery and registration without requiring applications to \
+interact directly with platform-specific DNS-SD implementations."
+
 HOMEPAGE = "https://api.kde.org/frameworks/kdnssd/html/index.html"
 SECTION = "libs"
+
 LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later"
 
 inherit kf6 features_check
-REQUIRED_DISTRO_FEATURES += " zeroconf"
+ANY_OF_DISTRO_FEATURES = "zeroconf avahi"
 
 DEPENDS += " avahi"

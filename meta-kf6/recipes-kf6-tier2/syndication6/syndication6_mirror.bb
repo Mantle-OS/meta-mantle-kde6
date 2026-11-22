@@ -1,12 +1,14 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2018-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "An RSS/Atom parser library"
+SUMMARY = "RSS and Atom feed parsing library for KDE and Qt applications"
+DESCRIPTION = "Syndication provides a framework for parsing and processing \
+RSS and Atom web feeds in KDE and Qt applications. It supports multiple \
+RSS versions and the Atom syndication format, providing a unified API \
+for accessing feed metadata, articles, authors, publication dates, \
+and associated content. The library simplifies feed aggregation and \
+integration into news readers and other content syndication applications."
+
 HOMEPAGE = "https://api.kde.org/frameworks/syndication/html/index.html"
 SECTION = "libs"
+
 LICENSE = "LGPL-2.0-or-later"
 
 inherit kf6

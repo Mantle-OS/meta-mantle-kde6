@@ -1,6 +1,3 @@
-# SPDX-FileCopyrightText: 2025 Joseph Mills <josephjamesmills@gmail.com>
-#
-# SPDX-License-Identifier: MIT
 SUMMARY = "Capi for chewing rust"
 
 include libchewing6-rs.inc

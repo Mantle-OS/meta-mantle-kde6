@@ -1,29 +1,36 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2014 Johan Thelin <johan.thelin@pelagicore.com>
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020-2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "Abstraction to system policy and authentication features"
+SUMMARY = "Privilege escalation and authorization framework for KDE and Qt applications"
+DESCRIPTION = "KAuth provides a framework for executing privileged \
+operations securely from KDE and Qt applications. It separates \
+unprivileged application code from privileged helper processes and \
+integrates with system authorization mechanisms such as PolicyKit. \
+The framework supports authorization checks, asynchronous execution, \
+and policy generation for applications requiring administrative access."
+
 HOMEPAGE = "https://api.kde.org/frameworks/kauth/html/index.html"
+SECTION = "libs"
+
 LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later AND LGPL-2.1-or-later"
 
-inherit kf6
+inherit kf6 features_check
+REQUIRED_DISTRO_FEATURES:class-target = "polkit"
 
-SRC_URI:append = " \
-    file://0001-Fix-build-when-KAUTH_BUILD_CODEGENERATOR_ONLY-ON.patch \
-"
+## TODO
+##  ACCEPTED !!
+# SRC_URI:append = " file://0001-Fix-build-when-KAUTH_BUILD_CODEGENERATOR_ONLY-ON.patch "
 
 DEPENDS:append = " \
     kcoreaddons6 \
     kwindowsystem6 \
 "
 
-DEPENDS:append:class-target = " ${PN}-native polkit-qt6-1"
+DEPENDS:append:class-target = " \
+    ${PN}-native \
+    polkit-qt6-1 \
+"
+
 DEPENDS:append:class-nativesdk = " ${PN}-native"
 
-PACKAGECONFIG[codegen-only] = "-DKAUTH_BUILD_CODEGENERATOR_ONLY=ON, -DKAUTH_BUILD_CODEGENERATOR_ONLY=OFF, "
+PACKAGECONFIG[codegen-only] = " -DKAUTH_BUILD_CODEGENERATOR_ONLY=ON, -DKAUTH_BUILD_CODEGENERATOR_ONLY=OFF, "
 
 PACKAGECONFIG:append:class-native  = " codegen-only"
 PACKAGECONFIG:append:class-nativesdk  = " codegen-only"

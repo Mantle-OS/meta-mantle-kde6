@@ -21,7 +21,7 @@ def plasma_real_name(d, name=None):
     return bpn
 
 SRC_URI = "${KDE6_PLASMA_MIRROR}/${@plasma_real_name(d)}-${PV}.tar.xz;name=${BPN}"
-S = "${WORKDIR}/${@plasma_real_name(d)}-${PV}" 
+S = "${UNPACKDIR}/${@plasma_real_name(d)}-${KDE6_PLASMA_VERSION}"
 
 DEPENDS:append = " \
     kpackage6-native \

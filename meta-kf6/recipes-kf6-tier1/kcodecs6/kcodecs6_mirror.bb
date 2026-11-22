@@ -1,13 +1,16 @@
-# SPDX-FileCopyrightText: 2014 Johan Thelin <johan.thelin@pelagicore.com>
-# SPDX-FileCopyrightText: 2016 Sébastien Taylor <sebastien@au-zone.com>
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
-SUMMARY = "Kde text tools"
+SUMMARY = "Text encoding and decoding utilities for KDE and Qt applications"
+DESCRIPTION = "KCodecs provides a collection of utilities for encoding \
+and decoding text and binary data in KDE and Qt applications. It supports \
+common encoding formats including Base64, quoted-printable, hexadecimal, \
+and various text transformation algorithms. The framework provides \
+reusable APIs for processing encoded content in applications, network \
+protocols, and data interchange formats."
+
+HOMEPAGE = "https://api.kde.org/frameworks/kcodecs/html/index.html"
+SECTION = "libs"
 LICENSE = "BSD-3-Clause AND LGPL-2.0-only AND LGPL-2.0-or-later AND MIT"
+
 inherit kf6
 
 DEPENDS:append = " gperf-native"
-
 BBCLASSEXTEND = "native nativesdk"

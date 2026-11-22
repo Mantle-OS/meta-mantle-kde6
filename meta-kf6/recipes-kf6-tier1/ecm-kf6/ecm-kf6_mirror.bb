@@ -1,5 +1,11 @@
-SUMMARY = "Extra CMake modules"
+SUMMARY = "Extra CMake Modules for KDE and Qt-based software"
+DESCRIPTION = "Extra CMake Modules (ECM) provides additional CMake modules, \
+macros, and utilities used to build KDE Frameworks, Plasma, and other \
+Qt-based applications. It extends CMake with reusable build configurations, \
+dependency discovery, installation helpers, and KDE-specific development tools."
 HOMEPAGE = "https://api.kde.org/frameworks/extra-cmake-modules/html/index.html"
+SECTION = "devel"
+
 LICENSE = "BSD-2-Clause AND BSD-3-Clause AND MIT"
 
 inherit qt6-cmake kde6-licenses kf6-checksums
@@ -17,9 +23,7 @@ CLEANBROKEN = "1"
 PACKAGECONFIG:append = " docs"
 PACKAGECONFIG[docs] = "-DBUILD_DOC=ON, -DBUILD_DOC=OFF, qttools6 python3-sphinx-native"
 
-FILES:${PN} += " \
-    ${datadir}/ECM \
-"
+FILES:${PN} += " ${datadir}/ECM"
 
 EXTRA_OECMAKE += " \
     -DBUILD_WITH_QT6=ON \

@@ -6,4 +6,3 @@ PACKAGECONFIG[kdoctools] = ", , kdoctools6 kdoctools6-native libxslt-native karc
 PACKAGECONFIG[ki18n] = ", , ki18n6 ki18n6-native gettext-native"
 PACKAGECONFIG:append = " ki18n"
 
-# polkit-qt6-1

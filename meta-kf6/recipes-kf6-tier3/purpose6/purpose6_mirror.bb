@@ -1,20 +1,20 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
+SUMMARY = "Application action and content sharing framework for KDE and Qt applications"
+DESCRIPTION = "Purpose provides a framework for discovering and executing \
+application actions based on specific tasks or content types. It enables \
+KDE and Qt applications to share files, images, URLs, and other data \
+through extensible plugins and services. The framework supports \
+integration with online services, local applications, and system \
+components through reusable actions and QML interfaces."
 
-SUMMARY = "Offers available actions for a specific purpose"
 HOMEPAGE = "https://api.kde.org/frameworks/purpose/html/index.html"
+SECTION = "libs"
+
 LICENSE = "LGPL-2.1-or-later"
 
-inherit kf6
-inherit gettext
+inherit kf6 gettext
 
 DEPENDS:append = " \
     qtdeclarative6 \
-    \
     kio6 \
     kirigami6 \
     knotifications6 \
@@ -22,6 +22,7 @@ DEPENDS:append = " \
 "
 
 PACKAGECONFIG[dbus] = "-DUSE_DBUS=ON, -DUSE_DBUS=OFF, "
+
 PACKAGECONFIG:append = " \
     kconfig \
     kcoreaddons \

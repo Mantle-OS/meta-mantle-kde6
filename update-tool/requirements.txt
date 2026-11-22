@@ -1,0 +1,6 @@
+# KDE OpenEmbedded release updater runtime dependencies.
+# Test discovery uses Python's standard-library unittest.
+msgspec>=0.19,<1
+zstandard>=0.23,<1
+requests>=2.32,<3
+beautifulsoup4>=4.12,<5

@@ -1,15 +1,10 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2020 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 SUMMARY = "The intelligent phonetic input method library"
 HOMEPAGE = ""
 SECTION = "libs"
 LICENSE = "LGPL-2.1-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=4fbd65380cdd255951079008b364516c"
 
-inherit kde6-cmake
+inherit cmake cmake_extra_sanity
 
 SRC_URI = " \
     gitsm://github.com/chewing/libchewing.git;branch=release/0.10.x;protocol=https \
