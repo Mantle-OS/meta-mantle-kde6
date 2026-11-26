@@ -6,7 +6,6 @@ management, service discovery, and device property monitoring. \
 The framework provides asynchronous APIs and QML integration, enabling \
 applications to interact with the Linux Bluetooth stack without directly \
 managing D-Bus communication."
-
 HOMEPAGE = "https://api.kde.org/frameworks/bluez-qt/html/index.html"
 SECTION = "libs"
 
@@ -15,8 +14,8 @@ LICENSE = "LGPL-2.1-or-later AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-K
 inherit kf6 features_check
 REQUIRED_DISTRO_FEATURES = "bluetooth"
 
-PACKAGECONFIG:append = " qml"
 PACKAGECONFIG[qml] =  ",, qtdeclarative6"
+PACKAGECONFIG:append = " qml"
 
 RDEPENDS:${PN} += " \
     bluez5 \

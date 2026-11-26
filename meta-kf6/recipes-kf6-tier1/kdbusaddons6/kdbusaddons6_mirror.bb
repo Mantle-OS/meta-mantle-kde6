@@ -14,9 +14,8 @@ LICENSE = "LGPL-2.0-or-later AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-K
 inherit kf6 
 inherit features_check
 
-ANY_OF_DISTRO_FEATURES = "opengl wayland kde_x11"
+ANY_OF_DISTRO_FEATURES = "wayland kde_x11"
 
-# TODO  LOOK AT NEW CODE
 PACKAGECONFIG[x11] = "-DWITH_X11=ON, -DWITH_X11=OFF, virtual/libx11"
 PACKAGECONFIG:append:class-target = " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'kde_x11', 'x11', '', d)} \

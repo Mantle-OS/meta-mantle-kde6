@@ -1,5 +1,3 @@
-# vorbris .....
-
 PACKAGECONFIG:append:class-native = " alsa"
 PACKAGECONFIG:remove:class-native = " \
     ${@bb.utils.filter('DISTRO_FEATURES', 'alsa pulseaudio', d)} \

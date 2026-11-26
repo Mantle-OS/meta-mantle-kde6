@@ -38,33 +38,15 @@ RDEPENDS:${PN} += " \
 SUMMARY:${PN}-support = "support recipes for kde6"
 DESCRIPTION:${PN}-support = "These packages are meant to support other parts of KDE6 like plasma and KF6"
 RRECOMMENDS:${PN}-support = " \
-    qtkeychain6 \
-    sddm-qt6 \
     kpeoplevcard6 \
-    zxing-cpp-kf6 \
     pulseaudio-qt6 \
-    kcolorpicker6 \
-    chewing-capi \
-    libchewing6 \
     phonon-backend-vlc-kf6 \
     polkit-qt6-1 \
-    ddcutil6 \
-    qcoro6 \
     oxygen-icons-kf6 \
-    libphonenumber-cpp \
     qca-kf6 \
-    libpinyin6 \
     futuresql6 \
     kquickimageeditor6 \
-    libqalculate6 \
-    libdmtx-kf6 \
     heaptrack6 \
     phonon-kf6 \
-    corrosion \
-    qmltermwidget6 \
     simplelogin6 \
-    qml-box2d6 \
-    maliit-keyboard-qt6 \
-    maliit-framework-qt6 \
-    kimageannotator6  \
 "

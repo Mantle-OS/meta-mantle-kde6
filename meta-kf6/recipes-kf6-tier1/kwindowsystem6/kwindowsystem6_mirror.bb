@@ -25,6 +25,8 @@ PACKAGECONFIG[x11] = "-DKWINDOWSYSTEM_X11=ON, -DKWINDOWSYSTEM_X11=OFF, \
 "
 
 PACKAGECONFIG[wayland] = "-DKWINDOWSYSTEM_WAYLAND=ON, -DKWINDOWSYSTEM_WAYLAND=OFF, \
+    wayland \
+    wayland-protocols \
     qtwayland6 \
     qtwayland6-native \
     plasma-wayland-protocols-kf6 \
@@ -34,11 +36,6 @@ PACKAGECONFIG:append:class-target = " \
     ${@bb.utils.filter('DISTRO_FEATURES', 'wayland', d)} \
     ${@bb.utils.contains('DISTRO_FEATURES', 'kde_x11', 'x11', '',  d)} \
     qml \
-"
-
-RDEPENDS:${PN}:class-target += " \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'directfb', '', d)} \
-    ${@bb.utils.contains('DISTRO_FEATURES', 'x11', 'directfb', '', d)}  \
 "
 
 BBCLASSEXTEND = "native nativesdk"

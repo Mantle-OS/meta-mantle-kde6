@@ -20,7 +20,7 @@ DEPENDS:append = " \
     openmp-native \
 "
 
-RDEPENDS:${PN} += " \
+RDEPENDS:${PN}:append = " \
     qtdeclarative6-qmlplugins \
 "
 

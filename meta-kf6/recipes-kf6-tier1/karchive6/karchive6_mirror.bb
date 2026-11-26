@@ -25,6 +25,6 @@ PACKAGECONFIG:append = " \
     openssl \
     zstd \
 "
-## FIXME SPLIT THE PACKAGES
+DEPENDS:append = " zlib"
 
 BBCLASSEXTEND = "native nativesdk"

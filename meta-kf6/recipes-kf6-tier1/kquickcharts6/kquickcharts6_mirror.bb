@@ -11,8 +11,6 @@ SECTION = "libs"
 LICENSE = "MIT AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
 
 inherit kf6 features_check
-
-## Lets look a bit deeper into this on the next pass.
 REQUIRED_DISTRO_FEATURES = "opengl"
 
 DEPENDS:append = " \

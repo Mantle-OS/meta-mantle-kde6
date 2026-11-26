@@ -14,4 +14,4 @@ inherit kf6 features_check
 REQUIRED_DISTRO_FEATURES = "3g"
 
 DEPENDS:append = " modemmanager"
-RDEPENDS:${PN} += " modemmanager"
+RDEPENDS:${PN}:append = " modemmanager"

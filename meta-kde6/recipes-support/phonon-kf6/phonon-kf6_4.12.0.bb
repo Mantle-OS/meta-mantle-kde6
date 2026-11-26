@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2018 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2022 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 DESCRIPTION = "Phonon for KF6"
 SECTION = "libs"
 LICENSE = "LGPL-2.1-only"

@@ -12,6 +12,7 @@ PR = "r0"
 
 inherit kde6-ecm
 
+## WARNING THIS PROJECT HAS BEEN ARCHIVED
 SRC_URI = "git://invent.kde.org/pim/kpeoplevcard;nobranch=1;protocol=https"
 SRCREV = "d4acaa3038f6b030d0d6390e628c39e9f8d87903"
 

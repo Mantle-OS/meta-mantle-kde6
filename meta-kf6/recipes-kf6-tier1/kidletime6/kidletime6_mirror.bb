@@ -7,26 +7,22 @@ applications to implement power management, screen locking, and other \
 idle-dependent functionality."
 HOMEPAGE = "https://api.kde.org/frameworks/kidletime/html/index.html"
 SECTION = "libs"
-
 LICENSE = "LGPL-2.1-or-later AND MIT"
 REUSE_LICENSECHECK_WHITELIST = "GPL-2.0-or-later"
 
 inherit kf6 features_check
-
 ANY_OF_DISTRO_FEATURES = "kde_x11 wayland"
 
-
-DEPENDS:append =  " bison"
-
-## FIXME LOOK AT libxkbcommon seems off here for wayland
 PACKAGECONFIG[x11] = "-DWITH_X11=ON, -DWITH_X11=OFF, \
     virtual/libx11 \
-    libxcb libxext \
+    libxcb \
+    libxext \
     libxscrnsaver \
     libxkbcommon \
 "
 
 PACKAGECONFIG[wayland] = "-DWITH_WAYLAND=ON, -DWITH_WAYLAND=OFF, \
+    wayland \
     qtwayland6 \
     qtwayland6-native \
     plasma-wayland-protocols-kf6 \
@@ -34,6 +30,5 @@ PACKAGECONFIG[wayland] = "-DWITH_WAYLAND=ON, -DWITH_WAYLAND=OFF, \
 
 PACKAGECONFIG:append = " \
     ${@bb.utils.filter('DISTRO_FEATURES', 'wayland', d)} \
-    ${@bb.utils.filter('DISTRO_FEATURES', 'kde_x11', d)} \
-    qml \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'kde_x11', 'x11', '', d)} \
 "

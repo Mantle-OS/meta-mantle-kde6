@@ -12,15 +12,19 @@ LICENSE = "BSD-3-Clause AND MIT"
 inherit kf6
 REUSE_LICENSECHECK_WHITELIST = "CC0-1.0"
 
-DEPENDS:append = " \
-    qrencode \
-    libdmtx-kf6 \
-    zxing-cpp-kf6 \
-"
-
+DEPENDS:append = " qrencode"
+PACKAGECONFIG[dmtx] = "-DWITH_DMTX=ON, -DWITH_DMTX=OFF, libdmtx"
 PACKAGECONFIG[qml] = "-DWITH_QUICK=ON, -DWITH_QUICK=OFF, qtdeclarative6"
 PACKAGECONFIG[multimedia] = "-DWITH_MULTIMEDIA=ON,-DWITH_MULTIMEDIA=OFF , qtmultimedia6"
+PACKAGECONFIG[zxing] = "-DWITH_ZXING=ON, -DWITH_ZXING=OFF, zxing-cpp"
 
-PACKAGECONFIG:append = " qml multimedia"
+
+PACKAGECONFIG:append = " \
+    qml \
+    multimedia \
+    dmtx \
+    zxing \
+"
+
 PACKAGECONFIG:remove:class-native = " qml multimedia"
 BBCLASSEXTEND = "native nativesdk"

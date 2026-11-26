@@ -1,14 +1,12 @@
-# SPDX-FileCopyrightText: none
-# SPDX-License-Identifier: CC0-1.0
-# SPDX-FileCopyrightText: 2014 Johan Thelin <johan.thelin@pelagicore.com>
-# SPDX-FileCopyrightText: 2016 Sébastien Taylor <sebastien@au-zone.com>
-# SPDX-FileCopyrightText: 2017-2020 Volker Krause <vkrause@kde.org>
-# SPDX-FileCopyrightText: 2018 Alistair Francis <alistair.francis@wdc.com>
-# SPDX-FileCopyrightText: 2020-2024 Andreas Cord-Landwehr <cordlandwehr@kde.org>
-#
-# SPDX-License-Identifier: MIT
 SUMMARY = "Hardware integration and detection"
+DESCRIPTION = "Solid is a KDE Frameworks library providing a unified \
+API for hardware discovery, device enumeration and hardware property \
+access. It abstracts platform-specific backends for storage devices, \
+network interfaces, batteries and other system hardware."
+
 HOMEPAGE = "https://api.kde.org/frameworks/solid/html/index.html"
+SECTION = "libs"
+
 LICENSE = "BSD-3-Clause AND LGPL-2.1-or-later AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL)"
 
 inherit kf6

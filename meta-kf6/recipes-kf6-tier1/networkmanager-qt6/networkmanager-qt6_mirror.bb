@@ -12,14 +12,10 @@ LICENSE = "BSD-3-Clause AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Ac
 
 inherit kf6
 
-## TODO nm vs conman in packaging
-
-DEPENDS += " \
-    qtbase6 \
+DEPENDS:append = " \
     qtdeclarative6 \
     networkmanager \
     glib-2.0 \
 "
 
-RDEPENDS:${PN} += " networkmanager"
-
+RDEPENDS:${PN}:append = " networkmanager"

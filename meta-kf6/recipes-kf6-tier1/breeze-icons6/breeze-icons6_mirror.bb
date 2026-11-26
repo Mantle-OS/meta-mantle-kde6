@@ -15,14 +15,6 @@ LIC_FILES_CHKSUM = "file://COPYING.LIB;md5=2d5025d4aa3495befef8f17206a5b0a1"
 
 inherit kf6 gtk-icon-cache
 
-SRC_URI:append = " \
-    file://0001-add-cross-compiled-generate-symbolic-dark-cmake-opti.patch \
-"
-
-## FIXME add packageconfig for dark light etc
-
-RDEPENDS:${PN} += " bash"
-
 DEPENDS:append:class-target = " \
     ${PN}-native \
     python3-native \
@@ -32,22 +24,24 @@ DEPENDS:append:class-target = " \
 DEPENDS:append:class-nativesdk = " ${PN}-native"
 
 EXTRA_OECMAKE:append:class-target = " \
-    -DGEN_SYM_DARK_EXE=${STAGING_BINDIR_NATIVE}/generate-symbolic-dark \
+    -DWITH_ICON_GENERATION=ON \
+    -DBINARY_ICONS_RESOURCE=ON \
+    -DWITH_ICONS_LIBRARY=ON \
+    -DBINARY_ICONS_RESOURCE=OFF \
+    -DKF6_HOST_TOOLING=${STAGING_BINDIR_NATIVE} \
 "
 
 EXTRA_OECMAKE:append:class-nativesdk = " \
-    -DGEN_SYM_DARK_EXE=${STAGING_BINDIR_NATIVE}/generate-symbolic-dark \
+    -DKF6_HOST_TOOLING=${STAGING_BINDIR_NATIVE} \
 "
 
 EXTRA_OECMAKE:append:class-native = " \
     -DSKIP_INSTALL_ICONS=ON \
     -DWITH_ICON_GENERATION=OFF \
+    -DBINARY_ICONS_RESOURCE=OFF \
+    -DINSTALL_HOST_TOOLS=ON \
+    -DWITH_ICONS_LIBRARY=ON \
 "
 
-do_install:append:class-native() {
-    install -d ${D}/${bindir}
-    install -m 0755 ${B}/bin/qrcAlias ${D}/${bindir}
-    install -m 0755 ${B}/bin/generate-symbolic-dark ${D}${bindir}
-}
-
+RDEPENDS:${PN} += " bash"
 BBCLASSEXTEND = "native nativesdk"

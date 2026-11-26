@@ -15,4 +15,4 @@ LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later"
 inherit kf6 features_check
 ANY_OF_DISTRO_FEATURES = "zeroconf avahi"
 
-DEPENDS += " avahi"
+DEPENDS:apppend = " avahi"

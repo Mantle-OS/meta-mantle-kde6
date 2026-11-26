@@ -5,7 +5,6 @@ It supports plotting data points, curves, axes, grid lines, and labels \
 through customizable Qt widgets. The framework simplifies the creation \
 of scientific, mathematical, and statistical graphs without requiring \
 complex external plotting libraries."
-
 HOMEPAGE = "https://api.kde.org/frameworks/kplotting/html/index.html"
 SECTION = "libs"
 LICENSE = "LGPL-2.0-or-later"

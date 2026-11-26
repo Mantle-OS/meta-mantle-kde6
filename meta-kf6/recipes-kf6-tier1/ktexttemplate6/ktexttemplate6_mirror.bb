@@ -13,6 +13,3 @@ LICENSE = "LGPL-2.1-or-later"
 inherit kf6
 
 DEPENDS:append = " qtbase6 qtdeclarative6"
-
-## TODO LOOK INTO
-## examples neeeds sql

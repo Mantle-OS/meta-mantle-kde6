@@ -13,19 +13,14 @@ LICENSE = "LGPL-2.0-or-later AND (LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-K
 
 inherit kf6
 
-## ISSUES HERE need to loook deeper into this on the upmainline sync
-EXTRA_OECMAKE:append:class-target = " \
-    -DBUILD_DESIGNERPLUGIN=OFF \
-"
+EXTRA_OECMAKE:append:class-target = " -DBUILD_DESIGNERPLUGIN=OFF"
+EXTRA_OECMAKE:append:class-native = " -DBUILD_DESIGNERPLUGIN=OFF"
+EXTRA_OECMAKE:append:class-nativesdk = " -DBUILD_DESIGNERPLUGIN=ON "
 
-EXTRA_OECMAKE:append:class-native = " \
-    -DBUILD_DESIGNERPLUGIN=OFF \
+PACKAGECONFIG[py-bindings] = "-DBUILD_PYTHON_BINDINGS=ON, -DBUILD_PYTHON_BINDINGS=OFF, \
+    python3-native \
+    python3-pyside6 \
+    python3-shiboken6-native \
 "
-
-EXTRA_OECMAKE:append:class-nativesdk = " \
-    -DBUILD_DESIGNERPLUGIN=ON \
-"
-
-PACKAGECONFIG[py-bindings] = "-DBUILD_PYTHON_BINDINGS=ON, -DBUILD_PYTHON_BINDINGS=OFF, python3-native python3-pyside6  python3-shiboken6-native "
 
 BBCLASSEXTEND = "native nativesdk"

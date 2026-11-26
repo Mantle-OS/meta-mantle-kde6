@@ -28,7 +28,6 @@ PACKAGECONFIG[wayland] = "-DWITH_WAYLAND=ON, -DWITH_WAYLAND=OFF, \
     plasma-wayland-protocols-kf6 \
 "
 
-## TODO LOOK AT THE NEW CODE
 PACKAGECONFIG[x11] = "-DWITH_X11=ON, -DWITH_X11=OFF, \
     virtual/libx11 \
     libxcb \

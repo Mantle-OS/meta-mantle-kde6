@@ -13,8 +13,8 @@ LICENSE = "LGPL-2.0-or-later"
 
 inherit kf6
 
-## TODO LOOK AT NEW CODE
-PACKAGECONFIG[x11] = "-DWITH_X11=ON, -DWITH_X11=OFF, "
-PACKAGECONFIG:append:class-target = " ${@bb.utils.filter('DISTRO_FEATURES', 'kde_x11', d)}"
+PACKAGECONFIG[x11] = "-DWITH_X11=ON, -DWITH_X11=OFF"
+PACKAGECONFIG:append:class-target = " \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'kde_x11', 'x11', '', d)}"
 
 BBCLASSEXTEND = "native nativesdk"

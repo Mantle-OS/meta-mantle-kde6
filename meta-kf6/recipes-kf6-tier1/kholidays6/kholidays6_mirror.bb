@@ -13,5 +13,8 @@ LICENSE = "BSD-2-Clause AND LGPL-2.0-or-later"
 
 inherit kf6
 
-## DOC WHY AND ALSO RUNTIME.
-DEPENDS:append = " qtdeclarative6"
+DEPENDS:append = " \
+    flex-native \
+    bison-native \
+    qtdeclarative6 \
+"
