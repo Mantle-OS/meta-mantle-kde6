@@ -18,11 +18,12 @@ DEPENDS:append = " \
     \
     kglobalaccel6 \
     kguiaddons6 \
+    kwidgetsaddons6 \
+    \
     kiconthemes6 \
     kio6 \
     knotifications6 \
     kpackage6 \
-    kwidgetsaddons6 \
     kwindowsystem6 \
 "
 

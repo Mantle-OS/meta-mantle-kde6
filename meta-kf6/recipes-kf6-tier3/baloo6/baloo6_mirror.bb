@@ -13,11 +13,6 @@ LICENSE = "LGPL-2.1-only"
 
 inherit kf6
 
-## FIXME LOOK AT THIS AGAIN IF ITS  riscv64 really ......
-SRC_URI:append:riscv64 = " \
-    file://0001-we-cant-mmap-such-a-large-memory-on-riscv64.patch \
-"
-
 DEPENDS:append = " \
     qtdeclarative6 \
     libxml2 \
@@ -49,4 +44,8 @@ PACKAGECONFIG:append = " \
 
 RDEPENDS:${PN} += " \
     lmdb \
+"
+
+FILES:${PN}:append = " \
+    ${datadir}/config.kcfg/baloosettings.kcfg \
 "

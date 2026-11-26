@@ -6,7 +6,7 @@ applications to expose status icons, context menus, tooltips, and \
 interactive actions through D-Bus. The framework supports integration \
 with KDE Plasma and other compatible desktop environments, providing \
 a standardized alternative to legacy system tray interfaces."
-
+BUGTRACKER = "https://bugs.kde.org/"
 HOMEPAGE = "https://api.kde.org/frameworks/kstatusnotifieritem/html/index.html"
 SECTION = "libs"
 
@@ -30,7 +30,6 @@ PACKAGECONFIG:append = " \
     dbus \
 "
 
-# TODO  NEW CODE CHECK
 PACKAGECONFIG:append:class-target = " \
     ${@bb.utils.contains('DISTRO_FEATURES', 'kde_x11', 'x11', '', d)} \
 "

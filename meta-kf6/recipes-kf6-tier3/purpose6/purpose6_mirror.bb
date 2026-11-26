@@ -15,9 +15,14 @@ inherit kf6 gettext
 
 DEPENDS:append = " \
     qtdeclarative6 \
-    kio6 \
+    \
+    prison6 \
+    kcmutils6 \
+    kitemmodels6 \
+    \
     kirigami6 \
     knotifications6 \
+    kio6 \
     kservice6 \
 "
 

@@ -17,8 +17,8 @@ def kf6_real_name(d, name=None):
         "phonon-kf6": "phonon",
         "plasma-wayland-protocols-kf6": "plasma-wayland-protocols",
         "qca-kf6": "qca",
-        "zxing-cpp-kf6": "zxing-cpp",
-        "libdmtx-kf6": "libdmtx",
+        "zxing-cpp": "zxing-cpp",
+        "libdmtx": "libdmtx",
         "ecm-kf6": "extra-cmake-modules",
     }
 

@@ -7,16 +7,13 @@ The framework supports authorization checks, asynchronous execution, \
 and policy generation for applications requiring administrative access."
 
 HOMEPAGE = "https://api.kde.org/frameworks/kauth/html/index.html"
+BUGTRACKER = "https://bugs.kde.org/"
 SECTION = "libs"
 
 LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later AND LGPL-2.1-or-later"
 
 inherit kf6 features_check
 REQUIRED_DISTRO_FEATURES:class-target = "polkit"
-
-## TODO
-##  ACCEPTED !!
-# SRC_URI:append = " file://0001-Fix-build-when-KAUTH_BUILD_CODEGENERATOR_ONLY-ON.patch "
 
 DEPENDS:append = " \
     kcoreaddons6 \

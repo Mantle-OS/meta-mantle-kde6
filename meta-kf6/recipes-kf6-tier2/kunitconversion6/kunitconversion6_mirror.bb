@@ -6,7 +6,7 @@ mass, temperature, time, speed, energy, pressure, and data storage. \
 The framework provides localized unit names, symbols, and conversion \
 functions, enabling applications to present measurements in different \
 unit systems and languages."
-
+BUGTRACKER = "https://bugs.kde.org/"
 HOMEPAGE = "https://api.kde.org/frameworks/kunitconversion/html/index.html"
 SECTION = "libs"
 
@@ -15,8 +15,7 @@ LICENSE = "LGPL-2.0-or-later"
 inherit kf6
 
 DEPENDS:append = " \
-    ki18n6 \
-    ki18n6-native \
+    ki18n6 ki18n6-native \
 " 
 
 PACKAGECONFIG[py-bindings] = "BUILD_PYTHON_BINDINGS=ON, -DBUILD_PYTHON_BINDINGS=OFF,\

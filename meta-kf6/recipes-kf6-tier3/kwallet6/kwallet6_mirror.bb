@@ -17,8 +17,7 @@ DEPENDS:append = " \
     libsecret \
     libgcrypt \
     gpgme \
-    qca-kf6 \
-    qca-kf6-native \
+    qca-kf6 qca-kf6-native \
     \
     kcolorscheme6 \
     kcrash6 \
@@ -57,4 +56,5 @@ EXTRA_OECMAKE:append = " \
 FILES:${PN} += " \
     ${datadir}/knotifications6 \
     ${datadir}/xdg-desktop-portal/portals/* \
+    ${datadir}/config.kcfg/ \
 "

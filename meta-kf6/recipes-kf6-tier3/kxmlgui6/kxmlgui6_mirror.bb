@@ -14,7 +14,7 @@ LICENSE = "LGPL-2.1-only"
 
 inherit kf6
 
-DEPENDS:append = "\
+DEPENDS:append = " \
     kitemviews6 \
     kconfigwidgets6 \
     kiconthemes6 \
@@ -23,7 +23,7 @@ DEPENDS:append = "\
     kwindowsystem6 \
     kglobalaccel6 \
 "
-## TODO LOOK DEEPER
+
 PACKAGECONFIG[no-global-accel] = "-DFORCE_DISABLE_KGLOBALACCEL=ON, -DFORCE_DISABLE_KGLOBALACCEL=OFF, "
 PACKAGECONFIG[dbus] = "-DUSE_DBUS=ON, -DUSE_DBUS=OFF, "
 PACKAGECONFIG[py-bindings] = "-DBUILD_PYTHON_BINDINGS=ON, -DBUILD_PYTHON_BINDINGS=OFF,\

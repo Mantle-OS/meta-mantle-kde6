@@ -17,9 +17,7 @@ inherit kf6 features_check
 REQUIRED_DISTRO_FEATURES = "polkit"
 ANY_OF_DISTRO_FEATURES = "wayland kde_x11"
 
-SRC_URI:append = " \
-    file://0001-SwitcherooControl-is-runtime-and-not-buildtime.patch \
-"
+# SRC_URI:append = " file://0001-SwitcherooControl-is-runtime-and-not-buildtime.patch "
 
 DEPENDS:append = " \
     acl \

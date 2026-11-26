@@ -14,7 +14,6 @@ LICENSE = "BSD-3-Clause AND LGPL-2.0-or-later"
 
 inherit kf6
 
-## TODO LOOK INTO THIS AGAIN
 PACKAGECONFIG[utempter] = " , -DCMAKE_DISABLE_FIND_PACKAGE_UTEMPTER=ON, libutempter"
 
 PACKAGECONFIG:append = " \

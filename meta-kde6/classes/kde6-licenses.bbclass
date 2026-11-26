@@ -13,21 +13,25 @@ do_populate_lic:prepend() {
         ],
         'LGPL-2.0-or-later': [
             '6d2d9952d88b50a51a5c73dc431d06c7',
-            '65d3616852dbf7b1a6d4b53b00626032'
+            '65d3616852dbf7b1a6d4b53b00626032',
+            'e3e049b303846e4de3eeafccf035a404'
         ],
         'LGPL-2.1-only': [
-            'fabba2a3bfeb22a6483d44e9ae824d3f'
+            'fabba2a3bfeb22a6483d44e9ae824d3f',
+            '41890f71f740302b785c27661123bff5'
         ],
         'LGPL-2.1-or-later': [
             '2a4f4fd2128ea2f65047ee63fbca9f68',
             '41890f71f740302b785c27661123bff5',
-            '147a320ed8b16b036829a0c71d424153'
+            '147a320ed8b16b036829a0c71d424153',
         ],
         'LGPL-3.0-only': [
-            'c51d3eef3be114124d11349ca0d7e117'
+            'c51d3eef3be114124d11349ca0d7e117',
+            '852ecadc0ac7e6f4d7144d5544a3815b'
         ],
         'LGPL-3.0-or-later': [
-            'c51d3eef3be114124d11349ca0d7e117'
+            'c51d3eef3be114124d11349ca0d7e117',
+            '852ecadc0ac7e6f4d7144d5544a3815b'
         ],
         'GPL-2.0-only': [
             '93e64b4a83c7e441e48bbdeeea05c977'
@@ -47,7 +51,8 @@ do_populate_lic:prepend() {
             'd0f280d1058e77e66264a9b9e10e6c89'
         ],
         'BSD-3-Clause': [
-            '954f4d71a37096249f837652a7f586c0'
+            '954f4d71a37096249f837652a7f586c0',
+            '71f739ef75581cae312e8c711bcdab16'
         ],
         'MIT': [
             '38aa75cf4c4c87f018227d5ec9638d75'

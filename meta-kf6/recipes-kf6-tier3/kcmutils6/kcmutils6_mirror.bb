@@ -14,8 +14,7 @@ LICENSE = "LGPL-2.0-only"
 inherit kf6
 
 DEPENDS:append:class-target = " \
-    libxml2 \
-    libxml2-native \
+    libxml2 libxml2-native \
     qtdeclarative6 \
     \
     kio6 \
@@ -24,6 +23,7 @@ DEPENDS:append:class-target = " \
     kguiaddons6 \
     kxmlgui6 \
     kwidgetsaddons6 \
+    kirigami6 \
 "
 
 PACKAGECONFIG[tools-only] = "-DTOOLS_ONLY=ON, -DTOOLS_ONLY=OFF, "

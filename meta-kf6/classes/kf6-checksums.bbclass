@@ -36,6 +36,10 @@ SRC_URI[sonnet6.sha256sum]             = "cae2686b18f41bde6494f353e1dccc5f045e97
 SRC_URI[syntax-highlighting6.sha256sum] = "561d01001509299ad0578a02365e6bc714f2799724ac5980bc021c1ec2a44a67"
 SRC_URI[threadweaver6.sha256sum]       = "b3ee9e6cdfdb3dec7c7df8e7f66ace6a94e73a531ba4f1d8f7b74360e7201e05"
 
+SRC_URI[oxygen-icons-kf6.sha256sum] = "743b5277c63592d84a51a643e5381d6afbc5c7563ff775faae6005311d1bfccd"
+SRC_URI[kapidox6.sha256sum] = "b85b295a4fe1b2fc144affed6785e85bb530268b2ada1df930c65127f73edf4c"
+
+
 ## tier 2
 SRC_URI[kauth6.sha256sum]              = "5bcdb298a2ee84bca93a989247fd6d6e34a1e1029caae17705a85b8ac4dbe837"
 SRC_URI[kcolorscheme6.sha256sum]       = "235c73afa46669c41cbe2e3a14c5a6ae1f8ad8cbb386b3f65261f65449d2b915"
@@ -52,6 +56,8 @@ SRC_URI[kpty6.sha256sum]               = "ed8a6feee493a1b98930fb78d40e09a5a7983e
 SRC_URI[kstatusnotifieritem6.sha256sum] = "46c9ebf7d5319a2bde9123427edb277b871740f4f79f65e79a382dde7e1891d9"
 SRC_URI[kunitconversion6.sha256sum]    = "af5e72a5cf7ee3d036e045441fc84a5e9c142be6d46bd36c1490d1cec5e7ecfd"
 SRC_URI[syndication6.sha256sum]        = "a1fc7e412e56ed9e457edd8c7295865007f89ea082c829245667f5321babfdf0"
+
+SRC_URI[kmime6.sha256sum] = "390870842f4b6afeab01a0f76b63e22f0b97f788f8815d847a43d7a4f23e7941"
 
 ## tier 3
 SRC_URI[baloo6.sha256sum]              = "305c0e41dab070cac27d2e9530a81aab95157dd76c1c00ffe87d1ad08734dad7"
@@ -80,3 +86,7 @@ SRC_URI[qqc2-desktop-style6.sha256sum] = "57269c662c25d0ccea96e128a54bc57c3abe0b
 
 ## tier 4
 SRC_URI[frameworkintegration6.sha256sum] = "874e13434e808cb0b2081af0f993e09236d0c3e44a6ae37d4fe724ee7547a912"
+
+
+
+

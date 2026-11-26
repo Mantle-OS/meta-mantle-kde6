@@ -5,7 +5,7 @@ RSS versions and the Atom syndication format, providing a unified API \
 for accessing feed metadata, articles, authors, publication dates, \
 and associated content. The library simplifies feed aggregation and \
 integration into news readers and other content syndication applications."
-
+BUGTRACKER = "https://bugs.kde.org/"
 HOMEPAGE = "https://api.kde.org/frameworks/syndication/html/index.html"
 SECTION = "libs"
 

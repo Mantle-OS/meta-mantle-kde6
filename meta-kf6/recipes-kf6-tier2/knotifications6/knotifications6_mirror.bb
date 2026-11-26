@@ -20,7 +20,6 @@ DEPENDS:append = " \
 "
 
 PACKAGECONFIG[dbus] = "-DUSE_DBUS=ON, -DUSE_DBUS=OFF, "
-
 PACKAGECONFIG[py-bindings] = "-DBUILD_PYTHON_BINDINGS=ON, -DBUILD_PYTHON_BINDINGS=OFF, \
     python3-native \
     python3-pyside6 \

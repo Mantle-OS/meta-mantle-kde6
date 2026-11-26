@@ -5,7 +5,7 @@ It supports progress dialogs, status indicators, cancellation controls, \
 and integration with desktop notification systems. The framework enables \
 KDE and Qt applications to present consistent feedback for background \
 tasks such as file transfers, downloads, and other long-running operations."
-
+BUGTRACKER = "https://bugs.kde.org/"
 HOMEPAGE = "https://api.kde.org/frameworks/kjobwidgets/html/index.html"
 SECTION = "libs"
 

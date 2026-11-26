@@ -6,6 +6,7 @@ selections, and interactive elements. The framework supports consistent \
 visual styling across applications, integration with system color schemes, \
 and automatic adaptation to light and dark themes."
 HOMEPAGE = "https://api.kde.org/frameworks/kcolorscheme/html/index.html"
+BUGTRACKER = "https://bugs.kde.org/"
 SECTION = "libs"
 
 LICENSE = "BSD-2-Clause AND LGPL-2.0-or-later AND LGPL-2.1-only AND LGPL-3.0-only"
